@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Models\Circle.cs" />
     <Compile Include="Models\Line.cs" />
+    <Compile Include="Models\Point.cs" />
     <Compile Include="Models\Rectangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
