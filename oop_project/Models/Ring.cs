@@ -31,5 +31,30 @@ namespace oop_project.Models
 
             pictureBox.Image = bitmap;
         }
+
+        public void Move(double dx, double dy)
+        {
+            Graphics gr = Graphics.FromImage(bitmap);
+            gr.DrawEllipse(Pens.White, (float)this.circle1.point.X, (float)this.circle1.point.Y, (float)this.circle1.Size, (float)this.circle1.Size);
+            gr.DrawEllipse(Pens.White, (float)this.circle1.point.X, (float)this.circle1.point.Y, (float)this.circle1.Size, (float)this.circle1.Size);
+
+            gr.DrawEllipse(Pens.White, (float)this.circle2.point.X, (float)this.circle2.point.Y, (float)this.circle2.Size, (float)this.circle2.Size);
+            gr.DrawEllipse(Pens.White, (float)this.circle2.point.X, (float)this.circle2.point.Y, (float)this.circle2.Size, (float)this.circle2.Size);
+
+            pictureBox.Image = bitmap;
+
+            this.circle1.point.X += dx;
+            this.circle1.point.Y += dy;
+
+            this.circle2.point.X += dx;
+            this.circle2.point.Y += dy;
+
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle1.point.X, (float)this.circle1.point.Y, (float)this.circle1.Size, (float)this.circle1.Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle1.point.X, (float)this.circle1.point.Y, (float)this.circle1.Size, (float)this.circle1.Size);
+
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle2.point.X, (float)this.circle2.point.Y, (float)this.circle2.Size, (float)this.circle2.Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle2.point.X, (float)this.circle2.point.Y, (float)this.circle2.Size, (float)this.circle2.Size);
+            pictureBox.Image = bitmap;
+        }
     }
 }

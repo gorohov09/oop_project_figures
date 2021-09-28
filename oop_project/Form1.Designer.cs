@@ -83,15 +83,22 @@ namespace oop_project
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBoxRingX = new System.Windows.Forms.TextBox();
-            this.textBoxRingY = new System.Windows.Forms.TextBox();
-            this.textBoxSizeRing1 = new System.Windows.Forms.TextBox();
-            this.textBoxSizeRing2 = new System.Windows.Forms.TextBox();
+            this.Move_Ring = new System.Windows.Forms.Button();
+            this.textBoxMoveRingY = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBoxMoveRingX = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxIDRing = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.Create_Ring = new System.Windows.Forms.Button();
+            this.textBoxSizeRing2 = new System.Windows.Forms.TextBox();
+            this.textBoxSizeRing1 = new System.Windows.Forms.TextBox();
+            this.textBoxRingY = new System.Windows.Forms.TextBox();
+            this.textBoxRingX = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -604,6 +611,13 @@ namespace oop_project
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.Move_Ring);
+            this.tabPage4.Controls.Add(this.textBoxMoveRingY);
+            this.tabPage4.Controls.Add(this.label26);
+            this.tabPage4.Controls.Add(this.textBoxMoveRingX);
+            this.tabPage4.Controls.Add(this.label25);
+            this.tabPage4.Controls.Add(this.textBoxIDRing);
+            this.tabPage4.Controls.Add(this.label24);
             this.tabPage4.Controls.Add(this.Create_Ring);
             this.tabPage4.Controls.Add(this.textBoxSizeRing2);
             this.tabPage4.Controls.Add(this.textBoxSizeRing1);
@@ -621,69 +635,63 @@ namespace oop_project
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // Move_Ring
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(21, 24);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(92, 13);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Координата по X";
+            this.Move_Ring.Location = new System.Drawing.Point(72, 332);
+            this.Move_Ring.Name = "Move_Ring";
+            this.Move_Ring.Size = new System.Drawing.Size(92, 22);
+            this.Move_Ring.TabIndex = 28;
+            this.Move_Ring.Text = "Переместить";
+            this.Move_Ring.UseVisualStyleBackColor = true;
+            this.Move_Ring.Click += new System.EventHandler(this.Move_Ring_Click);
             // 
-            // label21
+            // textBoxMoveRingY
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(21, 56);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 13);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Координата по Y";
+            this.textBoxMoveRingY.Location = new System.Drawing.Point(154, 295);
+            this.textBoxMoveRingY.Name = "textBoxMoveRingY";
+            this.textBoxMoveRingY.Size = new System.Drawing.Size(89, 20);
+            this.textBoxMoveRingY.TabIndex = 27;
             // 
-            // label22
+            // label26
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(21, 90);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(83, 13);
-            this.label22.TabIndex = 15;
-            this.label22.Text = "Радиус 1 круга";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(21, 298);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(86, 13);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "Смещение по Y";
             // 
-            // label23
+            // textBoxMoveRingX
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(21, 125);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(83, 13);
-            this.label23.TabIndex = 16;
-            this.label23.Text = "Радиус 2 круга";
+            this.textBoxMoveRingX.Location = new System.Drawing.Point(154, 255);
+            this.textBoxMoveRingX.Name = "textBoxMoveRingX";
+            this.textBoxMoveRingX.Size = new System.Drawing.Size(89, 20);
+            this.textBoxMoveRingX.TabIndex = 25;
             // 
-            // textBoxRingX
+            // label25
             // 
-            this.textBoxRingX.Location = new System.Drawing.Point(154, 21);
-            this.textBoxRingX.Name = "textBoxRingX";
-            this.textBoxRingX.Size = new System.Drawing.Size(91, 20);
-            this.textBoxRingX.TabIndex = 17;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(21, 258);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(86, 13);
+            this.label25.TabIndex = 24;
+            this.label25.Text = "Смещение по X";
             // 
-            // textBoxRingY
+            // textBoxIDRing
             // 
-            this.textBoxRingY.Location = new System.Drawing.Point(154, 53);
-            this.textBoxRingY.Name = "textBoxRingY";
-            this.textBoxRingY.Size = new System.Drawing.Size(91, 20);
-            this.textBoxRingY.TabIndex = 18;
+            this.textBoxIDRing.Location = new System.Drawing.Point(154, 212);
+            this.textBoxIDRing.Name = "textBoxIDRing";
+            this.textBoxIDRing.Size = new System.Drawing.Size(89, 20);
+            this.textBoxIDRing.TabIndex = 23;
             // 
-            // textBoxSizeRing1
+            // label24
             // 
-            this.textBoxSizeRing1.Location = new System.Drawing.Point(154, 87);
-            this.textBoxSizeRing1.Name = "textBoxSizeRing1";
-            this.textBoxSizeRing1.Size = new System.Drawing.Size(91, 20);
-            this.textBoxSizeRing1.TabIndex = 19;
-            // 
-            // textBoxSizeRing2
-            // 
-            this.textBoxSizeRing2.Location = new System.Drawing.Point(154, 122);
-            this.textBoxSizeRing2.Name = "textBoxSizeRing2";
-            this.textBoxSizeRing2.Size = new System.Drawing.Size(91, 20);
-            this.textBoxSizeRing2.TabIndex = 20;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(21, 215);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(118, 13);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Введите  ID элемента";
             // 
             // Create_Ring
             // 
@@ -694,6 +702,70 @@ namespace oop_project
             this.Create_Ring.Text = "Создать";
             this.Create_Ring.UseVisualStyleBackColor = true;
             this.Create_Ring.Click += new System.EventHandler(this.Create_Ring_Click);
+            // 
+            // textBoxSizeRing2
+            // 
+            this.textBoxSizeRing2.Location = new System.Drawing.Point(154, 122);
+            this.textBoxSizeRing2.Name = "textBoxSizeRing2";
+            this.textBoxSizeRing2.Size = new System.Drawing.Size(91, 20);
+            this.textBoxSizeRing2.TabIndex = 20;
+            // 
+            // textBoxSizeRing1
+            // 
+            this.textBoxSizeRing1.Location = new System.Drawing.Point(154, 87);
+            this.textBoxSizeRing1.Name = "textBoxSizeRing1";
+            this.textBoxSizeRing1.Size = new System.Drawing.Size(91, 20);
+            this.textBoxSizeRing1.TabIndex = 19;
+            // 
+            // textBoxRingY
+            // 
+            this.textBoxRingY.Location = new System.Drawing.Point(154, 53);
+            this.textBoxRingY.Name = "textBoxRingY";
+            this.textBoxRingY.Size = new System.Drawing.Size(91, 20);
+            this.textBoxRingY.TabIndex = 18;
+            // 
+            // textBoxRingX
+            // 
+            this.textBoxRingX.Location = new System.Drawing.Point(154, 21);
+            this.textBoxRingX.Name = "textBoxRingX";
+            this.textBoxRingX.Size = new System.Drawing.Size(91, 20);
+            this.textBoxRingX.TabIndex = 17;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(21, 125);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(83, 13);
+            this.label23.TabIndex = 16;
+            this.label23.Text = "Радиус 2 круга";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(21, 90);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(83, 13);
+            this.label22.TabIndex = 15;
+            this.label22.Text = "Радиус 1 круга";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(21, 56);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(92, 13);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Координата по Y";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(21, 24);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(92, 13);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Координата по X";
             // 
             // Form1
             // 
@@ -783,6 +855,13 @@ namespace oop_project
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button Create_Ring;
+        private System.Windows.Forms.Button Move_Ring;
+        private System.Windows.Forms.TextBox textBoxMoveRingY;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBoxMoveRingX;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBoxIDRing;
+        private System.Windows.Forms.Label label24;
     }
 }
 

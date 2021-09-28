@@ -18,6 +18,7 @@ namespace oop_project
         List<Rectangle> list_rectangles;
         List<Circle> list_circles;
         List<Line> list_lines;
+        List<Ring> list_rings;
 
         public Form1()
         {
@@ -27,6 +28,7 @@ namespace oop_project
             list_rectangles = new List<Rectangle>();
             list_circles = new List<Circle>();
             list_lines = new List<Line>();
+            list_rings = new List<Ring>();
         }
 
         private void Create_Rec_Click(object sender, EventArgs e)
@@ -308,18 +310,24 @@ namespace oop_project
 
             double x_circ_1 = Convert.ToDouble(textBoxRingX.Text);
             double y_circ_1 = Convert.ToDouble(textBoxRingY.Text);
-            double x_circ_2 = 0;
-            double y_circ_2 = 0;
+            double x_circ_2 = Convert.ToDouble(textBoxRingX.Text);
+            double y_circ_2 = Convert.ToDouble(textBoxRingY.Text);
 
             double circ1_size = Convert.ToDouble(textBoxSizeRing1.Text);
 
             double circ2_size = Convert.ToDouble(textBoxSizeRing2.Text);
 
+            double n = Math.Abs(circ2_size - circ1_size);
+
             if (circ2_size > circ1_size)
+            {    
+                x_circ_2 -= n / 2;
+                y_circ_2 -= n / 2;
+            }
+            else
             {
-                double n = circ2_size - circ1_size;
-                x_circ_2 = n / 2;
-                y_circ_2 = n / 2;
+                x_circ_1 -= n / 2;
+                y_circ_1 -= n / 2;
             }
 
             Circle circle1 = new Circle(x_circ_1, y_circ_1, circ1_size);
@@ -327,6 +335,31 @@ namespace oop_project
 
             ring = new Ring(circle1, circle2);
             ring.Draw();
+            list_rings.Add(ring);
+        }
+
+        private void Move_Ring_Click(object sender, EventArgs e)
+        {
+            double x_move = Convert.ToDouble(textBoxMoveRingX.Text);
+            double y_move = Convert.ToDouble(textBoxMoveRingY.Text);
+
+            if (textBoxIDCirc.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDRing.Text) < 0 || Convert.ToInt32(textBoxIDRing.Text) >= list_rings.Count)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rings.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                list_rings[Convert.ToInt32(textBoxIDRing.Text)].Move(x_move, y_move);
+            }
+            else
+            {
+                foreach (var item in list_rings)
+                {
+                    item.Move(x_move, y_move);
+                }
+            }
         }
     }
 }
