@@ -298,5 +298,35 @@ namespace oop_project
                 list_lines.Clear();
             }
         }
+
+        private void Create_Ring_Click(object sender, EventArgs e)
+        {
+            Ring.bitmap = bitmap;
+            Ring.pictureBox = PictureArea;
+
+            Ring ring;
+
+            double x_circ_1 = Convert.ToDouble(textBoxRingX.Text);
+            double y_circ_1 = Convert.ToDouble(textBoxRingY.Text);
+            double x_circ_2 = 0;
+            double y_circ_2 = 0;
+
+            double circ1_size = Convert.ToDouble(textBoxSizeRing1.Text);
+
+            double circ2_size = Convert.ToDouble(textBoxSizeRing2.Text);
+
+            if (circ2_size > circ1_size)
+            {
+                double n = circ2_size - circ1_size;
+                x_circ_2 = n / 2;
+                y_circ_2 = n / 2;
+            }
+
+            Circle circle1 = new Circle(x_circ_1, y_circ_1, circ1_size);
+            Circle circle2 = new Circle(x_circ_2, y_circ_2, circ2_size);
+
+            ring = new Ring(circle1, circle2);
+            ring.Draw();
+        }
     }
 }
