@@ -24,8 +24,7 @@ namespace oop_project
 
         public Rectangle(double x, double y, double size)
         {
-            this.point.X = x;
-            this.point.Y = y;
+            point = new MyPoint(x, y);
             this.Size = size;
         }
 
@@ -38,22 +37,19 @@ namespace oop_project
         {
             if (isValue == true)
             {
-                this.point.X = value;
-                this.point.Y = (double)new Random().Next(20, 500);
+                point = new MyPoint(value, (double)new Random().Next(20, 500));
                 this.Size = (double)new Random().Next(20, 300);
             }
             else
             {
-                this.point.X = (double)r.Next(20, 500);
-                this.point.Y = value;
+                point = new MyPoint((double)new Random().Next(20, 500), value);
                 this.Size = (double)r.Next(20, 300);
             }
         }
 
         public Rectangle()
         {
-            this.point.X = (double)r.Next(20, 400);
-            this.point.Y = (double)r.Next(20, 400);
+            point = new MyPoint((double)r.Next(20, 400), (double)r.Next(20, 400));
             this.Size = (double)r.Next(30, 150);
         }
 
@@ -69,28 +65,28 @@ namespace oop_project
             Graphics gr = Graphics.FromImage(bitmap);
             gr.DrawRectangle(Pens.White, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
-            this.X += dx;
-            this.Y += dy;
+            this.point.X += dx;
+            this.point.Y += dy;
 
-            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)Y, (float)Size, (float)Size);
+            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
         public void Change()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawRectangle(Pens.White, (float)point.X, (float)Y, (float)Size, (float)Size);
+            gr.DrawRectangle(Pens.White, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
             this.Size += r.Next(-50, 50);
 
-            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)Y, (float)Size, (float)Size);
+            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
         public void Delete()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawRectangle(Pens.White, (float)X, (float)Y, (float)Size, (float)Size);
+            gr.DrawRectangle(Pens.White, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 

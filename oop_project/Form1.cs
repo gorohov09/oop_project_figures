@@ -40,22 +40,22 @@ namespace oop_project
             if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Rectangle();
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecX.Text), Convert.ToDouble(textBoxRecY.Text));
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecX.Text), true);
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecY.Text), false);
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else
             {
@@ -64,7 +64,7 @@ namespace oop_project
                 double size_rec = Convert.ToDouble(textBoxSizeRec.Text);
                 MyPoint point = new MyPoint(x_rec, y_rec);
                 rectangle = new Rectangle(point, size_rec);
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
 
             list_rectangles.Add(rectangle);
@@ -157,22 +157,22 @@ namespace oop_project
             if ((textBoxCircX.Text == String.Empty) && (textBoxCircY.Text == String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle();
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
             }
             else if ((textBoxCircX.Text != String.Empty) && (textBoxCircY.Text != String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle(Convert.ToDouble(textBoxCircX.Text), Convert.ToDouble(textBoxCircY.Text));
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
             }
             else if ((textBoxCircX.Text != String.Empty) && (textBoxCircY.Text == String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle(Convert.ToDouble(textBoxCircX.Text), true);
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
             }
             else if ((textBoxCircX.Text == String.Empty) && (textBoxCircY.Text != String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle(Convert.ToDouble(textBoxCircY.Text), false);
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
             }
             else
             {
@@ -181,7 +181,7 @@ namespace oop_project
                 double size_circ = Convert.ToDouble(textBoxSizeCirc.Text);
                 MyPoint point = new MyPoint(x_circ, y_circ);
                 circle = new Circle(point, size_circ);
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
             }
 
             list_circles.Add(circle);
@@ -247,7 +247,7 @@ namespace oop_project
             if ((textBoxLineX1.Text == String.Empty) && (textBoxLineY1.Text == String.Empty) && (textBoxLineX2.Text == String.Empty) && (textBoxLineY2.Text == String.Empty))
             {
                 line = new Line();
-                MessageBox.Show($"Вы создали линию. Координаты: x1 = {line.X1} y1 = {line.Y1} x2 = {line.X2} y2 = {line.Y2}");
+                MessageBox.Show($"Вы создали линию. Координаты: x1 = {line.point1.X} y1 = {line.point1.Y} x2 = {line.point2.X} y2 = {line.point2.Y}");
             }
             else
             {
@@ -256,7 +256,7 @@ namespace oop_project
                 double x2_line = Convert.ToDouble(textBoxLineX2.Text);
                 double y2_line = Convert.ToDouble(textBoxLineY2.Text);
                 line = new Line(x1_line, y1_line, x2_line, y2_line);
-                MessageBox.Show($"Вы создали линию. Координаты: x1 = {line.X1} y1 = {line.Y1} x2 = {line.X2} y2 = {line.Y2}");
+                MessageBox.Show($"Вы создали линию. Координаты: x1 = {line.point1.X} y1 = {line.point1.Y} x2 = {line.point2.X} y2 = {line.point2.Y}");
             }
 
             list_lines.Add(line);
