@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using oop_project.Models;
 
 namespace oop_project
 {
@@ -177,7 +178,8 @@ namespace oop_project
                 double x_circ = Convert.ToDouble(textBoxCircX.Text);
                 double y_circ = Convert.ToDouble(textBoxCircY.Text);
                 double size_circ = Convert.ToDouble(textBoxSizeCirc.Text);
-                circle = new Circle(x_circ, y_circ, size_circ);
+                MyPoint point = new MyPoint(x_circ, y_circ);
+                circle = new Circle(point, size_circ);
                 MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
             }
 

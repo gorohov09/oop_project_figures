@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace oop_project.Models
 {
-    public class Point
+    public class MyPoint
     {
-        public int X { get; private set; }
+        public double X { get; set; }
 
-        public int Y { get; private set; }
+        public double Y { get; set; }
+
+        public MyPoint(double x, double y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
     }
 }

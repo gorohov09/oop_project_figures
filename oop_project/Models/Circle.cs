@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using oop_project.Models;
 
 namespace oop_project
 {
@@ -11,16 +12,19 @@ namespace oop_project
         public static PictureBox pictureBox;
         public static Bitmap bitmap;
 
-        public double X { get; private set; }
-
-        public double Y { get; private set; }
+        public MyPoint point { get; private set; }
 
         public double Size { get; set; }
 
+        public Circle(MyPoint point, double size)
+        {
+            this.point = point;
+        }
+
         public Circle(double x, double y, double size)
         {
-            this.X = x;
-            this.Y = y;
+            this.point.X = x;
+            this.point.Y = y;
             this.Size = size;
         }
 
@@ -33,49 +37,49 @@ namespace oop_project
         {
             if (isValue == true)
             {
-                this.X = value;
-                this.Y = (double)new Random().Next(20, 500);
+                this.point.X = value;
+                this.point.Y = (double)new Random().Next(20, 500);
                 this.Size = (double)new Random().Next(20, 300);
             }
             else
             {
-                this.X = (double)new Random().Next(20, 500);
-                this.Y = value;
+                this.point.X = (double)new Random().Next(20, 500);
+                this.point.Y = value;
                 this.Size = (double)new Random().Next(20, 300);
             }
         }
 
         public Circle()
         {
-            this.X = (double)r.Next(20, 400);
-            this.Y = (double)r.Next(20, 400);
+            this.point.X = (double)r.Next(20, 400);
+            this.point.Y = (double)r.Next(20, 400);
             this.Size = (double)r.Next(30, 150);
         }
 
         public void Draw()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawEllipse(Pens.LightGreen, (float)X, (float)Y, (float)Size, (float)Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.point.X, (float)this.point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
         public void Move(double dx, double dy)
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawEllipse(Pens.White, (float)X, (float)Y, (float)Size, (float)Size);
+            gr.DrawEllipse(Pens.White, (float)this.point.X, (float)this.point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
 
             this.X += dx;
             this.Y += dy;
 
-            gr.DrawEllipse(Pens.LightGreen, (float)X, (float)Y, (float)Size, (float)Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.point.X, (float)this.point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
         public void Delete()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawEllipse(Pens.White, (float)X, (float)Y, (float)Size, (float)Size);
+            gr.DrawEllipse(Pens.White, (float)this.point.X, (float)this.point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
     }
