@@ -70,8 +70,8 @@ namespace oop_project
             gr.DrawEllipse(Pens.White, (float)this.point.X, (float)this.point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
 
-            this.X += dx;
-            this.Y += dy;
+            this.point.X += dx;
+            this.point.Y += dy;
 
             gr.DrawEllipse(Pens.LightGreen, (float)this.point.X, (float)this.point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
