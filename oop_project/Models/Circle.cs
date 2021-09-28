@@ -19,6 +19,7 @@ namespace oop_project
         public Circle(MyPoint point, double size)
         {
             this.point = point;
+            this.Size = size;
         }
 
         public Circle(double x, double y, double size)

@@ -62,7 +62,8 @@ namespace oop_project
                 double x_rec = Convert.ToDouble(textBoxRecX.Text);
                 double y_rec = Convert.ToDouble(textBoxRecY.Text);
                 double size_rec = Convert.ToDouble(textBoxSizeRec.Text);
-                rectangle = new Rectangle(x_rec, y_rec, size_rec);
+                MyPoint point = new MyPoint(x_rec, y_rec);
+                rectangle = new Rectangle(point, size_rec);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
             }
 

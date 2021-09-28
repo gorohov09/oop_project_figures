@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using oop_project.Models;
 
 namespace oop_project
 {
@@ -11,11 +12,15 @@ namespace oop_project
         public static PictureBox pictureBox;
         public static Bitmap bitmap;
 
-        public double X { get; private set; }
-
-        public double Y { get; private set; }
+        public MyPoint point { get; private set; }
 
         public double Size { get; set; }
+
+        public Rectangle(MyPoint point, double size)
+        {
+            this.point = point;
+            this.Size = size;
+        }
 
         public Rectangle(double x, double y, double size)
         {
