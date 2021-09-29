@@ -35,25 +35,28 @@ namespace oop_project
             pictureBox.Image = bitmap;
         }
 
-        public void Move(double dx, double dy)
+        public void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawLine(Pens.White, (float)point1.X, (float)point1.Y, (float)point2.X, (float)point2.Y);
+            Pen pen = new Pen(color);
+            gr.DrawLine(pen, (float)point1.X, (float)point1.Y, (float)point2.X, (float)point2.Y);
             pictureBox.Image = bitmap;
+        }
+
+        public void Move(double dx, double dy)
+        {
+            Draw(Color.White);
             this.point1.X += dx;
             this.point1.Y += dy;
             this.point2.X += dx;
             this.point2.Y += dy;
 
-            gr.DrawLine(Pens.LightGreen, (float)point1.X, (float)point1.Y, (float)point2.X, (float)point2.Y);
-            pictureBox.Image = bitmap;
+            Draw(Color.LightGreen);
         }
 
         public void Delete()
         {
-            Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawLine(Pens.White, (float)point1.X, (float)point1.Y, (float)point2.X, (float)point2.Y);
-            pictureBox.Image = bitmap;
+            Draw(Color.White);
         }
     }
 }

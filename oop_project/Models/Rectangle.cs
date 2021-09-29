@@ -60,34 +60,32 @@ namespace oop_project
             pictureBox.Image = bitmap;
         }
 
-        public void Move(double dx, double dy)
+        public void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawRectangle(Pens.White, (float)point.X, (float)point.Y, (float)Size, (float)Size);
+            Pen pen = new Pen(color);
+            gr.DrawRectangle(pen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
+        }
+
+        public void Move(double dx, double dy)
+        {
+            Draw(Color.White);
             this.point.X += dx;
             this.point.Y += dy;
-
-            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
-            pictureBox.Image = bitmap;
+            Draw(Color.LightGreen);
         }
 
         public void Change()
         {
-            Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawRectangle(Pens.White, (float)point.X, (float)point.Y, (float)Size, (float)Size);
-            pictureBox.Image = bitmap;
+            Draw(Color.White);
             this.Size += r.Next(-50, 50);
-
-            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
-            pictureBox.Image = bitmap;
+            Draw(Color.LightGreen);
         }
 
         public void Delete()
         {
-            Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawRectangle(Pens.White, (float)point.X, (float)point.Y, (float)Size, (float)Size);
-            pictureBox.Image = bitmap;
+            Draw(Color.White);
         }
 
     }
