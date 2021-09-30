@@ -60,7 +60,7 @@ namespace oop_project
             pictureBox.Image = bitmap;
         }
 
-        public void Draw(Color color)
+        private void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);

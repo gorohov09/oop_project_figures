@@ -32,6 +32,8 @@ namespace oop_project
             this.PictureArea = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.trackBarRectY = new System.Windows.Forms.TrackBar();
+            this.trackBarRectX = new System.Windows.Forms.TrackBar();
             this.Change_Rec = new System.Windows.Forms.Button();
             this.textBoxSizeRec = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -102,6 +104,8 @@ namespace oop_project
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRectY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRectX)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -109,9 +113,9 @@ namespace oop_project
             // 
             // PictureArea
             // 
-            this.PictureArea.Location = new System.Drawing.Point(253, 2);
+            this.PictureArea.Location = new System.Drawing.Point(278, 2);
             this.PictureArea.Name = "PictureArea";
-            this.PictureArea.Size = new System.Drawing.Size(554, 456);
+            this.PictureArea.Size = new System.Drawing.Size(529, 456);
             this.PictureArea.TabIndex = 0;
             this.PictureArea.TabStop = false;
             // 
@@ -124,11 +128,13 @@ namespace oop_project
             this.tabControl1.Location = new System.Drawing.Point(-2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(259, 443);
+            this.tabControl1.Size = new System.Drawing.Size(335, 456);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.trackBarRectY);
+            this.tabPage1.Controls.Add(this.trackBarRectX);
             this.tabPage1.Controls.Add(this.Change_Rec);
             this.tabPage1.Controls.Add(this.textBoxSizeRec);
             this.tabPage1.Controls.Add(this.label6);
@@ -148,10 +154,28 @@ namespace oop_project
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(251, 417);
+            this.tabPage1.Size = new System.Drawing.Size(327, 430);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // trackBarRectY
+            // 
+            this.trackBarRectY.Location = new System.Drawing.Point(167, 48);
+            this.trackBarRectY.Maximum = 500;
+            this.trackBarRectY.Name = "trackBarRectY";
+            this.trackBarRectY.Size = new System.Drawing.Size(115, 45);
+            this.trackBarRectY.TabIndex = 17;
+            this.trackBarRectY.TickFrequency = 10;
+            // 
+            // trackBarRectX
+            // 
+            this.trackBarRectX.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarRectX.Location = new System.Drawing.Point(167, 11);
+            this.trackBarRectX.Maximum = 500;
+            this.trackBarRectX.Name = "trackBarRectX";
+            this.trackBarRectX.Size = new System.Drawing.Size(115, 45);
+            this.trackBarRectX.TabIndex = 16;
             // 
             // Change_Rec
             // 
@@ -165,23 +189,24 @@ namespace oop_project
             // 
             // textBoxSizeRec
             // 
-            this.textBoxSizeRec.Location = new System.Drawing.Point(154, 99);
+            this.textBoxSizeRec.Location = new System.Drawing.Point(208, 99);
             this.textBoxSizeRec.Name = "textBoxSizeRec";
-            this.textBoxSizeRec.Size = new System.Drawing.Size(89, 20);
+            this.textBoxSizeRec.Size = new System.Drawing.Size(74, 20);
             this.textBoxSizeRec.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(10, 102);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.Size = new System.Drawing.Size(138, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "Размер квадрата";
             // 
             // textBoxMoveRecX
             // 
-            this.textBoxMoveRecX.Location = new System.Drawing.Point(132, 207);
+            this.textBoxMoveRecX.Location = new System.Drawing.Point(206, 210);
             this.textBoxMoveRecX.Name = "textBoxMoveRecX";
             this.textBoxMoveRecX.Size = new System.Drawing.Size(91, 20);
             this.textBoxMoveRecX.TabIndex = 12;
@@ -205,7 +230,7 @@ namespace oop_project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 210);
+            this.label4.Location = new System.Drawing.Point(19, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 9;
@@ -233,7 +258,7 @@ namespace oop_project
             // 
             // textBoxIDRec
             // 
-            this.textBoxIDRec.Location = new System.Drawing.Point(134, 163);
+            this.textBoxIDRec.Location = new System.Drawing.Point(208, 170);
             this.textBoxIDRec.Name = "textBoxIDRec";
             this.textBoxIDRec.Size = new System.Drawing.Size(89, 20);
             this.textBoxIDRec.TabIndex = 6;
@@ -241,52 +266,58 @@ namespace oop_project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 170);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(10, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 13);
+            this.label3.Size = new System.Drawing.Size(170, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Введите  ID элемента";
             // 
             // Create_Rec
             // 
-            this.Create_Rec.Location = new System.Drawing.Point(62, 135);
+            this.Create_Rec.BackColor = System.Drawing.Color.IndianRed;
+            this.Create_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Create_Rec.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Create_Rec.Location = new System.Drawing.Point(96, 125);
             this.Create_Rec.Name = "Create_Rec";
-            this.Create_Rec.Size = new System.Drawing.Size(92, 22);
+            this.Create_Rec.Size = new System.Drawing.Size(111, 32);
             this.Create_Rec.TabIndex = 4;
             this.Create_Rec.Text = "Создать";
-            this.Create_Rec.UseVisualStyleBackColor = true;
+            this.Create_Rec.UseVisualStyleBackColor = false;
             this.Create_Rec.Click += new System.EventHandler(this.Create_Rec_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(10, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.Size = new System.Drawing.Size(133, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Координата по Y";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(10, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.Size = new System.Drawing.Size(132, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Координата по X";
             // 
             // textBoxRecY
             // 
-            this.textBoxRecY.Location = new System.Drawing.Point(154, 62);
+            this.textBoxRecY.Location = new System.Drawing.Point(288, 62);
             this.textBoxRecY.Name = "textBoxRecY";
-            this.textBoxRecY.Size = new System.Drawing.Size(90, 20);
+            this.textBoxRecY.Size = new System.Drawing.Size(36, 20);
             this.textBoxRecY.TabIndex = 1;
             // 
             // textBoxRecX
             // 
-            this.textBoxRecX.Location = new System.Drawing.Point(154, 25);
+            this.textBoxRecX.Location = new System.Drawing.Point(288, 25);
             this.textBoxRecX.Name = "textBoxRecX";
-            this.textBoxRecX.Size = new System.Drawing.Size(91, 20);
+            this.textBoxRecX.Size = new System.Drawing.Size(36, 20);
             this.textBoxRecX.TabIndex = 0;
             // 
             // tabPage2
@@ -309,7 +340,7 @@ namespace oop_project
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(251, 417);
+            this.tabPage2.Size = new System.Drawing.Size(275, 430);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -462,7 +493,7 @@ namespace oop_project
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(251, 417);
+            this.tabPage3.Size = new System.Drawing.Size(275, 430);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -630,7 +661,7 @@ namespace oop_project
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(251, 417);
+            this.tabPage4.Size = new System.Drawing.Size(275, 430);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -780,6 +811,8 @@ namespace oop_project
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRectY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRectX)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -862,6 +895,8 @@ namespace oop_project
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBoxIDRing;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TrackBar trackBarRectY;
+        private System.Windows.Forms.TrackBar trackBarRectX;
     }
 }
 

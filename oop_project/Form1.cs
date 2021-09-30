@@ -29,6 +29,20 @@ namespace oop_project
             list_circles = new List<Circle>();
             list_lines = new List<Line>();
             list_rings = new List<Ring>();
+
+            trackBarRectX.Scroll += TrackBarRectX_Scroll;
+            trackBarRectY.Scroll += TrackBarRectY_Scroll;
+            
+        }
+
+        private void TrackBarRectY_Scroll(object sender, EventArgs e)
+        {
+            textBoxRecY.Text = Convert.ToString(trackBarRectY.Value);
+        }
+
+        private void TrackBarRectX_Scroll(object sender, EventArgs e)
+        {
+            textBoxRecX.Text = Convert.ToString(trackBarRectX.Value);
         }
 
         private void Create_Rec_Click(object sender, EventArgs e)
