@@ -32,7 +32,14 @@ namespace oop_project
 
             trackBarRectX.Scroll += TrackBarRectX_Scroll;
             trackBarRectY.Scroll += TrackBarRectY_Scroll;
+
+            listBox1.SelectedIndexChanged += ListBox1_SelectedIndexChanged;
             
+        }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxIDRec.Text = listBox1.SelectedIndex.ToString();
         }
 
         private void TrackBarRectY_Scroll(object sender, EventArgs e)
@@ -84,6 +91,8 @@ namespace oop_project
             }
 
             list_rectangles.Add(rectangle);
+
+            listBox1.Items.Add(rectangle.ToString() + $"№{list_rectangles.Count}");
 
             rectangle.Draw();
         }
@@ -150,6 +159,8 @@ namespace oop_project
 
                 list_rectangles[Convert.ToInt32(textBoxIDRec.Text)].Delete();
                 list_rectangles.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
+                listBox1.Items.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
+                listBox1.Refresh();
             }
             else
             {          

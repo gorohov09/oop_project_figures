@@ -88,5 +88,10 @@ namespace oop_project
             Draw(Color.White);
         }
 
+        public override string ToString()
+        {
+            return "Квадрат";
+        }
+
     }
 }

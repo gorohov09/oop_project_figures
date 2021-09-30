@@ -101,6 +101,7 @@ namespace oop_project
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -133,6 +134,7 @@ namespace oop_project
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.trackBarRectY);
             this.tabPage1.Controls.Add(this.trackBarRectX);
             this.tabPage1.Controls.Add(this.Change_Rec);
@@ -798,6 +800,14 @@ namespace oop_project
             this.label20.TabIndex = 4;
             this.label20.Text = "Координата по X";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(192, 312);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(119, 95);
+            this.listBox1.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -897,6 +907,7 @@ namespace oop_project
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TrackBar trackBarRectY;
         private System.Windows.Forms.TrackBar trackBarRectX;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
