@@ -112,7 +112,7 @@ namespace oop_project
             }
 
             //list_rectangles.Add(rectangle);
-            ArrayOperation.AddElement(list_rectangles, rectangle);
+            list_rectangles = ArrayOperation.AddElement(list_rectangles, rectangle);
 
             listBoxRect.Items.Add(rectangle.ToString() + $"№{list_rectangles.Length}");
 
@@ -181,7 +181,7 @@ namespace oop_project
 
                 list_rectangles[Convert.ToInt32(textBoxIDRec.Text)].Delete();
                 //list_rectangles.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
-                ArrayOperation.RemoveElement(list_rectangles, Convert.ToInt32(textBoxIDRec.Text));
+                list_rectangles = ArrayOperation.RemoveElement(list_rectangles, Convert.ToInt32(textBoxIDRec.Text));
                 listBoxRect.Items.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
                 listBoxRect.Refresh();
             }
@@ -193,7 +193,7 @@ namespace oop_project
                     item.Delete();
                 }
                 //list_rectangles.Clear();
-                ArrayOperation.Clear(list_rectangles);
+                list_rectangles = ArrayOperation.Clear(list_rectangles);
                 listBoxRect.Items.Clear();
                 listBoxRect.Refresh();
             }
