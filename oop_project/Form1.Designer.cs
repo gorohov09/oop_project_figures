@@ -32,6 +32,7 @@ namespace oop_project
             this.PictureArea = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
             this.listBoxRect = new System.Windows.Forms.ListBox();
             this.trackBarRectY = new System.Windows.Forms.TrackBar();
             this.trackBarRectX = new System.Windows.Forms.TrackBar();
@@ -65,8 +66,6 @@ namespace oop_project
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxCircY = new System.Windows.Forms.TextBox();
             this.textBoxCircX = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Delete_Line = new System.Windows.Forms.Button();
             this.Move_Line = new System.Windows.Forms.Button();
@@ -102,7 +101,12 @@ namespace oop_project
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.trackBarCircX = new System.Windows.Forms.TrackBar();
+            this.trackBarCircY = new System.Windows.Forms.TrackBar();
+            this.listBoxCirc = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -111,6 +115,8 @@ namespace oop_project
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarCircX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarCircY)).BeginInit();
             this.SuspendLayout();
             // 
             // PictureArea
@@ -163,6 +169,16 @@ namespace oop_project
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(205, 207);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(144, 16);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "Список квадратов";
+            // 
             // listBoxRect
             // 
             this.listBoxRect.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -175,13 +191,14 @@ namespace oop_project
             this.listBoxRect.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxRect.Size = new System.Drawing.Size(119, 178);
             this.listBoxRect.TabIndex = 18;
+            this.listBoxRect.SelectedIndexChanged += new System.EventHandler(this.listBoxRect_SelectedIndexChanged_1);
             // 
             // trackBarRectY
             // 
             this.trackBarRectY.Location = new System.Drawing.Point(167, 48);
             this.trackBarRectY.Maximum = 500;
             this.trackBarRectY.Name = "trackBarRectY";
-            this.trackBarRectY.Size = new System.Drawing.Size(115, 45);
+            this.trackBarRectY.Size = new System.Drawing.Size(140, 45);
             this.trackBarRectY.TabIndex = 17;
             this.trackBarRectY.TickFrequency = 10;
             // 
@@ -191,7 +208,7 @@ namespace oop_project
             this.trackBarRectX.Location = new System.Drawing.Point(167, 11);
             this.trackBarRectX.Maximum = 500;
             this.trackBarRectX.Name = "trackBarRectX";
-            this.trackBarRectX.Size = new System.Drawing.Size(115, 45);
+            this.trackBarRectX.Size = new System.Drawing.Size(140, 45);
             this.trackBarRectX.TabIndex = 16;
             // 
             // Change_Rec
@@ -334,20 +351,26 @@ namespace oop_project
             // 
             // textBoxRecY
             // 
-            this.textBoxRecY.Location = new System.Drawing.Point(288, 62);
+            this.textBoxRecY.Location = new System.Drawing.Point(313, 50);
             this.textBoxRecY.Name = "textBoxRecY";
             this.textBoxRecY.Size = new System.Drawing.Size(36, 20);
             this.textBoxRecY.TabIndex = 1;
             // 
             // textBoxRecX
             // 
-            this.textBoxRecX.Location = new System.Drawing.Point(288, 25);
+            this.textBoxRecX.Location = new System.Drawing.Point(313, 24);
             this.textBoxRecX.Name = "textBoxRecX";
             this.textBoxRecX.Size = new System.Drawing.Size(36, 20);
             this.textBoxRecX.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.listBoxCirc);
+            this.tabPage2.Controls.Add(this.trackBarCircY);
+            this.tabPage2.Controls.Add(this.trackBarCircX);
+            this.tabPage2.Controls.Add(this.label29);
+            this.tabPage2.Controls.Add(this.label28);
             this.tabPage2.Controls.Add(this.Delete_Circ);
             this.tabPage2.Controls.Add(this.Move_Circ);
             this.tabPage2.Controls.Add(this.textBoxMoveCircY);
@@ -361,141 +384,131 @@ namespace oop_project
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.textBoxCircY);
             this.tabPage2.Controls.Add(this.textBoxCircX);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(327, 430);
+            this.tabPage2.Size = new System.Drawing.Size(364, 430);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Delete_Circ
             // 
-            this.Delete_Circ.Location = new System.Drawing.Point(78, 323);
+            this.Delete_Circ.BackColor = System.Drawing.Color.Maroon;
+            this.Delete_Circ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_Circ.Location = new System.Drawing.Point(134, 280);
             this.Delete_Circ.Name = "Delete_Circ";
-            this.Delete_Circ.Size = new System.Drawing.Size(90, 20);
+            this.Delete_Circ.Size = new System.Drawing.Size(90, 30);
             this.Delete_Circ.TabIndex = 24;
             this.Delete_Circ.Text = "Удалить";
-            this.Delete_Circ.UseVisualStyleBackColor = true;
+            this.Delete_Circ.UseVisualStyleBackColor = false;
             this.Delete_Circ.Click += new System.EventHandler(this.Delete_Circ_Click);
             // 
             // Move_Circ
             // 
-            this.Move_Circ.Location = new System.Drawing.Point(78, 283);
+            this.Move_Circ.BackColor = System.Drawing.Color.Maroon;
+            this.Move_Circ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Move_Circ.Location = new System.Drawing.Point(6, 280);
             this.Move_Circ.Name = "Move_Circ";
-            this.Move_Circ.Size = new System.Drawing.Size(92, 22);
+            this.Move_Circ.Size = new System.Drawing.Size(122, 30);
             this.Move_Circ.TabIndex = 23;
             this.Move_Circ.Text = "Переместить";
-            this.Move_Circ.UseVisualStyleBackColor = true;
+            this.Move_Circ.UseVisualStyleBackColor = false;
             this.Move_Circ.Click += new System.EventHandler(this.Move_Circ_Click);
             // 
             // textBoxMoveCircY
             // 
-            this.textBoxMoveCircY.Location = new System.Drawing.Point(154, 241);
+            this.textBoxMoveCircY.Location = new System.Drawing.Point(143, 241);
             this.textBoxMoveCircY.Name = "textBoxMoveCircY";
-            this.textBoxMoveCircY.Size = new System.Drawing.Size(89, 20);
+            this.textBoxMoveCircY.Size = new System.Drawing.Size(37, 20);
             this.textBoxMoveCircY.TabIndex = 22;
             // 
             // textBoxMoveCircX
             // 
-            this.textBoxMoveCircX.Location = new System.Drawing.Point(154, 205);
+            this.textBoxMoveCircX.Location = new System.Drawing.Point(143, 204);
             this.textBoxMoveCircX.Name = "textBoxMoveCircX";
-            this.textBoxMoveCircX.Size = new System.Drawing.Size(89, 20);
+            this.textBoxMoveCircX.Size = new System.Drawing.Size(37, 20);
             this.textBoxMoveCircX.TabIndex = 21;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 244);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(9, 242);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.Size = new System.Drawing.Size(119, 16);
             this.label12.TabIndex = 20;
             this.label12.Text = "Смещение по Y";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 208);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(10, 205);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 13);
+            this.label11.Size = new System.Drawing.Size(118, 16);
             this.label11.TabIndex = 19;
             this.label11.Text = "Смещение по X";
             // 
             // textBoxIDCirc
             // 
-            this.textBoxIDCirc.Location = new System.Drawing.Point(154, 167);
+            this.textBoxIDCirc.Location = new System.Drawing.Point(188, 166);
             this.textBoxIDCirc.Name = "textBoxIDCirc";
-            this.textBoxIDCirc.Size = new System.Drawing.Size(89, 20);
+            this.textBoxIDCirc.Size = new System.Drawing.Size(41, 20);
             this.textBoxIDCirc.TabIndex = 18;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 170);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(10, 167);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 13);
+            this.label10.Size = new System.Drawing.Size(170, 16);
             this.label10.TabIndex = 17;
             this.label10.Text = "Введите  ID элемента";
             // 
             // Create_Circ
             // 
-            this.Create_Circ.Location = new System.Drawing.Point(78, 127);
+            this.Create_Circ.BackColor = System.Drawing.Color.Maroon;
+            this.Create_Circ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Create_Circ.Location = new System.Drawing.Point(94, 117);
             this.Create_Circ.Name = "Create_Circ";
-            this.Create_Circ.Size = new System.Drawing.Size(92, 22);
+            this.Create_Circ.Size = new System.Drawing.Size(116, 35);
             this.Create_Circ.TabIndex = 16;
             this.Create_Circ.Text = "Создать";
-            this.Create_Circ.UseVisualStyleBackColor = true;
+            this.Create_Circ.UseVisualStyleBackColor = false;
             this.Create_Circ.Click += new System.EventHandler(this.Create_Circ_Click);
             // 
             // textBoxSizeCirc
             // 
-            this.textBoxSizeCirc.Location = new System.Drawing.Point(154, 89);
+            this.textBoxSizeCirc.Location = new System.Drawing.Point(188, 91);
             this.textBoxSizeCirc.Name = "textBoxSizeCirc";
-            this.textBoxSizeCirc.Size = new System.Drawing.Size(91, 20);
+            this.textBoxSizeCirc.Size = new System.Drawing.Size(69, 20);
             this.textBoxSizeCirc.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(20, 92);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 13);
+            this.label9.Size = new System.Drawing.Size(110, 16);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Размер круга(Радиус)";
+            this.label9.Text = "Размер круга";
             // 
             // textBoxCircY
             // 
-            this.textBoxCircY.Location = new System.Drawing.Point(154, 47);
+            this.textBoxCircY.Location = new System.Drawing.Point(315, 47);
             this.textBoxCircY.Name = "textBoxCircY";
-            this.textBoxCircY.Size = new System.Drawing.Size(91, 20);
+            this.textBoxCircY.Size = new System.Drawing.Size(26, 20);
             this.textBoxCircY.TabIndex = 6;
             // 
             // textBoxCircX
             // 
-            this.textBoxCircX.Location = new System.Drawing.Point(154, 13);
+            this.textBoxCircX.Location = new System.Drawing.Point(315, 16);
             this.textBoxCircX.Name = "textBoxCircX";
-            this.textBoxCircX.Size = new System.Drawing.Size(91, 20);
+            this.textBoxCircX.Size = new System.Drawing.Size(26, 20);
             this.textBoxCircX.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Координата по Y";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Координата по X";
             // 
             // tabPage3
             // 
@@ -519,7 +532,7 @@ namespace oop_project
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(327, 430);
+            this.tabPage3.Size = new System.Drawing.Size(364, 430);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -687,7 +700,7 @@ namespace oop_project
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(327, 430);
+            this.tabPage4.Size = new System.Drawing.Size(364, 430);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -824,15 +837,67 @@ namespace oop_project
             this.label20.TabIndex = 4;
             this.label20.Text = "Координата по X";
             // 
-            // label27
+            // label28
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(205, 207);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(144, 16);
-            this.label27.TabIndex = 19;
-            this.label27.Text = "Список квадратов";
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(10, 17);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(132, 16);
+            this.label28.TabIndex = 25;
+            this.label28.Text = "Координата по X";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(10, 51);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(133, 16);
+            this.label29.TabIndex = 26;
+            this.label29.Text = "Координата по Y";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
+            // 
+            // trackBarCircX
+            // 
+            this.trackBarCircX.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarCircX.Location = new System.Drawing.Point(163, 6);
+            this.trackBarCircX.Maximum = 500;
+            this.trackBarCircX.Name = "trackBarCircX";
+            this.trackBarCircX.Size = new System.Drawing.Size(137, 45);
+            this.trackBarCircX.TabIndex = 27;
+            // 
+            // trackBarCircY
+            // 
+            this.trackBarCircY.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarCircY.Location = new System.Drawing.Point(163, 38);
+            this.trackBarCircY.Maximum = 500;
+            this.trackBarCircY.Name = "trackBarCircY";
+            this.trackBarCircY.Size = new System.Drawing.Size(137, 45);
+            this.trackBarCircY.TabIndex = 28;
+            // 
+            // listBoxCirc
+            // 
+            this.listBoxCirc.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxCirc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxCirc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxCirc.FormattingEnabled = true;
+            this.listBoxCirc.ItemHeight = 16;
+            this.listBoxCirc.Location = new System.Drawing.Point(230, 226);
+            this.listBoxCirc.Name = "listBoxCirc";
+            this.listBoxCirc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxCirc.Size = new System.Drawing.Size(119, 178);
+            this.listBoxCirc.TabIndex = 29;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(227, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 16);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Список кругов";
             // 
             // Form1
             // 
@@ -855,6 +920,8 @@ namespace oop_project
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarCircX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarCircY)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -886,8 +953,6 @@ namespace oop_project
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxCircY;
         private System.Windows.Forms.TextBox textBoxCircX;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Create_Circ;
         private System.Windows.Forms.Label label11;
@@ -935,6 +1000,12 @@ namespace oop_project
         private System.Windows.Forms.TrackBar trackBarRectX;
         private System.Windows.Forms.ListBox listBoxRect;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TrackBar trackBarCircY;
+        private System.Windows.Forms.TrackBar trackBarCircX;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox listBoxCirc;
     }
 }
 

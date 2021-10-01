@@ -32,14 +32,32 @@ namespace oop_project
 
             trackBarRectX.Scroll += TrackBarRectX_Scroll;
             trackBarRectY.Scroll += TrackBarRectY_Scroll;
+            trackBarCircX.Scroll += TrackBarCircX_Scroll;
+            trackBarCircY.Scroll += TrackBarCircY_Scroll;
 
             listBoxRect.SelectedIndexChanged += ListBoxRect_SelectedIndexChanged;
+            listBoxCirc.SelectedIndexChanged += ListBoxCirc_SelectedIndexChanged;
             
+        }
+
+        private void ListBoxCirc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxIDCirc.Text = listBoxCirc.SelectedIndex.ToString();
+        }
+
+        private void TrackBarCircY_Scroll(object sender, EventArgs e)
+        {
+            textBoxCircY.Text = Convert.ToString(trackBarCircY.Value);
+        }
+
+        private void TrackBarCircX_Scroll(object sender, EventArgs e)
+        {
+            textBoxCircX.Text = Convert.ToString(trackBarCircX.Value);
         }
 
         private void ListBoxRect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBoxIDRec.Text = listBoxRect.SelectedIndex.ToString(); ;
+            textBoxIDRec.Text = listBoxRect.SelectedIndex.ToString(); 
         }
 
         private void TrackBarRectY_Scroll(object sender, EventArgs e)
@@ -213,6 +231,8 @@ namespace oop_project
 
             list_circles.Add(circle);
 
+            listBoxCirc.Items.Add(circle.ToString() + $"№{list_circles.Count + 1}")
+
             circle.Draw();
         }
 
@@ -252,6 +272,8 @@ namespace oop_project
 
                 list_circles[Convert.ToInt32(textBoxIDCirc.Text)].Delete();
                 list_circles.RemoveAt(Convert.ToInt32(textBoxIDCirc.Text));
+                listBoxCirc.Items.RemoveAt(Convert.ToInt32(textBoxIDCirc.Text));
+                listBoxCirc.Refresh();
             }
             else
             {
@@ -385,6 +407,16 @@ namespace oop_project
                     item.Move(x_move, y_move);
                 }
             }
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxRect_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
