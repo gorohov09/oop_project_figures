@@ -15,7 +15,8 @@ namespace oop_project
     {
         Bitmap bitmap;
 
-        List<Rectangle> list_rectangles;
+        //List<Rectangle> list_rectangles;
+        Rectangle[] list_rectangles;
         List<Circle> list_circles;
         List<Line> list_lines;
         List<Ring> list_rings;
@@ -25,7 +26,7 @@ namespace oop_project
             InitializeComponent();
             bitmap = new Bitmap(PictureArea.Width, PictureArea.Height);
 
-            list_rectangles = new List<Rectangle>();
+            list_rectangles = new Rectangle[0] { };
             list_circles = new List<Circle>();
             list_lines = new List<Line>();
             list_rings = new List<Ring>();
@@ -110,9 +111,10 @@ namespace oop_project
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
 
-            list_rectangles.Add(rectangle);
+            //list_rectangles.Add(rectangle);
+            ArrayOperation.AddElement(list_rectangles, rectangle);
 
-            listBoxRect.Items.Add(rectangle.ToString() + $"№{list_rectangles.Count}");
+            listBoxRect.Items.Add(rectangle.ToString() + $"№{list_rectangles.Length}");
 
             rectangle.Draw();
         }
@@ -125,9 +127,9 @@ namespace oop_project
 
             if (textBoxIDRec.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Count)
+                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -148,9 +150,9 @@ namespace oop_project
 
             if (textBoxIDRec.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Count)
+                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -171,14 +173,15 @@ namespace oop_project
 
             if (textBoxIDRec.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Count)
+                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 list_rectangles[Convert.ToInt32(textBoxIDRec.Text)].Delete();
-                list_rectangles.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
+                //list_rectangles.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
+                ArrayOperation.RemoveElement(list_rectangles, Convert.ToInt32(textBoxIDRec.Text));
                 listBoxRect.Items.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
                 listBoxRect.Refresh();
             }
@@ -189,7 +192,8 @@ namespace oop_project
                 {
                     item.Delete();
                 }
-                list_rectangles.Clear();
+                //list_rectangles.Clear();
+                ArrayOperation.Clear(list_rectangles);
                 listBoxRect.Items.Clear();
                 listBoxRect.Refresh();
             }
