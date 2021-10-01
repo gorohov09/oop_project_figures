@@ -90,11 +90,13 @@ namespace oop_project
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
+                //rectangle = Rectangle.X(Convert.ToDouble(textBoxRecX.Text));
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecX.Text), true);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
+                //rectangle = Rectangle.Y(Convert.ToDouble(textBoxRecY.Text));
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecY.Text), false);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
@@ -188,6 +190,8 @@ namespace oop_project
                     item.Delete();
                 }
                 list_rectangles.Clear();
+                listBoxRect.Items.Clear();
+                listBoxRect.Refresh();
             }
         }
 
@@ -231,7 +235,7 @@ namespace oop_project
 
             list_circles.Add(circle);
 
-            listBoxCirc.Items.Add(circle.ToString() + $"№{list_circles.Count + 1}")
+            listBoxCirc.Items.Add(circle.ToString() + $"№{list_circles.Count}");
 
             circle.Draw();
         }
@@ -282,6 +286,8 @@ namespace oop_project
                     item.Delete();
                 }
                 list_circles.Clear();
+                listBoxCirc.Items.Clear();
+                listBoxCirc.Refresh();
             }
         }
 
