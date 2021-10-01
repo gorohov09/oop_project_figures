@@ -32,6 +32,7 @@ namespace oop_project
             this.PictureArea = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listBoxRect = new System.Windows.Forms.ListBox();
             this.trackBarRectY = new System.Windows.Forms.TrackBar();
             this.trackBarRectX = new System.Windows.Forms.TrackBar();
             this.Change_Rec = new System.Windows.Forms.Button();
@@ -101,7 +102,7 @@ namespace oop_project
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -114,9 +115,9 @@ namespace oop_project
             // 
             // PictureArea
             // 
-            this.PictureArea.Location = new System.Drawing.Point(278, 2);
+            this.PictureArea.Location = new System.Drawing.Point(367, 2);
             this.PictureArea.Name = "PictureArea";
-            this.PictureArea.Size = new System.Drawing.Size(529, 456);
+            this.PictureArea.Size = new System.Drawing.Size(510, 520);
             this.PictureArea.TabIndex = 0;
             this.PictureArea.TabStop = false;
             // 
@@ -129,12 +130,13 @@ namespace oop_project
             this.tabControl1.Location = new System.Drawing.Point(-2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(335, 456);
+            this.tabControl1.Size = new System.Drawing.Size(372, 456);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.label27);
+            this.tabPage1.Controls.Add(this.listBoxRect);
             this.tabPage1.Controls.Add(this.trackBarRectY);
             this.tabPage1.Controls.Add(this.trackBarRectX);
             this.tabPage1.Controls.Add(this.Change_Rec);
@@ -156,10 +158,23 @@ namespace oop_project
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(327, 430);
+            this.tabPage1.Size = new System.Drawing.Size(364, 430);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // listBoxRect
+            // 
+            this.listBoxRect.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxRect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxRect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxRect.FormattingEnabled = true;
+            this.listBoxRect.ItemHeight = 16;
+            this.listBoxRect.Location = new System.Drawing.Point(225, 226);
+            this.listBoxRect.Name = "listBoxRect";
+            this.listBoxRect.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxRect.Size = new System.Drawing.Size(119, 178);
+            this.listBoxRect.TabIndex = 18;
             // 
             // trackBarRectY
             // 
@@ -181,12 +196,14 @@ namespace oop_project
             // 
             // Change_Rec
             // 
-            this.Change_Rec.Location = new System.Drawing.Point(51, 317);
+            this.Change_Rec.BackColor = System.Drawing.Color.Maroon;
+            this.Change_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_Rec.Location = new System.Drawing.Point(20, 317);
             this.Change_Rec.Name = "Change_Rec";
-            this.Change_Rec.Size = new System.Drawing.Size(128, 23);
+            this.Change_Rec.Size = new System.Drawing.Size(160, 52);
             this.Change_Rec.TabIndex = 15;
             this.Change_Rec.Text = "Изменить сторону квадрата";
-            this.Change_Rec.UseVisualStyleBackColor = true;
+            this.Change_Rec.UseVisualStyleBackColor = false;
             this.Change_Rec.Click += new System.EventHandler(this.Change_Rec_Click);
             // 
             // textBoxSizeRec
@@ -208,61 +225,68 @@ namespace oop_project
             // 
             // textBoxMoveRecX
             // 
-            this.textBoxMoveRecX.Location = new System.Drawing.Point(206, 210);
+            this.textBoxMoveRecX.Location = new System.Drawing.Point(134, 209);
             this.textBoxMoveRecX.Name = "textBoxMoveRecX";
-            this.textBoxMoveRecX.Size = new System.Drawing.Size(91, 20);
+            this.textBoxMoveRecX.Size = new System.Drawing.Size(45, 20);
             this.textBoxMoveRecX.TabIndex = 12;
             // 
             // textBoxMoveRecY
             // 
-            this.textBoxMoveRecY.Location = new System.Drawing.Point(130, 242);
+            this.textBoxMoveRecY.Location = new System.Drawing.Point(134, 242);
             this.textBoxMoveRecY.Name = "textBoxMoveRecY";
-            this.textBoxMoveRecY.Size = new System.Drawing.Size(91, 20);
+            this.textBoxMoveRecY.Size = new System.Drawing.Size(46, 20);
             this.textBoxMoveRecY.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(10, 249);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.Size = new System.Drawing.Size(119, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Смещение по Y";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 213);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(10, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Смещение по X";
             // 
             // DeleteRec
             // 
-            this.DeleteRec.Location = new System.Drawing.Point(130, 281);
+            this.DeleteRec.BackColor = System.Drawing.Color.DarkRed;
+            this.DeleteRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteRec.Location = new System.Drawing.Point(121, 280);
             this.DeleteRec.Name = "DeleteRec";
-            this.DeleteRec.Size = new System.Drawing.Size(90, 20);
+            this.DeleteRec.Size = new System.Drawing.Size(98, 31);
             this.DeleteRec.TabIndex = 8;
             this.DeleteRec.Text = "Удалить";
-            this.DeleteRec.UseVisualStyleBackColor = true;
+            this.DeleteRec.UseVisualStyleBackColor = false;
             this.DeleteRec.Click += new System.EventHandler(this.DeleteRec_Click);
             // 
             // Move_Rec
             // 
-            this.Move_Rec.Location = new System.Drawing.Point(13, 280);
+            this.Move_Rec.BackColor = System.Drawing.Color.Maroon;
+            this.Move_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Move_Rec.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Move_Rec.Location = new System.Drawing.Point(3, 280);
             this.Move_Rec.Name = "Move_Rec";
-            this.Move_Rec.Size = new System.Drawing.Size(92, 22);
+            this.Move_Rec.Size = new System.Drawing.Size(115, 31);
             this.Move_Rec.TabIndex = 7;
             this.Move_Rec.Text = "Переместить";
-            this.Move_Rec.UseVisualStyleBackColor = true;
+            this.Move_Rec.UseVisualStyleBackColor = false;
             this.Move_Rec.Click += new System.EventHandler(this.Move_Rec_Click);
             // 
             // textBoxIDRec
             // 
-            this.textBoxIDRec.Location = new System.Drawing.Point(208, 170);
+            this.textBoxIDRec.Location = new System.Drawing.Point(186, 173);
             this.textBoxIDRec.Name = "textBoxIDRec";
-            this.textBoxIDRec.Size = new System.Drawing.Size(89, 20);
+            this.textBoxIDRec.Size = new System.Drawing.Size(46, 20);
             this.textBoxIDRec.TabIndex = 6;
             // 
             // label3
@@ -342,7 +366,7 @@ namespace oop_project
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(275, 430);
+            this.tabPage2.Size = new System.Drawing.Size(327, 430);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -495,7 +519,7 @@ namespace oop_project
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(275, 430);
+            this.tabPage3.Size = new System.Drawing.Size(327, 430);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -663,7 +687,7 @@ namespace oop_project
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(275, 430);
+            this.tabPage4.Size = new System.Drawing.Size(327, 430);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -800,19 +824,21 @@ namespace oop_project
             this.label20.TabIndex = 4;
             this.label20.Text = "Координата по X";
             // 
-            // listBox1
+            // label27
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(192, 312);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(119, 95);
-            this.listBox1.TabIndex = 18;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(205, 207);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(144, 16);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "Список квадратов";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 457);
+            this.ClientSize = new System.Drawing.Size(873, 516);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.PictureArea);
             this.Name = "Form1";
@@ -907,7 +933,8 @@ namespace oop_project
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TrackBar trackBarRectY;
         private System.Windows.Forms.TrackBar trackBarRectX;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxRect;
+        private System.Windows.Forms.Label label27;
     }
 }
 
