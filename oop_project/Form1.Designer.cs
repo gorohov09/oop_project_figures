@@ -93,6 +93,7 @@ namespace oop_project
             this.textBoxLineY = new System.Windows.Forms.TextBox();
             this.textBoxLineX = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.Delete_Ring = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listBoxRing = new System.Windows.Forms.ListBox();
             this.trackBarRingY = new System.Windows.Forms.TrackBar();
@@ -113,7 +114,26 @@ namespace oop_project
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.Delete_Ring = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Delete_MyFigure = new System.Windows.Forms.Button();
+            this.Move_MyFigure = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.listBoxMyFigures = new System.Windows.Forms.ListBox();
+            this.textBoxMoveMyFigureY = new System.Windows.Forms.TextBox();
+            this.textBoxMoveMyFigureX = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBoxIDMyFigure = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Create_MyFigure = new System.Windows.Forms.Button();
+            this.textBoxMyFigureCircSize = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBoxMyFigureY = new System.Windows.Forms.TextBox();
+            this.trackBarMyFigureY = new System.Windows.Forms.TrackBar();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBoxMyFigureX = new System.Windows.Forms.TextBox();
+            this.trackBarMyFigureX = new System.Windows.Forms.TrackBar();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -128,11 +148,14 @@ namespace oop_project
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRingY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRingX)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureX)).BeginInit();
             this.SuspendLayout();
             // 
             // PictureArea
             // 
-            this.PictureArea.Location = new System.Drawing.Point(367, 2);
+            this.PictureArea.Location = new System.Drawing.Point(363, 2);
             this.PictureArea.Name = "PictureArea";
             this.PictureArea.Size = new System.Drawing.Size(510, 520);
             this.PictureArea.TabIndex = 0;
@@ -144,6 +167,8 @@ namespace oop_project
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl1.Location = new System.Drawing.Point(-2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -172,10 +197,10 @@ namespace oop_project
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBoxRecY);
             this.tabPage1.Controls.Add(this.textBoxRecX);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(364, 430);
+            this.tabPage1.Size = new System.Drawing.Size(364, 428);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -237,7 +262,7 @@ namespace oop_project
             // 
             this.textBoxSizeRec.Location = new System.Drawing.Point(208, 99);
             this.textBoxSizeRec.Name = "textBoxSizeRec";
-            this.textBoxSizeRec.Size = new System.Drawing.Size(74, 20);
+            this.textBoxSizeRec.Size = new System.Drawing.Size(74, 21);
             this.textBoxSizeRec.TabIndex = 14;
             // 
             // label6
@@ -254,14 +279,14 @@ namespace oop_project
             // 
             this.textBoxMoveRecX.Location = new System.Drawing.Point(134, 209);
             this.textBoxMoveRecX.Name = "textBoxMoveRecX";
-            this.textBoxMoveRecX.Size = new System.Drawing.Size(45, 20);
+            this.textBoxMoveRecX.Size = new System.Drawing.Size(45, 21);
             this.textBoxMoveRecX.TabIndex = 12;
             // 
             // textBoxMoveRecY
             // 
             this.textBoxMoveRecY.Location = new System.Drawing.Point(134, 242);
             this.textBoxMoveRecY.Name = "textBoxMoveRecY";
-            this.textBoxMoveRecY.Size = new System.Drawing.Size(46, 20);
+            this.textBoxMoveRecY.Size = new System.Drawing.Size(46, 21);
             this.textBoxMoveRecY.TabIndex = 11;
             // 
             // label5
@@ -313,7 +338,7 @@ namespace oop_project
             // 
             this.textBoxIDRec.Location = new System.Drawing.Point(186, 173);
             this.textBoxIDRec.Name = "textBoxIDRec";
-            this.textBoxIDRec.Size = new System.Drawing.Size(46, 20);
+            this.textBoxIDRec.Size = new System.Drawing.Size(46, 21);
             this.textBoxIDRec.TabIndex = 6;
             // 
             // label3
@@ -363,14 +388,14 @@ namespace oop_project
             // 
             this.textBoxRecY.Location = new System.Drawing.Point(313, 50);
             this.textBoxRecY.Name = "textBoxRecY";
-            this.textBoxRecY.Size = new System.Drawing.Size(36, 20);
+            this.textBoxRecY.Size = new System.Drawing.Size(36, 21);
             this.textBoxRecY.TabIndex = 1;
             // 
             // textBoxRecX
             // 
             this.textBoxRecX.Location = new System.Drawing.Point(313, 24);
             this.textBoxRecX.Name = "textBoxRecX";
-            this.textBoxRecX.Size = new System.Drawing.Size(36, 20);
+            this.textBoxRecX.Size = new System.Drawing.Size(36, 21);
             this.textBoxRecX.TabIndex = 0;
             // 
             // tabPage2
@@ -394,10 +419,10 @@ namespace oop_project
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.textBoxCircY);
             this.tabPage2.Controls.Add(this.textBoxCircX);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(364, 430);
+            this.tabPage2.Size = new System.Drawing.Size(364, 428);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -491,14 +516,14 @@ namespace oop_project
             // 
             this.textBoxMoveCircY.Location = new System.Drawing.Point(143, 241);
             this.textBoxMoveCircY.Name = "textBoxMoveCircY";
-            this.textBoxMoveCircY.Size = new System.Drawing.Size(37, 20);
+            this.textBoxMoveCircY.Size = new System.Drawing.Size(37, 21);
             this.textBoxMoveCircY.TabIndex = 22;
             // 
             // textBoxMoveCircX
             // 
             this.textBoxMoveCircX.Location = new System.Drawing.Point(143, 204);
             this.textBoxMoveCircX.Name = "textBoxMoveCircX";
-            this.textBoxMoveCircX.Size = new System.Drawing.Size(37, 20);
+            this.textBoxMoveCircX.Size = new System.Drawing.Size(37, 21);
             this.textBoxMoveCircX.TabIndex = 21;
             // 
             // label12
@@ -525,7 +550,7 @@ namespace oop_project
             // 
             this.textBoxIDCirc.Location = new System.Drawing.Point(188, 166);
             this.textBoxIDCirc.Name = "textBoxIDCirc";
-            this.textBoxIDCirc.Size = new System.Drawing.Size(41, 20);
+            this.textBoxIDCirc.Size = new System.Drawing.Size(41, 21);
             this.textBoxIDCirc.TabIndex = 18;
             // 
             // label10
@@ -554,7 +579,7 @@ namespace oop_project
             // 
             this.textBoxSizeCirc.Location = new System.Drawing.Point(188, 91);
             this.textBoxSizeCirc.Name = "textBoxSizeCirc";
-            this.textBoxSizeCirc.Size = new System.Drawing.Size(69, 20);
+            this.textBoxSizeCirc.Size = new System.Drawing.Size(69, 21);
             this.textBoxSizeCirc.TabIndex = 15;
             // 
             // label9
@@ -571,14 +596,14 @@ namespace oop_project
             // 
             this.textBoxCircY.Location = new System.Drawing.Point(315, 47);
             this.textBoxCircY.Name = "textBoxCircY";
-            this.textBoxCircY.Size = new System.Drawing.Size(26, 20);
+            this.textBoxCircY.Size = new System.Drawing.Size(26, 21);
             this.textBoxCircY.TabIndex = 6;
             // 
             // textBoxCircX
             // 
             this.textBoxCircX.Location = new System.Drawing.Point(315, 16);
             this.textBoxCircX.Name = "textBoxCircX";
-            this.textBoxCircX.Size = new System.Drawing.Size(26, 20);
+            this.textBoxCircX.Size = new System.Drawing.Size(26, 21);
             this.textBoxCircX.TabIndex = 5;
             // 
             // tabPage3
@@ -602,10 +627,10 @@ namespace oop_project
             this.tabPage3.Controls.Add(this.Create_Line);
             this.tabPage3.Controls.Add(this.textBoxLineY);
             this.tabPage3.Controls.Add(this.textBoxLineX);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(364, 430);
+            this.tabPage3.Size = new System.Drawing.Size(364, 428);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -637,7 +662,7 @@ namespace oop_project
             // 
             this.textBoxLineSize.Location = new System.Drawing.Point(166, 88);
             this.textBoxLineSize.Name = "textBoxLineSize";
-            this.textBoxLineSize.Size = new System.Drawing.Size(69, 20);
+            this.textBoxLineSize.Size = new System.Drawing.Size(69, 21);
             this.textBoxLineSize.TabIndex = 33;
             // 
             // label14
@@ -716,21 +741,21 @@ namespace oop_project
             // 
             this.textBoxMoveLineY.Location = new System.Drawing.Point(143, 242);
             this.textBoxMoveLineY.Name = "textBoxMoveLineY";
-            this.textBoxMoveLineY.Size = new System.Drawing.Size(37, 20);
+            this.textBoxMoveLineY.Size = new System.Drawing.Size(37, 21);
             this.textBoxMoveLineY.TabIndex = 25;
             // 
             // textBoxMoveLineX
             // 
             this.textBoxMoveLineX.Location = new System.Drawing.Point(143, 209);
             this.textBoxMoveLineX.Name = "textBoxMoveLineX";
-            this.textBoxMoveLineX.Size = new System.Drawing.Size(37, 20);
+            this.textBoxMoveLineX.Size = new System.Drawing.Size(37, 21);
             this.textBoxMoveLineX.TabIndex = 24;
             // 
             // textBoxIDLine
             // 
             this.textBoxIDLine.Location = new System.Drawing.Point(186, 176);
             this.textBoxIDLine.Name = "textBoxIDLine";
-            this.textBoxIDLine.Size = new System.Drawing.Size(41, 20);
+            this.textBoxIDLine.Size = new System.Drawing.Size(41, 21);
             this.textBoxIDLine.TabIndex = 23;
             // 
             // label19
@@ -779,14 +804,14 @@ namespace oop_project
             // 
             this.textBoxLineY.Location = new System.Drawing.Point(329, 44);
             this.textBoxLineY.Name = "textBoxLineY";
-            this.textBoxLineY.Size = new System.Drawing.Size(29, 20);
+            this.textBoxLineY.Size = new System.Drawing.Size(29, 21);
             this.textBoxLineY.TabIndex = 11;
             // 
             // textBoxLineX
             // 
             this.textBoxLineX.Location = new System.Drawing.Point(329, 15);
             this.textBoxLineX.Name = "textBoxLineX";
-            this.textBoxLineX.Size = new System.Drawing.Size(29, 20);
+            this.textBoxLineX.Size = new System.Drawing.Size(29, 21);
             this.textBoxLineX.TabIndex = 10;
             // 
             // tabPage4
@@ -812,13 +837,25 @@ namespace oop_project
             this.tabPage4.Controls.Add(this.label22);
             this.tabPage4.Controls.Add(this.label21);
             this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(364, 430);
+            this.tabPage4.Size = new System.Drawing.Size(364, 428);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // Delete_Ring
+            // 
+            this.Delete_Ring.BackColor = System.Drawing.Color.Maroon;
+            this.Delete_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_Ring.Location = new System.Drawing.Point(130, 324);
+            this.Delete_Ring.Name = "Delete_Ring";
+            this.Delete_Ring.Size = new System.Drawing.Size(99, 31);
+            this.Delete_Ring.TabIndex = 33;
+            this.Delete_Ring.Text = "Удалить";
+            this.Delete_Ring.UseVisualStyleBackColor = false;
+            this.Delete_Ring.Click += new System.EventHandler(this.Delete_Ring_Click);
             // 
             // label8
             // 
@@ -877,7 +914,7 @@ namespace oop_project
             // 
             this.textBoxMoveRingY.Location = new System.Drawing.Point(130, 284);
             this.textBoxMoveRingY.Name = "textBoxMoveRingY";
-            this.textBoxMoveRingY.Size = new System.Drawing.Size(45, 20);
+            this.textBoxMoveRingY.Size = new System.Drawing.Size(45, 21);
             this.textBoxMoveRingY.TabIndex = 27;
             // 
             // label26
@@ -894,7 +931,7 @@ namespace oop_project
             // 
             this.textBoxMoveRingX.Location = new System.Drawing.Point(130, 245);
             this.textBoxMoveRingX.Name = "textBoxMoveRingX";
-            this.textBoxMoveRingX.Size = new System.Drawing.Size(45, 20);
+            this.textBoxMoveRingX.Size = new System.Drawing.Size(45, 21);
             this.textBoxMoveRingX.TabIndex = 25;
             // 
             // label25
@@ -911,7 +948,7 @@ namespace oop_project
             // 
             this.textBoxIDRing.Location = new System.Drawing.Point(182, 211);
             this.textBoxIDRing.Name = "textBoxIDRing";
-            this.textBoxIDRing.Size = new System.Drawing.Size(45, 20);
+            this.textBoxIDRing.Size = new System.Drawing.Size(45, 21);
             this.textBoxIDRing.TabIndex = 23;
             // 
             // label24
@@ -941,28 +978,28 @@ namespace oop_project
             // 
             this.textBoxSizeRing2.Location = new System.Drawing.Point(154, 124);
             this.textBoxSizeRing2.Name = "textBoxSizeRing2";
-            this.textBoxSizeRing2.Size = new System.Drawing.Size(45, 20);
+            this.textBoxSizeRing2.Size = new System.Drawing.Size(45, 21);
             this.textBoxSizeRing2.TabIndex = 20;
             // 
             // textBoxSizeRing1
             // 
             this.textBoxSizeRing1.Location = new System.Drawing.Point(154, 89);
             this.textBoxSizeRing1.Name = "textBoxSizeRing1";
-            this.textBoxSizeRing1.Size = new System.Drawing.Size(45, 20);
+            this.textBoxSizeRing1.Size = new System.Drawing.Size(45, 21);
             this.textBoxSizeRing1.TabIndex = 19;
             // 
             // textBoxRingY
             // 
             this.textBoxRingY.Location = new System.Drawing.Point(325, 55);
             this.textBoxRingY.Name = "textBoxRingY";
-            this.textBoxRingY.Size = new System.Drawing.Size(33, 20);
+            this.textBoxRingY.Size = new System.Drawing.Size(33, 21);
             this.textBoxRingY.TabIndex = 18;
             // 
             // textBoxRingX
             // 
             this.textBoxRingX.Location = new System.Drawing.Point(325, 21);
             this.textBoxRingX.Name = "textBoxRingX";
-            this.textBoxRingX.Size = new System.Drawing.Size(33, 20);
+            this.textBoxRingX.Size = new System.Drawing.Size(33, 21);
             this.textBoxRingX.TabIndex = 17;
             // 
             // label23
@@ -1005,17 +1042,214 @@ namespace oop_project
             this.label20.TabIndex = 4;
             this.label20.Text = "Координата по X";
             // 
-            // Delete_Ring
+            // tabPage5
             // 
-            this.Delete_Ring.BackColor = System.Drawing.Color.Maroon;
-            this.Delete_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delete_Ring.Location = new System.Drawing.Point(130, 324);
-            this.Delete_Ring.Name = "Delete_Ring";
-            this.Delete_Ring.Size = new System.Drawing.Size(99, 31);
-            this.Delete_Ring.TabIndex = 33;
-            this.Delete_Ring.Text = "Удалить";
-            this.Delete_Ring.UseVisualStyleBackColor = false;
-            this.Delete_Ring.Click += new System.EventHandler(this.Delete_Ring_Click);
+            this.tabPage5.Controls.Add(this.Delete_MyFigure);
+            this.tabPage5.Controls.Add(this.Move_MyFigure);
+            this.tabPage5.Controls.Add(this.label37);
+            this.tabPage5.Controls.Add(this.listBoxMyFigures);
+            this.tabPage5.Controls.Add(this.textBoxMoveMyFigureY);
+            this.tabPage5.Controls.Add(this.textBoxMoveMyFigureX);
+            this.tabPage5.Controls.Add(this.label36);
+            this.tabPage5.Controls.Add(this.label35);
+            this.tabPage5.Controls.Add(this.textBoxIDMyFigure);
+            this.tabPage5.Controls.Add(this.label34);
+            this.tabPage5.Controls.Add(this.Create_MyFigure);
+            this.tabPage5.Controls.Add(this.textBoxMyFigureCircSize);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Controls.Add(this.textBoxMyFigureY);
+            this.tabPage5.Controls.Add(this.trackBarMyFigureY);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.textBoxMyFigureX);
+            this.tabPage5.Controls.Add(this.trackBarMyFigureX);
+            this.tabPage5.Controls.Add(this.label16);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(364, 428);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Произвольная фигура";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // Delete_MyFigure
+            // 
+            this.Delete_MyFigure.BackColor = System.Drawing.Color.Maroon;
+            this.Delete_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_MyFigure.Location = new System.Drawing.Point(125, 319);
+            this.Delete_MyFigure.Name = "Delete_MyFigure";
+            this.Delete_MyFigure.Size = new System.Drawing.Size(99, 31);
+            this.Delete_MyFigure.TabIndex = 49;
+            this.Delete_MyFigure.Text = "Удалить";
+            this.Delete_MyFigure.UseVisualStyleBackColor = false;
+            this.Delete_MyFigure.Click += new System.EventHandler(this.Delete_MyFigure_Click);
+            // 
+            // Move_MyFigure
+            // 
+            this.Move_MyFigure.BackColor = System.Drawing.Color.Maroon;
+            this.Move_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Move_MyFigure.Location = new System.Drawing.Point(3, 320);
+            this.Move_MyFigure.Name = "Move_MyFigure";
+            this.Move_MyFigure.Size = new System.Drawing.Size(114, 30);
+            this.Move_MyFigure.TabIndex = 48;
+            this.Move_MyFigure.Text = "Переместить";
+            this.Move_MyFigure.UseVisualStyleBackColor = false;
+            this.Move_MyFigure.Click += new System.EventHandler(this.Move_MyFigure_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(233, 222);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(111, 16);
+            this.label37.TabIndex = 47;
+            this.label37.Text = "Список фигур";
+            // 
+            // listBoxMyFigures
+            // 
+            this.listBoxMyFigures.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxMyFigures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxMyFigures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxMyFigures.FormattingEnabled = true;
+            this.listBoxMyFigures.ItemHeight = 16;
+            this.listBoxMyFigures.Location = new System.Drawing.Point(236, 241);
+            this.listBoxMyFigures.Name = "listBoxMyFigures";
+            this.listBoxMyFigures.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxMyFigures.Size = new System.Drawing.Size(119, 178);
+            this.listBoxMyFigures.TabIndex = 46;
+            // 
+            // textBoxMoveMyFigureY
+            // 
+            this.textBoxMoveMyFigureY.Location = new System.Drawing.Point(137, 277);
+            this.textBoxMoveMyFigureY.Name = "textBoxMoveMyFigureY";
+            this.textBoxMoveMyFigureY.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMoveMyFigureY.TabIndex = 45;
+            // 
+            // textBoxMoveMyFigureX
+            // 
+            this.textBoxMoveMyFigureX.Location = new System.Drawing.Point(137, 241);
+            this.textBoxMoveMyFigureX.Name = "textBoxMoveMyFigureX";
+            this.textBoxMoveMyFigureX.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMoveMyFigureX.TabIndex = 44;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(3, 280);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(119, 16);
+            this.label36.TabIndex = 43;
+            this.label36.Text = "Смещение по Y";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.Location = new System.Drawing.Point(3, 244);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(118, 16);
+            this.label35.TabIndex = 42;
+            this.label35.Text = "Смещение по X";
+            // 
+            // textBoxIDMyFigure
+            // 
+            this.textBoxIDMyFigure.Location = new System.Drawing.Point(179, 203);
+            this.textBoxIDMyFigure.Name = "textBoxIDMyFigure";
+            this.textBoxIDMyFigure.Size = new System.Drawing.Size(45, 21);
+            this.textBoxIDMyFigure.TabIndex = 41;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(3, 206);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(170, 16);
+            this.label34.TabIndex = 40;
+            this.label34.Text = "Введите  ID элемента";
+            // 
+            // Create_MyFigure
+            // 
+            this.Create_MyFigure.BackColor = System.Drawing.Color.Maroon;
+            this.Create_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Create_MyFigure.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Create_MyFigure.Location = new System.Drawing.Point(100, 146);
+            this.Create_MyFigure.Name = "Create_MyFigure";
+            this.Create_MyFigure.Size = new System.Drawing.Size(127, 31);
+            this.Create_MyFigure.TabIndex = 39;
+            this.Create_MyFigure.Text = "Создать";
+            this.Create_MyFigure.UseVisualStyleBackColor = false;
+            this.Create_MyFigure.Click += new System.EventHandler(this.Create_MyFigure_Click);
+            // 
+            // textBoxMyFigureCircSize
+            // 
+            this.textBoxMyFigureCircSize.Location = new System.Drawing.Point(182, 90);
+            this.textBoxMyFigureCircSize.Name = "textBoxMyFigureCircSize";
+            this.textBoxMyFigureCircSize.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMyFigureCircSize.TabIndex = 37;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(23, 93);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(124, 16);
+            this.label32.TabIndex = 35;
+            this.label32.Text = "Размер фигуры";
+            // 
+            // textBoxMyFigureY
+            // 
+            this.textBoxMyFigureY.Location = new System.Drawing.Point(309, 51);
+            this.textBoxMyFigureY.Name = "textBoxMyFigureY";
+            this.textBoxMyFigureY.Size = new System.Drawing.Size(33, 21);
+            this.textBoxMyFigureY.TabIndex = 34;
+            // 
+            // trackBarMyFigureY
+            // 
+            this.trackBarMyFigureY.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarMyFigureY.Location = new System.Drawing.Point(149, 45);
+            this.trackBarMyFigureY.Maximum = 500;
+            this.trackBarMyFigureY.Name = "trackBarMyFigureY";
+            this.trackBarMyFigureY.Size = new System.Drawing.Size(140, 45);
+            this.trackBarMyFigureY.TabIndex = 33;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(10, 54);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(133, 16);
+            this.label31.TabIndex = 32;
+            this.label31.Text = "Координата по Y";
+            // 
+            // textBoxMyFigureX
+            // 
+            this.textBoxMyFigureX.Location = new System.Drawing.Point(309, 13);
+            this.textBoxMyFigureX.Name = "textBoxMyFigureX";
+            this.textBoxMyFigureX.Size = new System.Drawing.Size(33, 21);
+            this.textBoxMyFigureX.TabIndex = 31;
+            // 
+            // trackBarMyFigureX
+            // 
+            this.trackBarMyFigureX.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarMyFigureX.Location = new System.Drawing.Point(148, 6);
+            this.trackBarMyFigureX.Maximum = 500;
+            this.trackBarMyFigureX.Name = "trackBarMyFigureX";
+            this.trackBarMyFigureX.Size = new System.Drawing.Size(140, 45);
+            this.trackBarMyFigureX.TabIndex = 30;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(10, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(132, 16);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Координата по X";
             // 
             // Form1
             // 
@@ -1044,6 +1278,10 @@ namespace oop_project
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRingY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRingX)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1135,6 +1373,26 @@ namespace oop_project
         private System.Windows.Forms.ListBox listBoxLine;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button Delete_Ring;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button Delete_MyFigure;
+        private System.Windows.Forms.Button Move_MyFigure;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ListBox listBoxMyFigures;
+        private System.Windows.Forms.TextBox textBoxMoveMyFigureY;
+        private System.Windows.Forms.TextBox textBoxMoveMyFigureX;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBoxIDMyFigure;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button Create_MyFigure;
+        private System.Windows.Forms.TextBox textBoxMyFigureCircSize;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBoxMyFigureY;
+        private System.Windows.Forms.TrackBar trackBarMyFigureY;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBoxMyFigureX;
+        private System.Windows.Forms.TrackBar trackBarMyFigureX;
+        private System.Windows.Forms.Label label16;
     }
 }
 
