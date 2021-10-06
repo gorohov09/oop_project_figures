@@ -47,22 +47,6 @@ namespace oop_project
             }
         }
 
-        //public static Rectangle X(double x)
-        //{
-        //    Rectangle rectangle = new Rectangle();
-        //    rectangle.point = new MyPoint(x, (double)new Random().Next(20, 500));
-        //    rectangle.Size = (double)new Random().Next(20, 300);
-        //    return rectangle;
-        //}
-
-        //public static Rectangle Y(double y)
-        //{
-        //    Rectangle rectangle = new Rectangle();
-        //    rectangle.point = new MyPoint((double)new Random().Next(20, 500), y);
-        //    rectangle.Size = (double)r.Next(20, 300);
-        //    return rectangle;
-        //}
-
         public Rectangle()
         {
             point = new MyPoint((double)r.Next(20, 400), (double)r.Next(20, 400));

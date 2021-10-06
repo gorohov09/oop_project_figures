@@ -15,11 +15,10 @@ namespace oop_project
     {
         Bitmap bitmap;
 
-        //List<Rectangle> list_rectangles;
         Rectangle[] list_rectangles;
-        List<Circle> list_circles;
-        List<Line> list_lines;
-        List<Ring> list_rings;
+        Circle[] list_circles;
+        Line[] list_lines;
+        Ring[] list_rings;
 
         public Form1()
         {
@@ -27,18 +26,54 @@ namespace oop_project
             bitmap = new Bitmap(PictureArea.Width, PictureArea.Height);
 
             list_rectangles = new Rectangle[0] { };
-            list_circles = new List<Circle>();
-            list_lines = new List<Line>();
-            list_rings = new List<Ring>();
+            list_circles = new Circle[0] { };
+            list_lines = new Line[0] { };
+            list_rings = new Ring[0] { };
 
             trackBarRectX.Scroll += TrackBarRectX_Scroll;
             trackBarRectY.Scroll += TrackBarRectY_Scroll;
             trackBarCircX.Scroll += TrackBarCircX_Scroll;
             trackBarCircY.Scroll += TrackBarCircY_Scroll;
+            trackBarRingX.Scroll += TrackBarRingX_Scroll;
+            trackBarRingY.Scroll += TrackBarRingY_Scroll;
+            trackBarLineX.Scroll += TrackBarLineX_Scroll;
+            trackBarLineY.Scroll += TrackBarLineY_Scroll;
 
             listBoxRect.SelectedIndexChanged += ListBoxRect_SelectedIndexChanged;
             listBoxCirc.SelectedIndexChanged += ListBoxCirc_SelectedIndexChanged;
+            listBoxRing.SelectedIndexChanged += ListBoxRing_SelectedIndexChanged;
+            listBoxLine.SelectedIndexChanged += ListBoxLine_SelectedIndexChanged;
             
+        }
+
+        private void ListBoxLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxIDLine.Text = listBoxLine.SelectedIndex.ToString();
+        }
+
+        private void TrackBarLineY_Scroll(object sender, EventArgs e)
+        {
+            textBoxLineY.Text = Convert.ToString(trackBarLineY.Value);
+        }
+
+        private void TrackBarLineX_Scroll(object sender, EventArgs e)
+        {
+            textBoxLineX.Text = Convert.ToString(trackBarLineX.Value);
+        }
+
+        private void ListBoxRing_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxIDRing.Text = listBoxRing.SelectedIndex.ToString();
+        }
+
+        private void TrackBarRingY_Scroll(object sender, EventArgs e)
+        {
+            textBoxRingY.Text = Convert.ToString(trackBarRingY.Value);
+        }
+
+        private void TrackBarRingX_Scroll(object sender, EventArgs e)
+        {
+            textBoxRingX.Text = Convert.ToString(trackBarRingX.Value);
         }
 
         private void ListBoxCirc_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,13 +126,11 @@ namespace oop_project
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
-                //rectangle = Rectangle.X(Convert.ToDouble(textBoxRecX.Text));
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecX.Text), true);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
-                //rectangle = Rectangle.Y(Convert.ToDouble(textBoxRecY.Text));
                 rectangle = new Rectangle(Convert.ToDouble(textBoxRecY.Text), false);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
@@ -111,7 +144,6 @@ namespace oop_project
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
 
-            //list_rectangles.Add(rectangle);
             list_rectangles = ArrayOperation.AddElement(list_rectangles, rectangle);
 
             listBoxRect.Items.Add(rectangle.ToString() + $"№{list_rectangles.Length}");
@@ -237,9 +269,9 @@ namespace oop_project
                 MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
             }
 
-            list_circles.Add(circle);
+            list_circles = ArrayOperation.AddElement(list_circles, circle);
 
-            listBoxCirc.Items.Add(circle.ToString() + $"№{list_circles.Count}");
+            listBoxCirc.Items.Add(circle.ToString() + $"№{list_circles.Length}");
 
             circle.Draw();
         }
@@ -251,9 +283,9 @@ namespace oop_project
 
             if (textBoxIDCirc.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDCirc.Text) < 0 || Convert.ToInt32(textBoxIDCirc.Text) >= list_circles.Count)
+                if (Convert.ToInt32(textBoxIDCirc.Text) < 0 || Convert.ToInt32(textBoxIDCirc.Text) >= list_circles.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_circles.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_circles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -272,14 +304,14 @@ namespace oop_project
         {
             if (textBoxIDCirc.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDCirc.Text) < 0 || Convert.ToInt32(textBoxIDCirc.Text) >= list_circles.Count)
+                if (Convert.ToInt32(textBoxIDCirc.Text) < 0 || Convert.ToInt32(textBoxIDCirc.Text) >= list_circles.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_circles.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_circles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 list_circles[Convert.ToInt32(textBoxIDCirc.Text)].Delete();
-                list_circles.RemoveAt(Convert.ToInt32(textBoxIDCirc.Text));
+                list_circles = ArrayOperation.RemoveElement(list_circles, Convert.ToInt32(textBoxIDCirc.Text));
                 listBoxCirc.Items.RemoveAt(Convert.ToInt32(textBoxIDCirc.Text));
                 listBoxCirc.Refresh();
             }
@@ -289,7 +321,8 @@ namespace oop_project
                 {
                     item.Delete();
                 }
-                list_circles.Clear();
+                //list_circles.Clear();
+                list_circles = ArrayOperation.Clear(list_circles);
                 listBoxCirc.Items.Clear();
                 listBoxCirc.Refresh();
             }
@@ -303,22 +336,23 @@ namespace oop_project
             Line line;
 
 
-            if ((textBoxLineX1.Text == String.Empty) && (textBoxLineY1.Text == String.Empty) && (textBoxLineX2.Text == String.Empty) && (textBoxLineY2.Text == String.Empty))
+            if ((textBoxLineX.Text == String.Empty) && (textBoxLineY.Text == String.Empty) && (textBoxLineSize.Text == String.Empty))
             {
                 line = new Line();
-                MessageBox.Show($"Вы создали линию. Координаты: x1 = {line.point1.X} y1 = {line.point1.Y} x2 = {line.point2.X} y2 = {line.point2.Y}");
+                MessageBox.Show($"Вы создали линию. Координаты базовой точки: x1 = {line.point.X} y1 = {line.point.Y}. Размер: {line.Size}");
             }
             else
             {
-                double x1_line = Convert.ToDouble(textBoxLineX1.Text);
-                double y1_line = Convert.ToDouble(textBoxLineY1.Text);
-                double x2_line = Convert.ToDouble(textBoxLineX2.Text);
-                double y2_line = Convert.ToDouble(textBoxLineY2.Text);
-                line = new Line(x1_line, y1_line, x2_line, y2_line);
-                MessageBox.Show($"Вы создали линию. Координаты: x1 = {line.point1.X} y1 = {line.point1.Y} x2 = {line.point2.X} y2 = {line.point2.Y}");
+                double x1_line = Convert.ToDouble(textBoxLineX.Text);
+                double y1_line = Convert.ToDouble(textBoxLineY.Text);
+                double size_line = Convert.ToDouble(textBoxLineSize.Text);
+                line = new Line(x1_line, y1_line, size_line);
+                MessageBox.Show($"Вы создали линию. Координаты базовой точки: x1 = {line.point.X} y1 = {line.point.Y}. Размер: {line.Size}");
             }
 
-            list_lines.Add(line);
+            list_lines = ArrayOperation.AddElement(list_lines, line);
+
+            listBoxLine.Items.Add(line.ToString() + $"№{list_lines.Length}");
 
             line.Draw();
         }
@@ -328,9 +362,15 @@ namespace oop_project
             double x_move = Convert.ToDouble(textBoxMoveLineX.Text);
             double y_move = Convert.ToDouble(textBoxMoveLineY.Text);
 
-            if (textBoxIDRec.Text != String.Empty)
+            if (textBoxIDLine.Text != String.Empty)
             {
-                list_lines[Convert.ToInt32(textBoxIDRec.Text)].Move(x_move, y_move);
+                if (Convert.ToInt32(textBoxIDLine.Text) < 0 || Convert.ToInt32(textBoxIDLine.Text) >= list_lines.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_lines.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                list_lines[Convert.ToInt32(textBoxIDLine.Text)].Move(x_move, y_move);
             }
             else
             {
@@ -345,8 +385,16 @@ namespace oop_project
         {
             if (textBoxIDLine.Text != String.Empty)
             {
+                if (Convert.ToInt32(textBoxIDLine.Text) < 0 || Convert.ToInt32(textBoxIDLine.Text) >= list_lines.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_lines.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 list_lines[Convert.ToInt32(textBoxIDLine.Text)].Delete();
-                list_lines.RemoveAt(Convert.ToInt32(textBoxIDLine.Text));
+                list_lines = ArrayOperation.RemoveElement(list_lines, Convert.ToInt32(textBoxIDLine.Text));
+                listBoxLine.Items.RemoveAt(Convert.ToInt32(textBoxIDLine.Text));
+                listBoxLine.Refresh();
             }
             else
             {
@@ -354,7 +402,9 @@ namespace oop_project
                 {
                     item.Delete();
                 }
-                list_lines.Clear();
+                list_lines = ArrayOperation.Clear(list_lines);
+                listBoxLine.Items.Clear();
+                listBoxLine.Refresh();
             }
         }
 
@@ -391,8 +441,12 @@ namespace oop_project
             Circle circle2 = new Circle(x_circ_2, y_circ_2, circ2_size);
 
             ring = new Ring(circle1, circle2);
+           
+            list_rings = ArrayOperation.AddElement(list_rings, ring);
+
+            listBoxRing.Items.Add(ring.ToString() + $"№{list_rings.Length}");
+
             ring.Draw();
-            list_rings.Add(ring);
         }
 
         private void Move_Ring_Click(object sender, EventArgs e)
@@ -400,11 +454,11 @@ namespace oop_project
             double x_move = Convert.ToDouble(textBoxMoveRingX.Text);
             double y_move = Convert.ToDouble(textBoxMoveRingY.Text);
 
-            if (textBoxIDCirc.Text != String.Empty)
+            if (textBoxIDRing.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRing.Text) < 0 || Convert.ToInt32(textBoxIDRing.Text) >= list_rings.Count)
+                if (Convert.ToInt32(textBoxIDRing.Text) < 0 || Convert.ToInt32(textBoxIDRing.Text) >= list_rings.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rings.Count - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rings.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -419,14 +473,31 @@ namespace oop_project
             }
         }
 
-        private void label29_Click(object sender, EventArgs e)
+        private void Delete_Ring_Click(object sender, EventArgs e)
         {
+            if (textBoxIDRing.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDRing.Text) < 0 || Convert.ToInt32(textBoxIDRing.Text) >= list_rings.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rings.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-        }
-
-        private void listBoxRect_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
+                list_rings[Convert.ToInt32(textBoxIDRing.Text)].Delete();
+                list_rings = ArrayOperation.RemoveElement(list_rings, Convert.ToInt32(textBoxIDRing.Text));
+                listBoxRing.Items.RemoveAt(Convert.ToInt32(textBoxIDRing.Text));
+                listBoxRing.Refresh();
+            }
+            else
+            {
+                foreach (var item in list_rings)
+                {
+                    item.Delete();
+                }
+                list_rings = ArrayOperation.Clear(list_rings);
+                listBoxRing.Items.Clear();
+                listBoxRing.Refresh();
+            }
         }
     }
 }

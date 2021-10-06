@@ -50,5 +50,15 @@ namespace oop_project.Models
 
             Draw(Color.LightGreen);
         }
+
+        public void Delete()
+        {
+            Draw(Color.White);
+        }
+
+        public override string ToString()
+        {
+            return "Кольцо";
+        }
     }
 }

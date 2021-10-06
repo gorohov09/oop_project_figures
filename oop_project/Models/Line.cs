@@ -12,26 +12,32 @@ namespace oop_project
         public static PictureBox pictureBox;
         public static Bitmap bitmap;
 
-        public MyPoint point1 { get; private set; }
+        public MyPoint point { get; private set; }
 
-        public MyPoint point2 { get; private set; }
+        public double Size { get; private set; }
 
-        public Line(double x1, double y1, double x2, double y2)
+        public Line(MyPoint point, double size)
         {
-            point1 = new MyPoint(x1, y1);
-            point2 = new MyPoint(x2, y2);
+            this.point = point;
+            this.Size = size;
+        }
+
+        public Line(double x1, double y1, double size)
+        {
+            point = new MyPoint(x1, y1);
+            this.Size = size;
         }
 
         public Line()
         {
-            point1 = new MyPoint((double)r.Next(-500, 500), (double)r.Next(-500, 500));
-            point2 = new MyPoint((double)r.Next(-500, 500), (double)r.Next(-500, 500));
+            point = new MyPoint((double)r.Next(-500, 500), (double)r.Next(-500, 500));
+            this.Size = (double)r.Next(-500, 500);
         }
 
         public void Draw()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawLine(Pens.LightGreen, (float)point1.X, (float)point1.Y, (float)point2.X, (float)point2.Y);
+            gr.DrawLine(Pens.LightGreen, (float)point.X, (float)point.Y, (float)(point.X + Size), (float)(point.Y + Size));
             pictureBox.Image = bitmap;
         }
 
@@ -39,24 +45,26 @@ namespace oop_project
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
-            gr.DrawLine(pen, (float)point1.X, (float)point1.Y, (float)point2.X, (float)point2.Y);
+            gr.DrawLine(pen, (float)point.X, (float)point.Y, (float)(point.X + Size), (float)(point.Y + Size));
             pictureBox.Image = bitmap;
         }
 
         public void Move(double dx, double dy)
         {
             Draw(Color.White);
-            this.point1.X += dx;
-            this.point1.Y += dy;
-            this.point2.X += dx;
-            this.point2.Y += dy;
-
+            this.point.X += dx;
+            this.point.Y += dy;
             Draw(Color.LightGreen);
         }
 
         public void Delete()
         {
             Draw(Color.White);
+        }
+
+        public override string ToString()
+        {
+            return "Линия";
         }
     }
 }
