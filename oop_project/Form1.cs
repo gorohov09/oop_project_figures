@@ -48,6 +48,9 @@ namespace oop_project
             listBoxRing.SelectedIndexChanged += ListBoxRing_SelectedIndexChanged;
             listBoxLine.SelectedIndexChanged += ListBoxLine_SelectedIndexChanged;
             listBoxMyFigures.SelectedIndexChanged += ListBoxMyFigures_SelectedIndexChanged;
+
+            TFigure.bitmap = bitmap;
+            TFigure.pictureBox = PictureArea;
             
         }
 
@@ -253,11 +256,7 @@ namespace oop_project
 
         private void Create_Circ_Click(object sender, EventArgs e)
         {
-            Circle.bitmap = bitmap;
-            Circle.pictureBox = PictureArea;
-
             Circle circle;
-
 
             if ((textBoxCircX.Text == String.Empty) && (textBoxCircY.Text == String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {

@@ -5,27 +5,16 @@ using oop_project.Models;
 
 namespace oop_project
 {
-    public class Rectangle
+    public class Rectangle : TFigure
     {
-        Random r = new Random();
-
-        public static PictureBox pictureBox;
-        public static Bitmap bitmap;
-
-        public MyPoint point { get; private set; }
-
-        public double Size { get; set; }
-
-        public Rectangle(MyPoint point, double size)
+        public Rectangle(MyPoint point, double size) :
+            base(point, size)
         {
-            this.point = point;
-            this.Size = size;
         }
 
-        public Rectangle(double x, double y, double size)
+        public Rectangle(double x, double y, double size) :
+            base(x, y, size)
         {
-            point = new MyPoint(x, y);
-            this.Size = size;
         }
 
         public Rectangle(double x, double y) :
@@ -33,34 +22,22 @@ namespace oop_project
         {
         }
 
-        public Rectangle(double value, bool isValue)
+        public Rectangle(double value, bool isValue) :
+            base(value, isValue)
         {
-            if (isValue == true)
-            {
-                point = new MyPoint(value, (double)new Random().Next(20, 500));
-                this.Size = (double)new Random().Next(20, 300);
-            }
-            else
-            {
-                point = new MyPoint((double)new Random().Next(20, 500), value);
-                this.Size = (double)r.Next(20, 300);
-            }
         }
 
-        public Rectangle()
+        public Rectangle() :
+            base()
         {
-            point = new MyPoint((double)r.Next(20, 400), (double)r.Next(20, 400));
-            this.Size = (double)r.Next(30, 150);
         }
 
-        public void Draw()
+        public override void Draw()
         {
-            Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawRectangle(Pens.LightGreen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
-            pictureBox.Image = bitmap;
+            Draw(Color.LightGreen);
         }
 
-        public void Draw(Color color)
+        private void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
@@ -68,7 +45,7 @@ namespace oop_project
             pictureBox.Image = bitmap;
         }
 
-        public void Move(double dx, double dy)
+        public override void Move(double dx, double dy)
         {
             Draw(Color.White);
             this.point.X += dx;

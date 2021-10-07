@@ -5,43 +5,29 @@ using oop_project.Models;
 
 namespace oop_project
 {
-    public class Line
+    public class Line : TFigure
     {
-        Random r = new Random();
-
-        public static PictureBox pictureBox;
-        public static Bitmap bitmap;
-
-        public MyPoint point { get; private set; }
-
-        public double Size { get; private set; }
-
-        public Line(MyPoint point, double size)
+        public Line(MyPoint point, double size) :
+            base(point, size)
         {
-            this.point = point;
-            this.Size = size;
         }
 
-        public Line(double x1, double y1, double size)
+        public Line(double x1, double y1, double size) :
+            base(x1, y1, size)
         {
-            point = new MyPoint(x1, y1);
-            this.Size = size;
         }
 
-        public Line()
+        public Line() :
+            base()
         {
-            point = new MyPoint((double)r.Next(-500, 500), (double)r.Next(-500, 500));
-            this.Size = (double)r.Next(-500, 500);
         }
 
-        public void Draw()
+        public override void Draw()
         {
-            Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawLine(Pens.LightGreen, (float)point.X, (float)point.Y, (float)(point.X + Size), (float)(point.Y + Size));
-            pictureBox.Image = bitmap;
+            Draw(Color.LightGreen);
         }
 
-        public void Draw(Color color)
+        private void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
@@ -49,7 +35,7 @@ namespace oop_project
             pictureBox.Image = bitmap;
         }
 
-        public void Move(double dx, double dy)
+        public override void Move(double dx, double dy)
         {
             Draw(Color.White);
             this.point.X += dx;
