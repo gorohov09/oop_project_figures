@@ -50,5 +50,7 @@ namespace oop_project.Models
         public abstract void Draw();
 
         public abstract void Move(double dx, double dy);
+
+        public abstract void Delete();
     }
 }

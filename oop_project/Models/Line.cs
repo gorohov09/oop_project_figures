@@ -43,7 +43,7 @@ namespace oop_project
             Draw(Color.LightGreen);
         }
 
-        public void Delete()
+        public override void Delete()
         {
             Draw(Color.White);
         }

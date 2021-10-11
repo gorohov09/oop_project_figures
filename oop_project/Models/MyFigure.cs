@@ -12,9 +12,9 @@ namespace oop_project.Models
 
         public Circle circle { get; private set; }
 
-        public Rectangle rectangle { get; private set; }
+        public Square rectangle { get; private set; }
 
-        public MyFigure(Circle circle, Rectangle rectangle)
+        public MyFigure(Circle circle, Square rectangle)
         {
             this.circle = circle;
             this.rectangle = rectangle;

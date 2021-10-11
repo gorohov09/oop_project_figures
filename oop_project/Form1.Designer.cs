@@ -134,6 +134,52 @@ namespace oop_project
             this.textBoxMyFigureX = new System.Windows.Forms.TextBox();
             this.trackBarMyFigureX = new System.Windows.Forms.TrackBar();
             this.label16 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.Change_Ellip = new System.Windows.Forms.Button();
+            this.Delete_Ellip = new System.Windows.Forms.Button();
+            this.Move_Ellip = new System.Windows.Forms.Button();
+            this.textBoxMoveElY = new System.Windows.Forms.TextBox();
+            this.textBoxMoveElX = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.listBoxEllips = new System.Windows.Forms.ListBox();
+            this.textBoxIDEllips = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.Create_Ellips = new System.Windows.Forms.Button();
+            this.textBoxEllipsSize2 = new System.Windows.Forms.TextBox();
+            this.textBoxEllipsSize1 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBoxEllipsY = new System.Windows.Forms.TextBox();
+            this.textBoxEllipsX = new System.Windows.Forms.TextBox();
+            this.trackBarEllipsY = new System.Windows.Forms.TrackBar();
+            this.trackBarEllipsX = new System.Windows.Forms.TrackBar();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.comboBoxInher = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.listBoxInher = new System.Windows.Forms.ListBox();
+            this.Delete_Inher = new System.Windows.Forms.Button();
+            this.Move_Inher = new System.Windows.Forms.Button();
+            this.textBoxMoveInherY = new System.Windows.Forms.TextBox();
+            this.textBoxMoveInherX = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBoxIDInher = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.Create_Inher = new System.Windows.Forms.Button();
+            this.textBoxInherSize2 = new System.Windows.Forms.TextBox();
+            this.textBoxInherSize1 = new System.Windows.Forms.TextBox();
+            this.labelInherSize2 = new System.Windows.Forms.Label();
+            this.labelInherSize1 = new System.Windows.Forms.Label();
+            this.textBoxInherY = new System.Windows.Forms.TextBox();
+            this.textBoxInherX = new System.Windows.Forms.TextBox();
+            this.trackBarInherY = new System.Windows.Forms.TrackBar();
+            this.trackBarInherX = new System.Windows.Forms.TrackBar();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -151,13 +197,19 @@ namespace oop_project
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureX)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsX)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarInherY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarInherX)).BeginInit();
             this.SuspendLayout();
             // 
             // PictureArea
             // 
-            this.PictureArea.Location = new System.Drawing.Point(363, 2);
+            this.PictureArea.Location = new System.Drawing.Point(372, 2);
             this.PictureArea.Name = "PictureArea";
-            this.PictureArea.Size = new System.Drawing.Size(510, 520);
+            this.PictureArea.Size = new System.Drawing.Size(501, 520);
             this.PictureArea.TabIndex = 0;
             this.PictureArea.TabStop = false;
             // 
@@ -168,11 +220,13 @@ namespace oop_project
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl1.Location = new System.Drawing.Point(-2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(372, 456);
+            this.tabControl1.Size = new System.Drawing.Size(379, 440);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -200,7 +254,7 @@ namespace oop_project
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(364, 428);
+            this.tabPage1.Size = new System.Drawing.Size(371, 412);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -353,7 +407,7 @@ namespace oop_project
             // 
             // Create_Rec
             // 
-            this.Create_Rec.BackColor = System.Drawing.Color.IndianRed;
+            this.Create_Rec.BackColor = System.Drawing.Color.Maroon;
             this.Create_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Rec.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Create_Rec.Location = new System.Drawing.Point(96, 125);
@@ -422,7 +476,7 @@ namespace oop_project
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(364, 428);
+            this.tabPage2.Size = new System.Drawing.Size(371, 412);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -630,7 +684,7 @@ namespace oop_project
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(364, 428);
+            this.tabPage3.Size = new System.Drawing.Size(371, 412);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -840,7 +894,7 @@ namespace oop_project
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(364, 428);
+            this.tabPage4.Size = new System.Drawing.Size(371, 412);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1066,7 +1120,7 @@ namespace oop_project
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(364, 428);
+            this.tabPage5.Size = new System.Drawing.Size(371, 412);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Произвольная фигура";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1251,6 +1305,487 @@ namespace oop_project
             this.label16.TabIndex = 5;
             this.label16.Text = "Координата по X";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.Change_Ellip);
+            this.tabPage6.Controls.Add(this.Delete_Ellip);
+            this.tabPage6.Controls.Add(this.Move_Ellip);
+            this.tabPage6.Controls.Add(this.textBoxMoveElY);
+            this.tabPage6.Controls.Add(this.textBoxMoveElX);
+            this.tabPage6.Controls.Add(this.label44);
+            this.tabPage6.Controls.Add(this.label43);
+            this.tabPage6.Controls.Add(this.listBoxEllips);
+            this.tabPage6.Controls.Add(this.textBoxIDEllips);
+            this.tabPage6.Controls.Add(this.label42);
+            this.tabPage6.Controls.Add(this.label41);
+            this.tabPage6.Controls.Add(this.Create_Ellips);
+            this.tabPage6.Controls.Add(this.textBoxEllipsSize2);
+            this.tabPage6.Controls.Add(this.textBoxEllipsSize1);
+            this.tabPage6.Controls.Add(this.label40);
+            this.tabPage6.Controls.Add(this.label39);
+            this.tabPage6.Controls.Add(this.textBoxEllipsY);
+            this.tabPage6.Controls.Add(this.textBoxEllipsX);
+            this.tabPage6.Controls.Add(this.trackBarEllipsY);
+            this.tabPage6.Controls.Add(this.trackBarEllipsX);
+            this.tabPage6.Controls.Add(this.label38);
+            this.tabPage6.Controls.Add(this.label33);
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(371, 412);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Эллипс";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // Change_Ellip
+            // 
+            this.Change_Ellip.BackColor = System.Drawing.Color.Maroon;
+            this.Change_Ellip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_Ellip.Location = new System.Drawing.Point(35, 347);
+            this.Change_Ellip.Name = "Change_Ellip";
+            this.Change_Ellip.Size = new System.Drawing.Size(178, 31);
+            this.Change_Ellip.TabIndex = 58;
+            this.Change_Ellip.Text = "Изменить полуоси";
+            this.Change_Ellip.UseVisualStyleBackColor = false;
+            this.Change_Ellip.Click += new System.EventHandler(this.Change_Ellip_Click);
+            // 
+            // Delete_Ellip
+            // 
+            this.Delete_Ellip.BackColor = System.Drawing.Color.Maroon;
+            this.Delete_Ellip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_Ellip.Location = new System.Drawing.Point(123, 310);
+            this.Delete_Ellip.Name = "Delete_Ellip";
+            this.Delete_Ellip.Size = new System.Drawing.Size(99, 31);
+            this.Delete_Ellip.TabIndex = 57;
+            this.Delete_Ellip.Text = "Удалить";
+            this.Delete_Ellip.UseVisualStyleBackColor = false;
+            this.Delete_Ellip.Click += new System.EventHandler(this.Delete_Ellip_Click);
+            // 
+            // Move_Ellip
+            // 
+            this.Move_Ellip.BackColor = System.Drawing.Color.Maroon;
+            this.Move_Ellip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Move_Ellip.Location = new System.Drawing.Point(3, 311);
+            this.Move_Ellip.Name = "Move_Ellip";
+            this.Move_Ellip.Size = new System.Drawing.Size(114, 30);
+            this.Move_Ellip.TabIndex = 56;
+            this.Move_Ellip.Text = "Переместить";
+            this.Move_Ellip.UseVisualStyleBackColor = false;
+            this.Move_Ellip.Click += new System.EventHandler(this.Move_Ellip_Click);
+            // 
+            // textBoxMoveElY
+            // 
+            this.textBoxMoveElY.Location = new System.Drawing.Point(135, 266);
+            this.textBoxMoveElY.Name = "textBoxMoveElY";
+            this.textBoxMoveElY.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMoveElY.TabIndex = 55;
+            // 
+            // textBoxMoveElX
+            // 
+            this.textBoxMoveElX.Location = new System.Drawing.Point(135, 239);
+            this.textBoxMoveElX.Name = "textBoxMoveElX";
+            this.textBoxMoveElX.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMoveElX.TabIndex = 54;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label44.Location = new System.Drawing.Point(10, 269);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(119, 16);
+            this.label44.TabIndex = 53;
+            this.label44.Text = "Смещение по Y";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Location = new System.Drawing.Point(10, 242);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(118, 16);
+            this.label43.TabIndex = 52;
+            this.label43.Text = "Смещение по X";
+            // 
+            // listBoxEllips
+            // 
+            this.listBoxEllips.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxEllips.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxEllips.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxEllips.FormattingEnabled = true;
+            this.listBoxEllips.ItemHeight = 16;
+            this.listBoxEllips.Location = new System.Drawing.Point(236, 228);
+            this.listBoxEllips.Name = "listBoxEllips";
+            this.listBoxEllips.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxEllips.Size = new System.Drawing.Size(119, 178);
+            this.listBoxEllips.TabIndex = 51;
+            // 
+            // textBoxIDEllips
+            // 
+            this.textBoxIDEllips.Location = new System.Drawing.Point(186, 206);
+            this.textBoxIDEllips.Name = "textBoxIDEllips";
+            this.textBoxIDEllips.Size = new System.Drawing.Size(45, 21);
+            this.textBoxIDEllips.TabIndex = 50;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(10, 209);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(170, 16);
+            this.label42.TabIndex = 49;
+            this.label42.Text = "Введите  ID элемента";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(244, 209);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(111, 16);
+            this.label41.TabIndex = 48;
+            this.label41.Text = "Список фигур";
+            // 
+            // Create_Ellips
+            // 
+            this.Create_Ellips.BackColor = System.Drawing.Color.Maroon;
+            this.Create_Ellips.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Create_Ellips.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Create_Ellips.Location = new System.Drawing.Point(104, 157);
+            this.Create_Ellips.Name = "Create_Ellips";
+            this.Create_Ellips.Size = new System.Drawing.Size(127, 31);
+            this.Create_Ellips.TabIndex = 42;
+            this.Create_Ellips.Text = "Создать";
+            this.Create_Ellips.UseVisualStyleBackColor = false;
+            this.Create_Ellips.Click += new System.EventHandler(this.Create_Ellips_Click);
+            // 
+            // textBoxEllipsSize2
+            // 
+            this.textBoxEllipsSize2.Location = new System.Drawing.Point(212, 119);
+            this.textBoxEllipsSize2.Name = "textBoxEllipsSize2";
+            this.textBoxEllipsSize2.Size = new System.Drawing.Size(45, 21);
+            this.textBoxEllipsSize2.TabIndex = 41;
+            // 
+            // textBoxEllipsSize1
+            // 
+            this.textBoxEllipsSize1.Location = new System.Drawing.Point(212, 83);
+            this.textBoxEllipsSize1.Name = "textBoxEllipsSize1";
+            this.textBoxEllipsSize1.Size = new System.Drawing.Size(45, 21);
+            this.textBoxEllipsSize1.TabIndex = 40;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.Location = new System.Drawing.Point(32, 122);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(165, 16);
+            this.label40.TabIndex = 39;
+            this.label40.Text = "Размер 2-ой полуоси";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label39.Location = new System.Drawing.Point(32, 86);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(165, 16);
+            this.label39.TabIndex = 38;
+            this.label39.Text = "Размер 1-ой полуоси";
+            // 
+            // textBoxEllipsY
+            // 
+            this.textBoxEllipsY.Location = new System.Drawing.Point(308, 47);
+            this.textBoxEllipsY.Name = "textBoxEllipsY";
+            this.textBoxEllipsY.Size = new System.Drawing.Size(33, 21);
+            this.textBoxEllipsY.TabIndex = 37;
+            // 
+            // textBoxEllipsX
+            // 
+            this.textBoxEllipsX.Location = new System.Drawing.Point(308, 14);
+            this.textBoxEllipsX.Name = "textBoxEllipsX";
+            this.textBoxEllipsX.Size = new System.Drawing.Size(33, 21);
+            this.textBoxEllipsX.TabIndex = 36;
+            // 
+            // trackBarEllipsY
+            // 
+            this.trackBarEllipsY.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarEllipsY.Location = new System.Drawing.Point(162, 38);
+            this.trackBarEllipsY.Maximum = 500;
+            this.trackBarEllipsY.Name = "trackBarEllipsY";
+            this.trackBarEllipsY.Size = new System.Drawing.Size(140, 45);
+            this.trackBarEllipsY.TabIndex = 35;
+            // 
+            // trackBarEllipsX
+            // 
+            this.trackBarEllipsX.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarEllipsX.Location = new System.Drawing.Point(162, 6);
+            this.trackBarEllipsX.Maximum = 500;
+            this.trackBarEllipsX.Name = "trackBarEllipsX";
+            this.trackBarEllipsX.Size = new System.Drawing.Size(140, 45);
+            this.trackBarEllipsX.TabIndex = 34;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label38.Location = new System.Drawing.Point(23, 50);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(133, 16);
+            this.label38.TabIndex = 33;
+            this.label38.Text = "Координата по Y";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(23, 17);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(132, 16);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Координата по X";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.comboBoxInher);
+            this.tabPage7.Controls.Add(this.label52);
+            this.tabPage7.Controls.Add(this.listBoxInher);
+            this.tabPage7.Controls.Add(this.Delete_Inher);
+            this.tabPage7.Controls.Add(this.Move_Inher);
+            this.tabPage7.Controls.Add(this.textBoxMoveInherY);
+            this.tabPage7.Controls.Add(this.textBoxMoveInherX);
+            this.tabPage7.Controls.Add(this.label51);
+            this.tabPage7.Controls.Add(this.label50);
+            this.tabPage7.Controls.Add(this.textBoxIDInher);
+            this.tabPage7.Controls.Add(this.label49);
+            this.tabPage7.Controls.Add(this.Create_Inher);
+            this.tabPage7.Controls.Add(this.textBoxInherSize2);
+            this.tabPage7.Controls.Add(this.textBoxInherSize1);
+            this.tabPage7.Controls.Add(this.labelInherSize2);
+            this.tabPage7.Controls.Add(this.labelInherSize1);
+            this.tabPage7.Controls.Add(this.textBoxInherY);
+            this.tabPage7.Controls.Add(this.textBoxInherX);
+            this.tabPage7.Controls.Add(this.trackBarInherY);
+            this.tabPage7.Controls.Add(this.trackBarInherX);
+            this.tabPage7.Controls.Add(this.label46);
+            this.tabPage7.Controls.Add(this.label45);
+            this.tabPage7.Location = new System.Drawing.Point(4, 24);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(371, 412);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxInher
+            // 
+            this.comboBoxInher.FormattingEnabled = true;
+            this.comboBoxInher.Items.AddRange(new object[] {
+            "Ромб",
+            "Прямоугольник"});
+            this.comboBoxInher.Location = new System.Drawing.Point(259, 95);
+            this.comboBoxInher.Name = "comboBoxInher";
+            this.comboBoxInher.Size = new System.Drawing.Size(97, 23);
+            this.comboBoxInher.TabIndex = 61;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label52.Location = new System.Drawing.Point(245, 209);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(111, 16);
+            this.label52.TabIndex = 60;
+            this.label52.Text = "Список фигур";
+            // 
+            // listBoxInher
+            // 
+            this.listBoxInher.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxInher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxInher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxInher.FormattingEnabled = true;
+            this.listBoxInher.ItemHeight = 16;
+            this.listBoxInher.Location = new System.Drawing.Point(245, 228);
+            this.listBoxInher.Name = "listBoxInher";
+            this.listBoxInher.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxInher.Size = new System.Drawing.Size(119, 178);
+            this.listBoxInher.TabIndex = 59;
+            // 
+            // Delete_Inher
+            // 
+            this.Delete_Inher.BackColor = System.Drawing.Color.Maroon;
+            this.Delete_Inher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_Inher.Location = new System.Drawing.Point(126, 312);
+            this.Delete_Inher.Name = "Delete_Inher";
+            this.Delete_Inher.Size = new System.Drawing.Size(99, 31);
+            this.Delete_Inher.TabIndex = 58;
+            this.Delete_Inher.Text = "Удалить";
+            this.Delete_Inher.UseVisualStyleBackColor = false;
+            this.Delete_Inher.Click += new System.EventHandler(this.Delete_Inher_Click);
+            // 
+            // Move_Inher
+            // 
+            this.Move_Inher.BackColor = System.Drawing.Color.Maroon;
+            this.Move_Inher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Move_Inher.Location = new System.Drawing.Point(6, 312);
+            this.Move_Inher.Name = "Move_Inher";
+            this.Move_Inher.Size = new System.Drawing.Size(114, 30);
+            this.Move_Inher.TabIndex = 57;
+            this.Move_Inher.Text = "Переместить";
+            this.Move_Inher.UseVisualStyleBackColor = false;
+            this.Move_Inher.Click += new System.EventHandler(this.Move_Inher_Click);
+            // 
+            // textBoxMoveInherY
+            // 
+            this.textBoxMoveInherY.Location = new System.Drawing.Point(142, 272);
+            this.textBoxMoveInherY.Name = "textBoxMoveInherY";
+            this.textBoxMoveInherY.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMoveInherY.TabIndex = 56;
+            // 
+            // textBoxMoveInherX
+            // 
+            this.textBoxMoveInherX.Location = new System.Drawing.Point(142, 244);
+            this.textBoxMoveInherX.Name = "textBoxMoveInherX";
+            this.textBoxMoveInherX.Size = new System.Drawing.Size(45, 21);
+            this.textBoxMoveInherX.TabIndex = 55;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label51.Location = new System.Drawing.Point(3, 275);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(119, 16);
+            this.label51.TabIndex = 54;
+            this.label51.Text = "Смещение по Y";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label50.Location = new System.Drawing.Point(3, 247);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(118, 16);
+            this.label50.TabIndex = 53;
+            this.label50.Text = "Смещение по X";
+            // 
+            // textBoxIDInher
+            // 
+            this.textBoxIDInher.Location = new System.Drawing.Point(177, 209);
+            this.textBoxIDInher.Name = "textBoxIDInher";
+            this.textBoxIDInher.Size = new System.Drawing.Size(45, 21);
+            this.textBoxIDInher.TabIndex = 51;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label49.Location = new System.Drawing.Point(1, 212);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(170, 16);
+            this.label49.TabIndex = 50;
+            this.label49.Text = "Введите  ID элемента";
+            // 
+            // Create_Inher
+            // 
+            this.Create_Inher.BackColor = System.Drawing.Color.Maroon;
+            this.Create_Inher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Create_Inher.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Create_Inher.Location = new System.Drawing.Point(111, 166);
+            this.Create_Inher.Name = "Create_Inher";
+            this.Create_Inher.Size = new System.Drawing.Size(127, 31);
+            this.Create_Inher.TabIndex = 43;
+            this.Create_Inher.Text = "Создать";
+            this.Create_Inher.UseVisualStyleBackColor = false;
+            this.Create_Inher.Click += new System.EventHandler(this.Create_Inher_Click);
+            // 
+            // textBoxInherSize2
+            // 
+            this.textBoxInherSize2.Location = new System.Drawing.Point(193, 135);
+            this.textBoxInherSize2.Name = "textBoxInherSize2";
+            this.textBoxInherSize2.Size = new System.Drawing.Size(45, 21);
+            this.textBoxInherSize2.TabIndex = 42;
+            // 
+            // textBoxInherSize1
+            // 
+            this.textBoxInherSize1.Location = new System.Drawing.Point(193, 102);
+            this.textBoxInherSize1.Name = "textBoxInherSize1";
+            this.textBoxInherSize1.Size = new System.Drawing.Size(45, 21);
+            this.textBoxInherSize1.TabIndex = 41;
+            // 
+            // labelInherSize2
+            // 
+            this.labelInherSize2.AutoSize = true;
+            this.labelInherSize2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelInherSize2.Location = new System.Drawing.Point(6, 138);
+            this.labelInherSize2.Name = "labelInherSize2";
+            this.labelInherSize2.Size = new System.Drawing.Size(76, 16);
+            this.labelInherSize2.TabIndex = 40;
+            this.labelInherSize2.Text = "Размер 2";
+            // 
+            // labelInherSize1
+            // 
+            this.labelInherSize1.AutoSize = true;
+            this.labelInherSize1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelInherSize1.Location = new System.Drawing.Point(6, 105);
+            this.labelInherSize1.Name = "labelInherSize1";
+            this.labelInherSize1.Size = new System.Drawing.Size(76, 16);
+            this.labelInherSize1.TabIndex = 39;
+            this.labelInherSize1.Text = "Размер 1";
+            // 
+            // textBoxInherY
+            // 
+            this.textBoxInherY.Location = new System.Drawing.Point(323, 44);
+            this.textBoxInherY.Name = "textBoxInherY";
+            this.textBoxInherY.Size = new System.Drawing.Size(33, 21);
+            this.textBoxInherY.TabIndex = 38;
+            // 
+            // textBoxInherX
+            // 
+            this.textBoxInherX.Location = new System.Drawing.Point(323, 17);
+            this.textBoxInherX.Name = "textBoxInherX";
+            this.textBoxInherX.Size = new System.Drawing.Size(33, 21);
+            this.textBoxInherX.TabIndex = 37;
+            // 
+            // trackBarInherY
+            // 
+            this.trackBarInherY.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarInherY.Location = new System.Drawing.Point(177, 44);
+            this.trackBarInherY.Maximum = 500;
+            this.trackBarInherY.Name = "trackBarInherY";
+            this.trackBarInherY.Size = new System.Drawing.Size(140, 45);
+            this.trackBarInherY.TabIndex = 36;
+            // 
+            // trackBarInherX
+            // 
+            this.trackBarInherX.Cursor = System.Windows.Forms.Cursors.Default;
+            this.trackBarInherX.Location = new System.Drawing.Point(177, 6);
+            this.trackBarInherX.Maximum = 500;
+            this.trackBarInherX.Name = "trackBarInherX";
+            this.trackBarInherX.Size = new System.Drawing.Size(140, 45);
+            this.trackBarInherX.TabIndex = 35;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label46.Location = new System.Drawing.Point(22, 56);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(133, 16);
+            this.label46.TabIndex = 34;
+            this.label46.Text = "Координата по Y";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label45.Location = new System.Drawing.Point(22, 25);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(132, 16);
+            this.label45.TabIndex = 7;
+            this.label45.Text = "Координата по X";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1282,6 +1817,14 @@ namespace oop_project
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureX)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsX)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarInherY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarInherX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1393,6 +1936,52 @@ namespace oop_project
         private System.Windows.Forms.TextBox textBoxMyFigureX;
         private System.Windows.Forms.TrackBar trackBarMyFigureX;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBoxEllipsSize2;
+        private System.Windows.Forms.TextBox textBoxEllipsSize1;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBoxEllipsY;
+        private System.Windows.Forms.TextBox textBoxEllipsX;
+        private System.Windows.Forms.TrackBar trackBarEllipsY;
+        private System.Windows.Forms.TrackBar trackBarEllipsX;
+        private System.Windows.Forms.Button Create_Ellips;
+        private System.Windows.Forms.ListBox listBoxEllips;
+        private System.Windows.Forms.TextBox textBoxIDEllips;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Button Change_Ellip;
+        private System.Windows.Forms.Button Delete_Ellip;
+        private System.Windows.Forms.Button Move_Ellip;
+        private System.Windows.Forms.TextBox textBoxMoveElY;
+        private System.Windows.Forms.TextBox textBoxMoveElX;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Label labelInherSize2;
+        private System.Windows.Forms.Label labelInherSize1;
+        private System.Windows.Forms.TextBox textBoxInherY;
+        private System.Windows.Forms.TextBox textBoxInherX;
+        private System.Windows.Forms.TrackBar trackBarInherY;
+        private System.Windows.Forms.TrackBar trackBarInherX;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Button Delete_Inher;
+        private System.Windows.Forms.Button Move_Inher;
+        private System.Windows.Forms.TextBox textBoxMoveInherY;
+        private System.Windows.Forms.TextBox textBoxMoveInherX;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox textBoxIDInher;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Button Create_Inher;
+        private System.Windows.Forms.TextBox textBoxInherSize2;
+        private System.Windows.Forms.TextBox textBoxInherSize1;
+        private System.Windows.Forms.ComboBox comboBoxInher;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.ListBox listBoxInher;
     }
 }
 

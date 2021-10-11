@@ -15,22 +15,28 @@ namespace oop_project
     {
         Bitmap bitmap;
 
-        Rectangle[] list_rectangles;
+        Square[] list_squares;
         Circle[] list_circles;
         Line[] list_lines;
         Ring[] list_rings;
         MyFigure[] list_myfigures;
+        Ellipse[] list_ellipses;
+        Square[] list_inher;
 
         public Form1()
         {
             InitializeComponent();
             bitmap = new Bitmap(PictureArea.Width, PictureArea.Height);
 
-            list_rectangles = new Rectangle[0] { };
+            list_squares = new Square[0] { };
             list_circles = new Circle[0] { };
             list_lines = new Line[0] { };
             list_rings = new Ring[0] { };
             list_myfigures = new MyFigure[0] { };
+            list_ellipses = new Ellipse[0] { };
+            list_inher = new Square[0] { };
+
+            comboBoxInher.SelectedIndexChanged += ComboBoxInher_SelectedIndexChanged;
 
             trackBarRectX.Scroll += TrackBarRectX_Scroll;
             trackBarRectY.Scroll += TrackBarRectY_Scroll;
@@ -42,16 +48,66 @@ namespace oop_project
             trackBarLineY.Scroll += TrackBarLineY_Scroll;
             trackBarMyFigureX.Scroll += TrackBarMyFigureX_Scroll;
             trackBarMyFigureY.Scroll += TrackBarMyFigureY_Scroll;
+            trackBarEllipsX.Scroll += TrackBarEllipsX_Scroll;
+            trackBarEllipsY.Scroll += TrackBarEllipsY_Scroll;
+            trackBarInherX.Scroll += TrackBarInherX_Scroll;
+            trackBarInherY.Scroll += TrackBarInherY_Scroll;
 
             listBoxRect.SelectedIndexChanged += ListBoxRect_SelectedIndexChanged;
             listBoxCirc.SelectedIndexChanged += ListBoxCirc_SelectedIndexChanged;
             listBoxRing.SelectedIndexChanged += ListBoxRing_SelectedIndexChanged;
             listBoxLine.SelectedIndexChanged += ListBoxLine_SelectedIndexChanged;
             listBoxMyFigures.SelectedIndexChanged += ListBoxMyFigures_SelectedIndexChanged;
+            listBoxEllips.SelectedIndexChanged += ListBoxEllips_SelectedIndexChanged;
+            listBoxInher.SelectedIndexChanged += ListBoxInher_SelectedIndexChanged;
 
             TFigure.bitmap = bitmap;
             TFigure.pictureBox = PictureArea;
             
+        }
+
+        private void ListBoxInher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxIDInher.Text = listBoxInher.SelectedIndex.ToString();
+        }
+
+        private void TrackBarInherY_Scroll(object sender, EventArgs e)
+        {
+            textBoxInherY.Text = Convert.ToString(trackBarInherY.Value);
+        }
+
+        private void TrackBarInherX_Scroll(object sender, EventArgs e)
+        {
+            textBoxInherX.Text = Convert.ToString(trackBarInherX.Value);
+        }
+
+        private void ComboBoxInher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxInher.SelectedIndex == 0)
+            {
+                labelInherSize1.Text = "Размер 1-ой диагонали";
+                labelInherSize2.Text = "Размер 2-ой диагонали";
+            }
+            else if (comboBoxInher.SelectedIndex == 1)
+            {
+                labelInherSize1.Text = "Размер 1-ой стороны";
+                labelInherSize2.Text = "Размер 2-ой стороны";
+            }
+        }
+
+        private void TrackBarEllipsY_Scroll(object sender, EventArgs e)
+        {
+            textBoxEllipsY.Text = Convert.ToString(trackBarEllipsY.Value);
+        }
+
+        private void TrackBarEllipsX_Scroll(object sender, EventArgs e)
+        {
+            textBoxEllipsX.Text = Convert.ToString(trackBarEllipsX.Value);
+        }
+
+        private void ListBoxEllips_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxIDEllips.Text = listBoxEllips.SelectedIndex.ToString();
         }
 
         private void ListBoxMyFigures_SelectedIndexChanged(object sender, EventArgs e)
@@ -131,30 +187,30 @@ namespace oop_project
 
         private void Create_Rec_Click(object sender, EventArgs e)
         {
-            Rectangle.bitmap = bitmap;
-            Rectangle.pictureBox = PictureArea;
+            Square.bitmap = bitmap;
+            Square.pictureBox = PictureArea;
 
-            Rectangle rectangle;
+            Square rectangle;
             
             
             if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
-                rectangle = new Rectangle();
+                rectangle = new Square();
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
-                rectangle = new Rectangle(Convert.ToDouble(textBoxRecX.Text), Convert.ToDouble(textBoxRecY.Text));
+                rectangle = new Square(Convert.ToDouble(textBoxRecX.Text), Convert.ToDouble(textBoxRecY.Text));
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
-                rectangle = new Rectangle(Convert.ToDouble(textBoxRecX.Text), true);
+                rectangle = new Square(Convert.ToDouble(textBoxRecX.Text), true);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
-                rectangle = new Rectangle(Convert.ToDouble(textBoxRecY.Text), false);
+                rectangle = new Square(Convert.ToDouble(textBoxRecY.Text), false);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
             else
@@ -163,13 +219,13 @@ namespace oop_project
                 double y_rec = Convert.ToDouble(textBoxRecY.Text);
                 double size_rec = Convert.ToDouble(textBoxSizeRec.Text);
                 MyPoint point = new MyPoint(x_rec, y_rec);
-                rectangle = new Rectangle(point, size_rec);
+                rectangle = new Square(point, size_rec);
                 MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
             }
 
-            list_rectangles = ArrayOperation.AddElement(list_rectangles, rectangle);
+            list_squares = ArrayOperation.AddElement(list_squares, rectangle);
 
-            listBoxRect.Items.Add(rectangle.ToString() + $"№{list_rectangles.Length}");
+            listBoxRect.Items.Add(rectangle.ToString() + $"№{list_squares.Length}");
 
             rectangle.Draw();
         }
@@ -182,17 +238,17 @@ namespace oop_project
 
             if (textBoxIDRec.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Length)
+                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_squares.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_squares.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                list_rectangles[Convert.ToInt32(textBoxIDRec.Text)].Move(x_move, y_move);
+                list_squares[Convert.ToInt32(textBoxIDRec.Text)].Move(x_move, y_move);
             }
             else
             {
-                foreach (var item in list_rectangles)
+                foreach (var item in list_squares)
                 {
                     item.Move(x_move, y_move);
                 }
@@ -205,18 +261,18 @@ namespace oop_project
 
             if (textBoxIDRec.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Length)
+                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_squares.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_squares.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                list_rectangles[Convert.ToInt32(textBoxIDRec.Text)].Change();
+                list_squares[Convert.ToInt32(textBoxIDRec.Text)].Change();
             }
             else
             {
 
-                foreach (var item in list_rectangles)
+                foreach (var item in list_squares)
                 {
                     item.Change();
                 }
@@ -228,27 +284,27 @@ namespace oop_project
 
             if (textBoxIDRec.Text != String.Empty)
             {
-                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_rectangles.Length)
+                if (Convert.ToInt32(textBoxIDRec.Text) < 0 || Convert.ToInt32(textBoxIDRec.Text) >= list_squares.Length)
                 {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rectangles.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_squares.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                list_rectangles[Convert.ToInt32(textBoxIDRec.Text)].Delete();
+                list_squares[Convert.ToInt32(textBoxIDRec.Text)].Delete();
                 //list_rectangles.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
-                list_rectangles = ArrayOperation.RemoveElement(list_rectangles, Convert.ToInt32(textBoxIDRec.Text));
+                list_squares = ArrayOperation.RemoveElement(list_squares, Convert.ToInt32(textBoxIDRec.Text));
                 listBoxRect.Items.RemoveAt(Convert.ToInt32(textBoxIDRec.Text));
                 listBoxRect.Refresh();
             }
             else
             {          
 
-                foreach (var item in list_rectangles)
+                foreach (var item in list_squares)
                 {
                     item.Delete();
                 }
                 //list_rectangles.Clear();
-                list_rectangles = ArrayOperation.Clear(list_rectangles);
+                list_squares = ArrayOperation.Clear(list_squares);
                 listBoxRect.Items.Clear();
                 listBoxRect.Refresh();
             }
@@ -531,7 +587,7 @@ namespace oop_project
             double size_figure = Convert.ToDouble(textBoxMyFigureCircSize.Text);
 
             Circle circle = new Circle(x_center, y_center, size_figure);
-            Rectangle rectangle = new Rectangle(x_center, y_center, size_figure);
+            Square rectangle = new Square(x_center, y_center, size_figure);
 
             my_figure = new MyFigure(circle, rectangle);
 
@@ -590,6 +646,209 @@ namespace oop_project
                 list_myfigures = ArrayOperation.Clear(list_myfigures);
                 listBoxMyFigures.Items.Clear();
                 listBoxMyFigures.Refresh();
+            }
+        }
+
+        private void Create_Ellips_Click(object sender, EventArgs e)
+        {
+            Ellipse ellipse;
+
+            if ((textBoxEllipsX.Text == String.Empty) && (textBoxEllipsY.Text == String.Empty) && (textBoxEllipsSize1.Text == String.Empty) && (textBoxEllipsSize2.Text == String.Empty))
+            {
+                ellipse = new Ellipse();
+                MessageBox.Show($"Вы создали эллипс 1-ая полуось: {ellipse.Size} 2-ая полуось: {ellipse.Size2}. Координаты: x = {ellipse.point.X} y = {ellipse.point.Y}");
+            }
+            else
+            {
+                double x_ellip = Convert.ToDouble(textBoxEllipsX.Text);
+                double y_ellip = Convert.ToDouble(textBoxEllipsY.Text);
+                double size1_ellip = Convert.ToDouble(textBoxEllipsSize1.Text);
+                double size2_ellip = Convert.ToDouble(textBoxEllipsSize2.Text);
+                MyPoint point = new MyPoint(x_ellip, y_ellip);
+                ellipse = new Ellipse(point, size1_ellip, size2_ellip);
+                MessageBox.Show($"Вы создали эллипс 1-ая полуось: {ellipse.Size} 2-ая полуось: {ellipse.Size2}. Координаты: x = {ellipse.point.X} y = {ellipse.point.Y}");
+            }
+
+            list_ellipses = ArrayOperation.AddElement(list_ellipses, ellipse);
+
+            listBoxEllips.Items.Add(ellipse.ToString() + $"№{list_ellipses.Length}");
+
+            ellipse.Draw();
+        }
+
+        private void Move_Ellip_Click(object sender, EventArgs e)
+        {
+            double x_move = Convert.ToDouble(textBoxMoveElX.Text);
+            double y_move = Convert.ToDouble(textBoxMoveElY.Text);
+
+            if (textBoxIDEllips.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDEllips.Text) < 0 || Convert.ToInt32(textBoxIDEllips.Text) >= list_ellipses.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_ellipses.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                list_ellipses[Convert.ToInt32(textBoxIDEllips.Text)].Move(x_move, y_move);
+            }
+            else
+            {
+                foreach (var item in list_ellipses)
+                {
+                    item.Move(x_move, y_move);
+                }
+            }
+        }
+
+        private void Change_Ellip_Click(object sender, EventArgs e)
+        {
+            if (textBoxIDEllips.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDEllips.Text) < 0 || Convert.ToInt32(textBoxIDEllips.Text) >= list_ellipses.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_ellipses.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                list_ellipses[Convert.ToInt32(textBoxIDEllips.Text)].ChangeSemiAxis();
+            }
+            else
+            {
+                foreach (var item in list_ellipses)
+                {
+                    item.ChangeSemiAxis();
+                }
+            }
+        }
+
+        private void Delete_Ellip_Click(object sender, EventArgs e)
+        {
+            if (textBoxIDEllips.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDEllips.Text) < 0 || Convert.ToInt32(textBoxIDEllips.Text) >= list_ellipses.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_ellipses.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                list_ellipses[Convert.ToInt32(textBoxIDEllips.Text)].Delete();
+                list_ellipses = ArrayOperation.RemoveElement(list_ellipses, Convert.ToInt32(textBoxIDEllips.Text));
+                listBoxEllips.Items.RemoveAt(Convert.ToInt32(textBoxIDEllips.Text));
+                listBoxEllips.Refresh();
+            }
+            else
+            {
+                foreach (var item in list_ellipses)
+                {
+                    item.Delete();
+                }
+                list_ellipses = ArrayOperation.Clear(list_ellipses);
+                listBoxEllips.Items.Clear();
+                listBoxEllips.Refresh();
+            }
+        }
+
+        private void Create_Inher_Click(object sender, EventArgs e)
+        {
+            if (comboBoxInher.SelectedIndex == 0)
+            {
+                Rhomb rhomb;
+                if ((textBoxInherX.Text == String.Empty) && (textBoxInherY.Text == String.Empty) && (textBoxInherSize1.Text == String.Empty) && (textBoxInherSize2.Text == String.Empty))
+                {
+                    rhomb = new Rhomb();
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rhomb.Size} 2-ая полуось: {rhomb.Size2}. Координаты: x = {rhomb.point.X} y = {rhomb.point.Y}");
+                }
+                else
+                {
+                    double x_rhomb = Convert.ToDouble(textBoxInherX.Text);
+                    double y_rhomb = Convert.ToDouble(textBoxInherY.Text);
+                    double size1_rhomb = Convert.ToDouble(textBoxInherSize1.Text);
+                    double size2_rhomb = Convert.ToDouble(textBoxInherSize2.Text);
+                    MyPoint point = new MyPoint(x_rhomb, y_rhomb);
+                    rhomb = new Rhomb(point, size1_rhomb, size2_rhomb);
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rhomb.Size} 2-ая полуось: {rhomb.Size2}. Координаты: x = {rhomb.point.X} y = {rhomb.point.Y}");
+                }
+
+                list_inher = ArrayOperation.AddElement(list_inher, rhomb);
+
+                listBoxInher.Items.Add(rhomb.ToString() + $"№{list_inher.Length}");
+
+                rhomb.Draw();
+            }
+            else if (comboBoxInher.SelectedIndex == 1)
+            {
+                MyRectangle rec;
+                if ((textBoxInherX.Text == String.Empty) && (textBoxInherY.Text == String.Empty) && (textBoxInherSize1.Text == String.Empty) && (textBoxInherSize2.Text == String.Empty))
+                {
+                    rec = new MyRectangle();
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rec.Size} 2-ая полуось: {rec.Size2}. Координаты: x = {rec.point.X} y = {rec.point.Y}");
+                }
+                else
+                {
+                    double x_rhomb = Convert.ToDouble(textBoxInherX.Text);
+                    double y_rhomb = Convert.ToDouble(textBoxInherY.Text);
+                    double size1_rhomb = Convert.ToDouble(textBoxInherSize1.Text);
+                    double size2_rhomb = Convert.ToDouble(textBoxInherSize2.Text);
+                    MyPoint point = new MyPoint(x_rhomb, y_rhomb);
+                    rec = new MyRectangle(point, size1_rhomb, size2_rhomb);
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rec.Size} 2-ая полуось: {rec.Size2}. Координаты: x = {rec.point.X} y = {rec.point.Y}");
+                }
+                list_inher = ArrayOperation.AddElement(list_inher, rec);
+
+                listBoxInher.Items.Add(rec.ToString() + $"№{list_inher.Length}");
+
+                rec.Draw();
+            }
+
+        }
+
+        private void Move_Inher_Click(object sender, EventArgs e)
+        {
+            double x_move = Convert.ToDouble(textBoxMoveInherX.Text);
+            double y_move = Convert.ToDouble(textBoxMoveInherY.Text);
+
+            if (textBoxIDInher.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDInher.Text) < 0 || Convert.ToInt32(textBoxIDInher.Text) >= list_inher.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_inher.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                list_inher[Convert.ToInt32(textBoxIDInher.Text)].Move(x_move, y_move);
+            }
+            else
+            {
+                foreach (var item in list_inher)
+                {
+                    item.Move(x_move, y_move);
+                }
+            }
+        }
+
+        private void Delete_Inher_Click(object sender, EventArgs e)
+        {
+            if (textBoxIDInher.Text != String.Empty)
+            {
+                if (Convert.ToInt32(textBoxIDInher.Text) < 0 || Convert.ToInt32(textBoxIDInher.Text) >= list_inher.Length)
+                {
+                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_inher.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                list_inher[Convert.ToInt32(textBoxIDInher.Text)].Delete();
+                list_inher = ArrayOperation.RemoveElement(list_inher, Convert.ToInt32(textBoxIDInher.Text));
+                listBoxInher.Items.RemoveAt(Convert.ToInt32(textBoxIDInher.Text));
+                listBoxInher.Refresh();
+            }
+            else
+            {
+                foreach (var item in list_inher)
+                {
+                    item.Delete();
+                }
+                list_inher = ArrayOperation.Clear(list_inher);
+                listBoxInher.Items.Clear();
+                listBoxInher.Refresh();
             }
         }
     }
