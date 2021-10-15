@@ -29,30 +29,38 @@ namespace oop_project.Models
 
         public override void Draw()
         {
-            base.Draw(Color.LightGreen, Size, Size2);
+            Draw(Color.LightGreen);
+        }
+
+        public override void Draw(Color color)
+        {
+            Graphics gr = Graphics.FromImage(bitmap);
+            Pen pen = new Pen(color);
+            gr.DrawEllipse(pen, (float)point.X, (float)point.Y, (float)Size, (float)Size2);
+            pictureBox.Image = bitmap;
         }
 
         public void ChangeSemiAxis()
         {
-            base.Draw(Color.White, Size, Size2);
+            Draw(Color.White);
             double temp = Size;
             Size = Size2;
             Size2 = temp;
-            Draw();
+            Draw(Color.LightGreen);
         }
 
-        public override void Move(double dx, double dy)
-        {
-            Draw(Color.White, Size, Size2);
-            point.X += dx;
-            point.Y += dy;
-            Draw(Color.LightGreen, Size, Size2);
-        }
+        //public override void Move(double dx, double dy)
+        //{
+        //    Draw(Color.White, Size, Size2);
+        //    point.X += dx;
+        //    point.Y += dy;
+        //    Draw(Color.LightGreen, Size, Size2);
+        //}
 
-        public override void Delete()
-        {
-            Draw(Color.White, Size, Size2);
-        }
+        //public override void Delete()
+        //{
+        //    Draw(Color.White, Size, Size2);
+        //}
 
         public override string ToString()
         {

@@ -29,23 +29,31 @@ namespace oop_project.Models
 
         public override void Draw()
         {
-            base.Draw(Color.LightGreen, Size, Size2);
+            base.Draw(Color.LightGreen);
         }
 
-        public override void Move(double dx, double dy)
+        public override void Draw(Color color)
         {
-            base.Draw(Color.White, Size, Size2);
-
-            this.point.X += dx;
-            this.point.Y += dy;
-
-            base.Draw(Color.LightGreen, Size, Size2);
+            Graphics gr = Graphics.FromImage(bitmap);
+            Pen pen = new Pen(color);
+            gr.DrawRectangle(pen, (float)point.X, (float)point.Y, (float)Size, (float)Size2);
+            pictureBox.Image = bitmap;
         }
 
-        public override void Delete()
-        {
-            base.Draw(Color.White, Size, Size2);
-        }
+        //public override void Move(double dx, double dy)
+        //{
+        //    base.Draw(Color.White);
+
+        //    this.point.X += dx;
+        //    this.point.Y += dy;
+
+        //    base.Draw(Color.LightGreen, Size, Size2);
+        //}
+
+        //public override void Delete()
+        //{
+        //    base.Draw(Color.White, Size, Size2);
+        //}
 
         public override string ToString()
         {

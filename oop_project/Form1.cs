@@ -11,6 +11,16 @@ using oop_project.Models;
 
 namespace oop_project
 {
+    enum Figure
+    {
+        Circle,
+        Ellipse,
+        Line,
+        Rectangle,
+        Rhomb,
+        Square
+    }
+
     public partial class Form1 : Form
     {
         Bitmap bitmap;
@@ -22,11 +32,13 @@ namespace oop_project
         MyFigure[] list_myfigures;
         Ellipse[] list_ellipses;
         Square[] list_inher;
+        TFigure[] list_figures;
 
         public Form1()
         {
             InitializeComponent();
             bitmap = new Bitmap(PictureArea.Width, PictureArea.Height);
+            
 
             list_squares = new Square[0] { };
             list_circles = new Circle[0] { };
@@ -35,6 +47,8 @@ namespace oop_project
             list_myfigures = new MyFigure[0] { };
             list_ellipses = new Ellipse[0] { };
             list_inher = new Square[0] { };
+            list_figures = new TFigure[0] { };
+
 
             comboBoxInher.SelectedIndexChanged += ComboBoxInher_SelectedIndexChanged;
 
@@ -849,6 +863,42 @@ namespace oop_project
                 list_inher = ArrayOperation.Clear(list_inher);
                 listBoxInher.Items.Clear();
                 listBoxInher.Refresh();
+            }
+        }
+
+        private void Create_Figures_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            TFigure figure;
+
+            for (int i = 0; i < 15; i++)
+            {
+                
+                switch (rand.Next(0, 5))
+                {
+                    case (int)Figure.Circle:
+                        figure = new Circle((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
+                        break;
+                    case (int)Figure.Ellipse:
+                        figure = new Ellipse((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
+                        break;
+                    case (int)Figure.Line:
+                        figure = new Line((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
+                        break;
+                    case (int)Figure.Rectangle:
+                        figure = new MyRectangle((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
+                        break;
+                    case (int)Figure.Rhomb:
+                        figure = new Rhomb((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
+                        break;
+                    default:
+                        figure = new Square((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
+                        break;
+                }
+
+                list_figures = ArrayOperation.AddElement(list_figures, figure);
+                figure.Draw();
+                listBoxFigures.Items.Add(figure.ToString() + $"№{list_figures.Length}");
             }
         }
     }

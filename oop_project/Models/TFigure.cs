@@ -47,10 +47,33 @@ namespace oop_project.Models
             this.Size = (double)r.Next(30, 150);
         }
 
-        public abstract void Draw();
+        public virtual void Draw()
+        {
 
-        public abstract void Move(double dx, double dy);
+        }
 
-        public abstract void Delete();
+        public virtual void Draw(Color color)
+        {
+            
+        }
+
+        public virtual void Move(double dx, double dy)
+        {
+            Draw(Color.White);
+            this.point.X += dx;
+            this.point.Y += dy;
+            Draw(Color.LightGreen);
+        }
+
+        public virtual void Delete()
+        {
+            Draw(Color.White);
+        }
+
+        //public abstract void Draw();
+
+        //public abstract void Move(double dx, double dy);
+
+        //public abstract void Delete();
     }
 }

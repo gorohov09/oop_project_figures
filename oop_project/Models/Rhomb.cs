@@ -27,7 +27,7 @@ namespace oop_project.Models
             this.Size2 = (double)r.Next(0, 300);
         }
 
-        private void Draw(Color color)
+        public override void Draw(Color color)
         {
             int x1 = (int)point.X;
             int y1 = (int)point.Y;

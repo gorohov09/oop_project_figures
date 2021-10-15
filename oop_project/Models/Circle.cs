@@ -34,31 +34,31 @@ namespace oop_project
 
         public override void Draw()
         {
-            Draw(Color.LightGreen, Size, Size);
+            Draw(Color.LightGreen);
         }
-
-        protected void Draw(Color color, double size1, double size2)
+        
+        public override void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
-            gr.DrawEllipse(pen, (float)point.X, (float)point.Y, (float)size1, (float)size2);
+            gr.DrawEllipse(pen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
-        public override void Move(double dx, double dy)
-        {
-            Draw(Color.White, Size, Size);
+        //public override void Move(double dx, double dy)
+        //{
+        //    Draw(Color.White, Size, Size);
 
-            this.point.X += dx;
-            this.point.Y += dy;
+        //    this.point.X += dx;
+        //    this.point.Y += dy;
 
-            Draw(Color.LightGreen, Size, Size);
-        }
+        //    Draw(Color.LightGreen, Size, Size);
+        //}
 
-        public override void Delete()
-        {
-            Draw(Color.White, Size, Size);
-        }
+        //public override void Delete()
+        //{
+        //    Draw(Color.White, Size, Size);
+        //}
 
         public override string ToString()
         {

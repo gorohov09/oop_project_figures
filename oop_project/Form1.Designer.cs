@@ -180,6 +180,17 @@ namespace oop_project
             this.trackBarInherX = new System.Windows.Forms.TrackBar();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.Create_Figures = new System.Windows.Forms.Button();
+            this.listBoxFigures = new System.Windows.Forms.ListBox();
+            this.Delete_Figures = new System.Windows.Forms.Button();
+            this.Move_Figures = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.textBoxMoveFiguresX = new System.Windows.Forms.TextBox();
+            this.textBoxMoveFiguresY = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.comboBoxFigures = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -209,7 +220,7 @@ namespace oop_project
             // 
             this.PictureArea.Location = new System.Drawing.Point(372, 2);
             this.PictureArea.Name = "PictureArea";
-            this.PictureArea.Size = new System.Drawing.Size(501, 520);
+            this.PictureArea.Size = new System.Drawing.Size(501, 317);
             this.PictureArea.TabIndex = 0;
             this.PictureArea.TabStop = false;
             // 
@@ -226,7 +237,7 @@ namespace oop_project
             this.tabControl1.Location = new System.Drawing.Point(-2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(379, 440);
+            this.tabControl1.Size = new System.Drawing.Size(379, 410);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -254,7 +265,7 @@ namespace oop_project
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(371, 412);
+            this.tabPage1.Size = new System.Drawing.Size(371, 382);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -263,7 +274,7 @@ namespace oop_project
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(205, 207);
+            this.label27.Location = new System.Drawing.Point(231, 154);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(144, 16);
             this.label27.TabIndex = 19;
@@ -276,7 +287,7 @@ namespace oop_project
             this.listBoxRect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxRect.FormattingEnabled = true;
             this.listBoxRect.ItemHeight = 16;
-            this.listBoxRect.Location = new System.Drawing.Point(225, 226);
+            this.listBoxRect.Location = new System.Drawing.Point(245, 174);
             this.listBoxRect.Name = "listBoxRect";
             this.listBoxRect.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxRect.Size = new System.Drawing.Size(119, 178);
@@ -476,7 +487,7 @@ namespace oop_project
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(371, 412);
+            this.tabPage2.Size = new System.Drawing.Size(371, 382);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -485,7 +496,7 @@ namespace oop_project
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(227, 204);
+            this.label7.Location = new System.Drawing.Point(248, 155);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 30;
@@ -498,7 +509,7 @@ namespace oop_project
             this.listBoxCirc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxCirc.FormattingEnabled = true;
             this.listBoxCirc.ItemHeight = 16;
-            this.listBoxCirc.Location = new System.Drawing.Point(230, 226);
+            this.listBoxCirc.Location = new System.Drawing.Point(245, 174);
             this.listBoxCirc.Name = "listBoxCirc";
             this.listBoxCirc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxCirc.Size = new System.Drawing.Size(119, 178);
@@ -684,7 +695,7 @@ namespace oop_project
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(371, 412);
+            this.tabPage3.Size = new System.Drawing.Size(371, 382);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -696,7 +707,7 @@ namespace oop_project
             this.listBoxLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxLine.FormattingEnabled = true;
             this.listBoxLine.ItemHeight = 16;
-            this.listBoxLine.Location = new System.Drawing.Point(233, 232);
+            this.listBoxLine.Location = new System.Drawing.Point(239, 180);
             this.listBoxLine.Name = "listBoxLine";
             this.listBoxLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxLine.Size = new System.Drawing.Size(119, 178);
@@ -706,7 +717,7 @@ namespace oop_project
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(242, 213);
+            this.label15.Location = new System.Drawing.Point(248, 161);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 16);
             this.label15.TabIndex = 34;
@@ -894,7 +905,7 @@ namespace oop_project
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(371, 412);
+            this.tabPage4.Size = new System.Drawing.Size(371, 382);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -915,7 +926,7 @@ namespace oop_project
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(249, 226);
+            this.label8.Location = new System.Drawing.Point(255, 165);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 16);
             this.label8.TabIndex = 32;
@@ -928,7 +939,7 @@ namespace oop_project
             this.listBoxRing.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxRing.FormattingEnabled = true;
             this.listBoxRing.ItemHeight = 16;
-            this.listBoxRing.Location = new System.Drawing.Point(239, 245);
+            this.listBoxRing.Location = new System.Drawing.Point(246, 184);
             this.listBoxRing.Name = "listBoxRing";
             this.listBoxRing.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxRing.Size = new System.Drawing.Size(119, 178);
@@ -1120,7 +1131,7 @@ namespace oop_project
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(371, 412);
+            this.tabPage5.Size = new System.Drawing.Size(371, 382);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Произвольная фигура";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1153,7 +1164,7 @@ namespace oop_project
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(233, 222);
+            this.label37.Location = new System.Drawing.Point(244, 153);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(111, 16);
             this.label37.TabIndex = 47;
@@ -1166,7 +1177,7 @@ namespace oop_project
             this.listBoxMyFigures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxMyFigures.FormattingEnabled = true;
             this.listBoxMyFigures.ItemHeight = 16;
-            this.listBoxMyFigures.Location = new System.Drawing.Point(236, 241);
+            this.listBoxMyFigures.Location = new System.Drawing.Point(236, 181);
             this.listBoxMyFigures.Name = "listBoxMyFigures";
             this.listBoxMyFigures.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxMyFigures.Size = new System.Drawing.Size(119, 178);
@@ -1332,7 +1343,7 @@ namespace oop_project
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(371, 412);
+            this.tabPage6.Size = new System.Drawing.Size(371, 382);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Эллипс";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1414,7 +1425,7 @@ namespace oop_project
             this.listBoxEllips.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxEllips.FormattingEnabled = true;
             this.listBoxEllips.ItemHeight = 16;
-            this.listBoxEllips.Location = new System.Drawing.Point(236, 228);
+            this.listBoxEllips.Location = new System.Drawing.Point(237, 183);
             this.listBoxEllips.Name = "listBoxEllips";
             this.listBoxEllips.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxEllips.Size = new System.Drawing.Size(119, 178);
@@ -1441,7 +1452,7 @@ namespace oop_project
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(244, 209);
+            this.label41.Location = new System.Drawing.Point(244, 164);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(111, 16);
             this.label41.TabIndex = 48;
@@ -1573,7 +1584,7 @@ namespace oop_project
             this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(371, 412);
+            this.tabPage7.Size = new System.Drawing.Size(371, 382);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1593,7 +1604,7 @@ namespace oop_project
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label52.Location = new System.Drawing.Point(245, 209);
+            this.label52.Location = new System.Drawing.Point(245, 181);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(111, 16);
             this.label52.TabIndex = 60;
@@ -1606,7 +1617,7 @@ namespace oop_project
             this.listBoxInher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxInher.FormattingEnabled = true;
             this.listBoxInher.ItemHeight = 16;
-            this.listBoxInher.Location = new System.Drawing.Point(245, 228);
+            this.listBoxInher.Location = new System.Drawing.Point(245, 200);
             this.listBoxInher.Name = "listBoxInher";
             this.listBoxInher.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxInher.Size = new System.Drawing.Size(119, 178);
@@ -1786,11 +1797,137 @@ namespace oop_project
             this.label45.TabIndex = 7;
             this.label45.Text = "Координата по X";
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label47.Location = new System.Drawing.Point(379, 318);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(196, 16);
+            this.label47.TabIndex = 3;
+            this.label47.Text = "Массив случайных фигур";
+            // 
+            // Create_Figures
+            // 
+            this.Create_Figures.BackColor = System.Drawing.Color.Maroon;
+            this.Create_Figures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Create_Figures.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Create_Figures.Location = new System.Drawing.Point(33, 414);
+            this.Create_Figures.Name = "Create_Figures";
+            this.Create_Figures.Size = new System.Drawing.Size(111, 32);
+            this.Create_Figures.TabIndex = 5;
+            this.Create_Figures.Text = "Создать";
+            this.Create_Figures.UseVisualStyleBackColor = false;
+            this.Create_Figures.Click += new System.EventHandler(this.Create_Figures_Click);
+            // 
+            // listBoxFigures
+            // 
+            this.listBoxFigures.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxFigures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxFigures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxFigures.FormattingEnabled = true;
+            this.listBoxFigures.ItemHeight = 16;
+            this.listBoxFigures.Location = new System.Drawing.Point(386, 337);
+            this.listBoxFigures.Name = "listBoxFigures";
+            this.listBoxFigures.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxFigures.Size = new System.Drawing.Size(162, 178);
+            this.listBoxFigures.TabIndex = 19;
+            // 
+            // Delete_Figures
+            // 
+            this.Delete_Figures.BackColor = System.Drawing.Color.Maroon;
+            this.Delete_Figures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_Figures.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Delete_Figures.Location = new System.Drawing.Point(173, 414);
+            this.Delete_Figures.Name = "Delete_Figures";
+            this.Delete_Figures.Size = new System.Drawing.Size(111, 32);
+            this.Delete_Figures.TabIndex = 20;
+            this.Delete_Figures.Text = "Удалить";
+            this.Delete_Figures.UseVisualStyleBackColor = false;
+            // 
+            // Move_Figures
+            // 
+            this.Move_Figures.BackColor = System.Drawing.Color.Maroon;
+            this.Move_Figures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Move_Figures.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Move_Figures.Location = new System.Drawing.Point(640, 405);
+            this.Move_Figures.Name = "Move_Figures";
+            this.Move_Figures.Size = new System.Drawing.Size(123, 32);
+            this.Move_Figures.TabIndex = 21;
+            this.Move_Figures.Text = "Переместить";
+            this.Move_Figures.UseVisualStyleBackColor = false;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label48.Location = new System.Drawing.Point(605, 322);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(212, 16);
+            this.label48.TabIndex = 22;
+            this.label48.Text = "Координаты базовой точки";
+            // 
+            // textBoxMoveFiguresX
+            // 
+            this.textBoxMoveFiguresX.Location = new System.Drawing.Point(646, 341);
+            this.textBoxMoveFiguresX.Name = "textBoxMoveFiguresX";
+            this.textBoxMoveFiguresX.Size = new System.Drawing.Size(36, 20);
+            this.textBoxMoveFiguresX.TabIndex = 23;
+            // 
+            // textBoxMoveFiguresY
+            // 
+            this.textBoxMoveFiguresY.Location = new System.Drawing.Point(727, 341);
+            this.textBoxMoveFiguresY.Name = "textBoxMoveFiguresY";
+            this.textBoxMoveFiguresY.Size = new System.Drawing.Size(36, 20);
+            this.textBoxMoveFiguresY.TabIndex = 24;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label53.Location = new System.Drawing.Point(619, 343);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(21, 16);
+            this.label53.TabIndex = 25;
+            this.label53.Text = "X:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label54.Location = new System.Drawing.Point(699, 343);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(22, 16);
+            this.label54.TabIndex = 26;
+            this.label54.Text = "Y:";
+            // 
+            // comboBoxFigures
+            // 
+            this.comboBoxFigures.FormattingEnabled = true;
+            this.comboBoxFigures.Items.AddRange(new object[] {
+            "Ромб",
+            "Прямоугольник"});
+            this.comboBoxFigures.Location = new System.Drawing.Point(646, 367);
+            this.comboBoxFigures.Name = "comboBoxFigures";
+            this.comboBoxFigures.Size = new System.Drawing.Size(117, 21);
+            this.comboBoxFigures.TabIndex = 62;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 516);
+            this.Controls.Add(this.comboBoxFigures);
+            this.Controls.Add(this.label54);
+            this.Controls.Add(this.label53);
+            this.Controls.Add(this.textBoxMoveFiguresY);
+            this.Controls.Add(this.textBoxMoveFiguresX);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.Move_Figures);
+            this.Controls.Add(this.Delete_Figures);
+            this.Controls.Add(this.listBoxFigures);
+            this.Controls.Add(this.Create_Figures);
+            this.Controls.Add(this.label47);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.PictureArea);
             this.Name = "Form1";
@@ -1826,6 +1963,7 @@ namespace oop_project
             ((System.ComponentModel.ISupportInitialize)(this.trackBarInherY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarInherX)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1982,6 +2120,17 @@ namespace oop_project
         private System.Windows.Forms.ComboBox comboBoxInher;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ListBox listBoxInher;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button Create_Figures;
+        private System.Windows.Forms.ListBox listBoxFigures;
+        private System.Windows.Forms.Button Delete_Figures;
+        private System.Windows.Forms.Button Move_Figures;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox textBoxMoveFiguresX;
+        private System.Windows.Forms.TextBox textBoxMoveFiguresY;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.ComboBox comboBoxFigures;
     }
 }
 
