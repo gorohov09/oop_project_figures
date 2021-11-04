@@ -47,33 +47,35 @@ namespace oop_project.Models
             this.Size = (double)r.Next(30, 150);
         }
 
-        public virtual void Draw()
-        {
+        #region Laba_5
+        //public virtual void Draw()
+        //{
 
-        }
+        //}
 
-        public virtual void Draw(Color color)
-        {
-            
-        }
+        //public virtual void Draw(Color color)
+        //{
 
-        public virtual void Move(double dx, double dy)
-        {
-            Draw(Color.White);
-            this.point.X += dx;
-            this.point.Y += dy;
-            Draw(Color.LightGreen);
-        }
+        //}
 
-        public virtual void Delete()
-        {
-            Draw(Color.White);
-        }
+        //public void Move(double dx, double dy)
+        //{
+        //    Draw(Color.White);
+        //    this.point.X += dx;
+        //    this.point.Y += dy;
+        //    Draw(Color.LightGreen);
+        //}
 
-        //public abstract void Draw();
+        //public void Delete()
+        //{
+        //    Draw(Color.White);
+        //}
+        #endregion
 
-        //public abstract void Move(double dx, double dy);
+        public abstract void Draw();
 
-        //public abstract void Delete();
+        public abstract void Move(double dx, double dy);
+
+        public abstract void Delete();
     }
 }

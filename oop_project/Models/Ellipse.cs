@@ -49,19 +49,6 @@ namespace oop_project.Models
             Draw(Color.LightGreen);
         }
 
-        //public override void Move(double dx, double dy)
-        //{
-        //    Draw(Color.White, Size, Size2);
-        //    point.X += dx;
-        //    point.Y += dy;
-        //    Draw(Color.LightGreen, Size, Size2);
-        //}
-
-        //public override void Delete()
-        //{
-        //    Draw(Color.White, Size, Size2);
-        //}
-
         public override string ToString()
         {
             return "Эллипс";

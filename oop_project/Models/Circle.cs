@@ -37,7 +37,7 @@ namespace oop_project
             Draw(Color.LightGreen);
         }
         
-        public override void Draw(Color color)
+        public virtual void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
@@ -45,20 +45,20 @@ namespace oop_project
             pictureBox.Image = bitmap;
         }
 
-        //public override void Move(double dx, double dy)
-        //{
-        //    Draw(Color.White, Size, Size);
+        public override void Move(double dx, double dy)
+        {
+            Draw(Color.White);
 
-        //    this.point.X += dx;
-        //    this.point.Y += dy;
+            this.point.X += dx;
+            this.point.Y += dy;
 
-        //    Draw(Color.LightGreen, Size, Size);
-        //}
+            Draw(Color.LightGreen);
+        }
 
-        //public override void Delete()
-        //{
-        //    Draw(Color.White, Size, Size);
-        //}
+        public override void Delete()
+        {
+            Draw(Color.White);
+        }
 
         public override string ToString()
         {

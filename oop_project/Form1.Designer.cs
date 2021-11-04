@@ -209,7 +209,7 @@ namespace oop_project
             // 
             this.PictureArea.BackColor = System.Drawing.SystemColors.Window;
             this.PictureArea.Location = new System.Drawing.Point(496, 2);
-            this.PictureArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PictureArea.Margin = new System.Windows.Forms.Padding(4);
             this.PictureArea.Name = "PictureArea";
             this.PictureArea.Size = new System.Drawing.Size(668, 632);
             this.PictureArea.TabIndex = 0;
@@ -224,9 +224,9 @@ namespace oop_project
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl1.Location = new System.Drawing.Point(-3, 2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(505, 632);
@@ -254,11 +254,11 @@ namespace oop_project
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBoxRecY);
             this.tabPage1.Controls.Add(this.textBoxRecX);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(497, 474);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(497, 599);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Квадрат";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -282,7 +282,7 @@ namespace oop_project
             this.listBoxRect.FormattingEnabled = true;
             this.listBoxRect.ItemHeight = 20;
             this.listBoxRect.Location = new System.Drawing.Point(327, 214);
-            this.listBoxRect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxRect.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxRect.Name = "listBoxRect";
             this.listBoxRect.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxRect.Size = new System.Drawing.Size(158, 202);
@@ -291,7 +291,7 @@ namespace oop_project
             // trackBarRectY
             // 
             this.trackBarRectY.Location = new System.Drawing.Point(223, 59);
-            this.trackBarRectY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarRectY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarRectY.Maximum = 500;
             this.trackBarRectY.Name = "trackBarRectY";
             this.trackBarRectY.Size = new System.Drawing.Size(187, 56);
@@ -302,7 +302,7 @@ namespace oop_project
             // 
             this.trackBarRectX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarRectX.Location = new System.Drawing.Point(223, 14);
-            this.trackBarRectX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarRectX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarRectX.Maximum = 500;
             this.trackBarRectX.Name = "trackBarRectX";
             this.trackBarRectX.Size = new System.Drawing.Size(187, 56);
@@ -313,7 +313,7 @@ namespace oop_project
             this.Change_Rec.BackColor = System.Drawing.Color.Maroon;
             this.Change_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Change_Rec.Location = new System.Drawing.Point(27, 390);
-            this.Change_Rec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Change_Rec.Margin = new System.Windows.Forms.Padding(4);
             this.Change_Rec.Name = "Change_Rec";
             this.Change_Rec.Size = new System.Drawing.Size(213, 64);
             this.Change_Rec.TabIndex = 15;
@@ -324,9 +324,9 @@ namespace oop_project
             // textBoxSizeRec
             // 
             this.textBoxSizeRec.Location = new System.Drawing.Point(277, 122);
-            this.textBoxSizeRec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSizeRec.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSizeRec.Name = "textBoxSizeRec";
-            this.textBoxSizeRec.Size = new System.Drawing.Size(97, 24);
+            this.textBoxSizeRec.Size = new System.Drawing.Size(97, 27);
             this.textBoxSizeRec.TabIndex = 14;
             // 
             // label6
@@ -343,17 +343,17 @@ namespace oop_project
             // textBoxMoveRecX
             // 
             this.textBoxMoveRecX.Location = new System.Drawing.Point(179, 257);
-            this.textBoxMoveRecX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveRecX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveRecX.Name = "textBoxMoveRecX";
-            this.textBoxMoveRecX.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveRecX.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveRecX.TabIndex = 12;
             // 
             // textBoxMoveRecY
             // 
             this.textBoxMoveRecY.Location = new System.Drawing.Point(179, 298);
-            this.textBoxMoveRecY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveRecY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveRecY.Name = "textBoxMoveRecY";
-            this.textBoxMoveRecY.Size = new System.Drawing.Size(60, 24);
+            this.textBoxMoveRecY.Size = new System.Drawing.Size(60, 27);
             this.textBoxMoveRecY.TabIndex = 11;
             // 
             // label5
@@ -383,7 +383,7 @@ namespace oop_project
             this.DeleteRec.BackColor = System.Drawing.Color.DarkRed;
             this.DeleteRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteRec.Location = new System.Drawing.Point(161, 345);
-            this.DeleteRec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteRec.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteRec.Name = "DeleteRec";
             this.DeleteRec.Size = new System.Drawing.Size(131, 38);
             this.DeleteRec.TabIndex = 8;
@@ -397,7 +397,7 @@ namespace oop_project
             this.Move_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Rec.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Move_Rec.Location = new System.Drawing.Point(4, 345);
-            this.Move_Rec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_Rec.Margin = new System.Windows.Forms.Padding(4);
             this.Move_Rec.Name = "Move_Rec";
             this.Move_Rec.Size = new System.Drawing.Size(153, 38);
             this.Move_Rec.TabIndex = 7;
@@ -408,9 +408,9 @@ namespace oop_project
             // textBoxIDRec
             // 
             this.textBoxIDRec.Location = new System.Drawing.Point(248, 213);
-            this.textBoxIDRec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDRec.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDRec.Name = "textBoxIDRec";
-            this.textBoxIDRec.Size = new System.Drawing.Size(60, 24);
+            this.textBoxIDRec.Size = new System.Drawing.Size(60, 27);
             this.textBoxIDRec.TabIndex = 6;
             // 
             // label3
@@ -430,7 +430,7 @@ namespace oop_project
             this.Create_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Rec.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Create_Rec.Location = new System.Drawing.Point(128, 154);
-            this.Create_Rec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Rec.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Rec.Name = "Create_Rec";
             this.Create_Rec.Size = new System.Drawing.Size(148, 39);
             this.Create_Rec.TabIndex = 4;
@@ -463,17 +463,17 @@ namespace oop_project
             // textBoxRecY
             // 
             this.textBoxRecY.Location = new System.Drawing.Point(417, 62);
-            this.textBoxRecY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRecY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRecY.Name = "textBoxRecY";
-            this.textBoxRecY.Size = new System.Drawing.Size(47, 24);
+            this.textBoxRecY.Size = new System.Drawing.Size(47, 27);
             this.textBoxRecY.TabIndex = 1;
             // 
             // textBoxRecX
             // 
             this.textBoxRecX.Location = new System.Drawing.Point(417, 30);
-            this.textBoxRecX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRecX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRecX.Name = "textBoxRecX";
-            this.textBoxRecX.Size = new System.Drawing.Size(47, 24);
+            this.textBoxRecX.Size = new System.Drawing.Size(47, 27);
             this.textBoxRecX.TabIndex = 0;
             // 
             // tabPage2
@@ -497,11 +497,11 @@ namespace oop_project
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.textBoxCircY);
             this.tabPage2.Controls.Add(this.textBoxCircX);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(497, 474);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(497, 599);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Круг";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@ namespace oop_project
             this.listBoxCirc.FormattingEnabled = true;
             this.listBoxCirc.ItemHeight = 20;
             this.listBoxCirc.Location = new System.Drawing.Point(327, 214);
-            this.listBoxCirc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxCirc.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxCirc.Name = "listBoxCirc";
             this.listBoxCirc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxCirc.Size = new System.Drawing.Size(158, 202);
@@ -535,7 +535,7 @@ namespace oop_project
             // 
             this.trackBarCircY.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarCircY.Location = new System.Drawing.Point(217, 47);
-            this.trackBarCircY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarCircY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarCircY.Maximum = 500;
             this.trackBarCircY.Name = "trackBarCircY";
             this.trackBarCircY.Size = new System.Drawing.Size(183, 56);
@@ -545,7 +545,7 @@ namespace oop_project
             // 
             this.trackBarCircX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarCircX.Location = new System.Drawing.Point(217, 7);
-            this.trackBarCircX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarCircX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarCircX.Maximum = 500;
             this.trackBarCircX.Name = "trackBarCircX";
             this.trackBarCircX.Size = new System.Drawing.Size(183, 56);
@@ -578,7 +578,7 @@ namespace oop_project
             this.Delete_Circ.BackColor = System.Drawing.Color.Maroon;
             this.Delete_Circ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_Circ.Location = new System.Drawing.Point(179, 345);
-            this.Delete_Circ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete_Circ.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_Circ.Name = "Delete_Circ";
             this.Delete_Circ.Size = new System.Drawing.Size(120, 37);
             this.Delete_Circ.TabIndex = 24;
@@ -591,7 +591,7 @@ namespace oop_project
             this.Move_Circ.BackColor = System.Drawing.Color.Maroon;
             this.Move_Circ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Circ.Location = new System.Drawing.Point(8, 345);
-            this.Move_Circ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_Circ.Margin = new System.Windows.Forms.Padding(4);
             this.Move_Circ.Name = "Move_Circ";
             this.Move_Circ.Size = new System.Drawing.Size(163, 37);
             this.Move_Circ.TabIndex = 23;
@@ -602,17 +602,17 @@ namespace oop_project
             // textBoxMoveCircY
             // 
             this.textBoxMoveCircY.Location = new System.Drawing.Point(191, 297);
-            this.textBoxMoveCircY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveCircY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveCircY.Name = "textBoxMoveCircY";
-            this.textBoxMoveCircY.Size = new System.Drawing.Size(48, 24);
+            this.textBoxMoveCircY.Size = new System.Drawing.Size(48, 27);
             this.textBoxMoveCircY.TabIndex = 22;
             // 
             // textBoxMoveCircX
             // 
             this.textBoxMoveCircX.Location = new System.Drawing.Point(191, 251);
-            this.textBoxMoveCircX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveCircX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveCircX.Name = "textBoxMoveCircX";
-            this.textBoxMoveCircX.Size = new System.Drawing.Size(48, 24);
+            this.textBoxMoveCircX.Size = new System.Drawing.Size(48, 27);
             this.textBoxMoveCircX.TabIndex = 21;
             // 
             // label12
@@ -640,9 +640,9 @@ namespace oop_project
             // textBoxIDCirc
             // 
             this.textBoxIDCirc.Location = new System.Drawing.Point(251, 204);
-            this.textBoxIDCirc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDCirc.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDCirc.Name = "textBoxIDCirc";
-            this.textBoxIDCirc.Size = new System.Drawing.Size(53, 24);
+            this.textBoxIDCirc.Size = new System.Drawing.Size(53, 27);
             this.textBoxIDCirc.TabIndex = 18;
             // 
             // label10
@@ -661,9 +661,9 @@ namespace oop_project
             this.Create_Circ.BackColor = System.Drawing.Color.Maroon;
             this.Create_Circ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Circ.Location = new System.Drawing.Point(125, 144);
-            this.Create_Circ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Circ.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Circ.Name = "Create_Circ";
-            this.Create_Circ.Size = new System.Drawing.Size(155, 43);
+            this.Create_Circ.Size = new System.Drawing.Size(155, 37);
             this.Create_Circ.TabIndex = 16;
             this.Create_Circ.Text = "Создать";
             this.Create_Circ.UseVisualStyleBackColor = false;
@@ -672,9 +672,9 @@ namespace oop_project
             // textBoxSizeCirc
             // 
             this.textBoxSizeCirc.Location = new System.Drawing.Point(251, 112);
-            this.textBoxSizeCirc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSizeCirc.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSizeCirc.Name = "textBoxSizeCirc";
-            this.textBoxSizeCirc.Size = new System.Drawing.Size(91, 24);
+            this.textBoxSizeCirc.Size = new System.Drawing.Size(91, 27);
             this.textBoxSizeCirc.TabIndex = 15;
             // 
             // label9
@@ -691,17 +691,17 @@ namespace oop_project
             // textBoxCircY
             // 
             this.textBoxCircY.Location = new System.Drawing.Point(420, 58);
-            this.textBoxCircY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCircY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCircY.Name = "textBoxCircY";
-            this.textBoxCircY.Size = new System.Drawing.Size(33, 24);
+            this.textBoxCircY.Size = new System.Drawing.Size(33, 27);
             this.textBoxCircY.TabIndex = 6;
             // 
             // textBoxCircX
             // 
             this.textBoxCircX.Location = new System.Drawing.Point(420, 20);
-            this.textBoxCircX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCircX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCircX.Name = "textBoxCircX";
-            this.textBoxCircX.Size = new System.Drawing.Size(33, 24);
+            this.textBoxCircX.Size = new System.Drawing.Size(33, 27);
             this.textBoxCircX.TabIndex = 5;
             // 
             // tabPage3
@@ -725,11 +725,11 @@ namespace oop_project
             this.tabPage3.Controls.Add(this.Create_Line);
             this.tabPage3.Controls.Add(this.textBoxLineY);
             this.tabPage3.Controls.Add(this.textBoxLineX);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage3.Size = new System.Drawing.Size(497, 474);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(497, 599);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Линия";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -742,7 +742,7 @@ namespace oop_project
             this.listBoxLine.FormattingEnabled = true;
             this.listBoxLine.ItemHeight = 20;
             this.listBoxLine.Location = new System.Drawing.Point(319, 222);
-            this.listBoxLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxLine.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxLine.Name = "listBoxLine";
             this.listBoxLine.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxLine.Size = new System.Drawing.Size(158, 202);
@@ -762,9 +762,9 @@ namespace oop_project
             // textBoxLineSize
             // 
             this.textBoxLineSize.Location = new System.Drawing.Point(221, 108);
-            this.textBoxLineSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLineSize.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLineSize.Name = "textBoxLineSize";
-            this.textBoxLineSize.Size = new System.Drawing.Size(91, 24);
+            this.textBoxLineSize.Size = new System.Drawing.Size(91, 27);
             this.textBoxLineSize.TabIndex = 33;
             // 
             // label14
@@ -782,7 +782,7 @@ namespace oop_project
             // 
             this.trackBarLineY.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarLineY.Location = new System.Drawing.Point(221, 49);
-            this.trackBarLineY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarLineY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarLineY.Maximum = 500;
             this.trackBarLineY.Name = "trackBarLineY";
             this.trackBarLineY.Size = new System.Drawing.Size(183, 56);
@@ -792,7 +792,7 @@ namespace oop_project
             // 
             this.trackBarLineX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarLineX.Location = new System.Drawing.Point(221, 4);
-            this.trackBarLineX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarLineX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarLineX.Maximum = 500;
             this.trackBarLineX.Name = "trackBarLineX";
             this.trackBarLineX.Size = new System.Drawing.Size(183, 56);
@@ -825,7 +825,7 @@ namespace oop_project
             this.Delete_Line.BackColor = System.Drawing.Color.Maroon;
             this.Delete_Line.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_Line.Location = new System.Drawing.Point(171, 361);
-            this.Delete_Line.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete_Line.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_Line.Name = "Delete_Line";
             this.Delete_Line.Size = new System.Drawing.Size(132, 38);
             this.Delete_Line.TabIndex = 27;
@@ -838,7 +838,7 @@ namespace oop_project
             this.Move_Line.BackColor = System.Drawing.Color.Maroon;
             this.Move_Line.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Line.Location = new System.Drawing.Point(8, 361);
-            this.Move_Line.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_Line.Margin = new System.Windows.Forms.Padding(4);
             this.Move_Line.Name = "Move_Line";
             this.Move_Line.Size = new System.Drawing.Size(155, 38);
             this.Move_Line.TabIndex = 26;
@@ -849,25 +849,25 @@ namespace oop_project
             // textBoxMoveLineY
             // 
             this.textBoxMoveLineY.Location = new System.Drawing.Point(191, 298);
-            this.textBoxMoveLineY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveLineY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveLineY.Name = "textBoxMoveLineY";
-            this.textBoxMoveLineY.Size = new System.Drawing.Size(48, 24);
+            this.textBoxMoveLineY.Size = new System.Drawing.Size(48, 27);
             this.textBoxMoveLineY.TabIndex = 25;
             // 
             // textBoxMoveLineX
             // 
             this.textBoxMoveLineX.Location = new System.Drawing.Point(191, 257);
-            this.textBoxMoveLineX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveLineX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveLineX.Name = "textBoxMoveLineX";
-            this.textBoxMoveLineX.Size = new System.Drawing.Size(48, 24);
+            this.textBoxMoveLineX.Size = new System.Drawing.Size(48, 27);
             this.textBoxMoveLineX.TabIndex = 24;
             // 
             // textBoxIDLine
             // 
             this.textBoxIDLine.Location = new System.Drawing.Point(248, 217);
-            this.textBoxIDLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDLine.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDLine.Name = "textBoxIDLine";
-            this.textBoxIDLine.Size = new System.Drawing.Size(53, 24);
+            this.textBoxIDLine.Size = new System.Drawing.Size(53, 27);
             this.textBoxIDLine.TabIndex = 23;
             // 
             // label19
@@ -908,7 +908,7 @@ namespace oop_project
             this.Create_Line.BackColor = System.Drawing.Color.Maroon;
             this.Create_Line.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Line.Location = new System.Drawing.Point(148, 151);
-            this.Create_Line.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Line.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Line.Name = "Create_Line";
             this.Create_Line.Size = new System.Drawing.Size(137, 41);
             this.Create_Line.TabIndex = 17;
@@ -919,17 +919,17 @@ namespace oop_project
             // textBoxLineY
             // 
             this.textBoxLineY.Location = new System.Drawing.Point(439, 54);
-            this.textBoxLineY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLineY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLineY.Name = "textBoxLineY";
-            this.textBoxLineY.Size = new System.Drawing.Size(37, 24);
+            this.textBoxLineY.Size = new System.Drawing.Size(37, 27);
             this.textBoxLineY.TabIndex = 11;
             // 
             // textBoxLineX
             // 
             this.textBoxLineX.Location = new System.Drawing.Point(439, 18);
-            this.textBoxLineX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLineX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLineX.Name = "textBoxLineX";
-            this.textBoxLineX.Size = new System.Drawing.Size(37, 24);
+            this.textBoxLineX.Size = new System.Drawing.Size(37, 27);
             this.textBoxLineX.TabIndex = 10;
             // 
             // tabPage4
@@ -955,13 +955,12 @@ namespace oop_project
             this.tabPage4.Controls.Add(this.label22);
             this.tabPage4.Controls.Add(this.label21);
             this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage4.Size = new System.Drawing.Size(497, 474);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Size = new System.Drawing.Size(497, 599);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Delete_Ring
@@ -969,7 +968,7 @@ namespace oop_project
             this.Delete_Ring.BackColor = System.Drawing.Color.Maroon;
             this.Delete_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_Ring.Location = new System.Drawing.Point(173, 399);
-            this.Delete_Ring.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete_Ring.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_Ring.Name = "Delete_Ring";
             this.Delete_Ring.Size = new System.Drawing.Size(132, 38);
             this.Delete_Ring.TabIndex = 33;
@@ -996,7 +995,7 @@ namespace oop_project
             this.listBoxRing.FormattingEnabled = true;
             this.listBoxRing.ItemHeight = 20;
             this.listBoxRing.Location = new System.Drawing.Point(328, 226);
-            this.listBoxRing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxRing.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxRing.Name = "listBoxRing";
             this.listBoxRing.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxRing.Size = new System.Drawing.Size(158, 202);
@@ -1006,7 +1005,7 @@ namespace oop_project
             // 
             this.trackBarRingY.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarRingY.Location = new System.Drawing.Point(225, 47);
-            this.trackBarRingY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarRingY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarRingY.Maximum = 500;
             this.trackBarRingY.Name = "trackBarRingY";
             this.trackBarRingY.Size = new System.Drawing.Size(187, 56);
@@ -1016,7 +1015,7 @@ namespace oop_project
             // 
             this.trackBarRingX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarRingX.Location = new System.Drawing.Point(225, 7);
-            this.trackBarRingX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarRingX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarRingX.Maximum = 500;
             this.trackBarRingX.Name = "trackBarRingX";
             this.trackBarRingX.Size = new System.Drawing.Size(187, 56);
@@ -1027,7 +1026,7 @@ namespace oop_project
             this.Move_Ring.BackColor = System.Drawing.Color.Maroon;
             this.Move_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Ring.Location = new System.Drawing.Point(13, 399);
-            this.Move_Ring.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_Ring.Margin = new System.Windows.Forms.Padding(4);
             this.Move_Ring.Name = "Move_Ring";
             this.Move_Ring.Size = new System.Drawing.Size(152, 37);
             this.Move_Ring.TabIndex = 28;
@@ -1038,9 +1037,9 @@ namespace oop_project
             // textBoxMoveRingY
             // 
             this.textBoxMoveRingY.Location = new System.Drawing.Point(173, 350);
-            this.textBoxMoveRingY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveRingY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveRingY.Name = "textBoxMoveRingY";
-            this.textBoxMoveRingY.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveRingY.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveRingY.TabIndex = 27;
             // 
             // label26
@@ -1057,9 +1056,9 @@ namespace oop_project
             // textBoxMoveRingX
             // 
             this.textBoxMoveRingX.Location = new System.Drawing.Point(173, 302);
-            this.textBoxMoveRingX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveRingX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveRingX.Name = "textBoxMoveRingX";
-            this.textBoxMoveRingX.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveRingX.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveRingX.TabIndex = 25;
             // 
             // label25
@@ -1076,9 +1075,9 @@ namespace oop_project
             // textBoxIDRing
             // 
             this.textBoxIDRing.Location = new System.Drawing.Point(243, 260);
-            this.textBoxIDRing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDRing.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDRing.Name = "textBoxIDRing";
-            this.textBoxIDRing.Size = new System.Drawing.Size(59, 24);
+            this.textBoxIDRing.Size = new System.Drawing.Size(59, 27);
             this.textBoxIDRing.TabIndex = 23;
             // 
             // label24
@@ -1098,7 +1097,7 @@ namespace oop_project
             this.Create_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Ring.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.Create_Ring.Location = new System.Drawing.Point(155, 185);
-            this.Create_Ring.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Ring.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Ring.Name = "Create_Ring";
             this.Create_Ring.Size = new System.Drawing.Size(169, 38);
             this.Create_Ring.TabIndex = 21;
@@ -1109,33 +1108,33 @@ namespace oop_project
             // textBoxSizeRing2
             // 
             this.textBoxSizeRing2.Location = new System.Drawing.Point(205, 153);
-            this.textBoxSizeRing2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSizeRing2.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSizeRing2.Name = "textBoxSizeRing2";
-            this.textBoxSizeRing2.Size = new System.Drawing.Size(59, 24);
+            this.textBoxSizeRing2.Size = new System.Drawing.Size(59, 27);
             this.textBoxSizeRing2.TabIndex = 20;
             // 
             // textBoxSizeRing1
             // 
             this.textBoxSizeRing1.Location = new System.Drawing.Point(205, 110);
-            this.textBoxSizeRing1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSizeRing1.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSizeRing1.Name = "textBoxSizeRing1";
-            this.textBoxSizeRing1.Size = new System.Drawing.Size(59, 24);
+            this.textBoxSizeRing1.Size = new System.Drawing.Size(59, 27);
             this.textBoxSizeRing1.TabIndex = 19;
             // 
             // textBoxRingY
             // 
             this.textBoxRingY.Location = new System.Drawing.Point(433, 68);
-            this.textBoxRingY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRingY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRingY.Name = "textBoxRingY";
-            this.textBoxRingY.Size = new System.Drawing.Size(43, 24);
+            this.textBoxRingY.Size = new System.Drawing.Size(43, 27);
             this.textBoxRingY.TabIndex = 18;
             // 
             // textBoxRingX
             // 
             this.textBoxRingX.Location = new System.Drawing.Point(433, 26);
-            this.textBoxRingX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRingX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRingX.Name = "textBoxRingX";
-            this.textBoxRingX.Size = new System.Drawing.Size(43, 24);
+            this.textBoxRingX.Size = new System.Drawing.Size(43, 27);
             this.textBoxRingX.TabIndex = 17;
             // 
             // label23
@@ -1203,13 +1202,12 @@ namespace oop_project
             this.tabPage5.Controls.Add(this.textBoxMyFigureX);
             this.tabPage5.Controls.Add(this.trackBarMyFigureX);
             this.tabPage5.Controls.Add(this.label16);
-            this.tabPage5.Location = new System.Drawing.Point(4, 27);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage5.Size = new System.Drawing.Size(497, 601);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Size = new System.Drawing.Size(497, 599);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Произвольная фигура";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // Delete_MyFigure
@@ -1217,7 +1215,7 @@ namespace oop_project
             this.Delete_MyFigure.BackColor = System.Drawing.Color.Maroon;
             this.Delete_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_MyFigure.Location = new System.Drawing.Point(167, 393);
-            this.Delete_MyFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete_MyFigure.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_MyFigure.Name = "Delete_MyFigure";
             this.Delete_MyFigure.Size = new System.Drawing.Size(132, 38);
             this.Delete_MyFigure.TabIndex = 49;
@@ -1230,7 +1228,7 @@ namespace oop_project
             this.Move_MyFigure.BackColor = System.Drawing.Color.Maroon;
             this.Move_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_MyFigure.Location = new System.Drawing.Point(4, 394);
-            this.Move_MyFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_MyFigure.Margin = new System.Windows.Forms.Padding(4);
             this.Move_MyFigure.Name = "Move_MyFigure";
             this.Move_MyFigure.Size = new System.Drawing.Size(152, 37);
             this.Move_MyFigure.TabIndex = 48;
@@ -1257,7 +1255,7 @@ namespace oop_project
             this.listBoxMyFigures.FormattingEnabled = true;
             this.listBoxMyFigures.ItemHeight = 20;
             this.listBoxMyFigures.Location = new System.Drawing.Point(315, 223);
-            this.listBoxMyFigures.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxMyFigures.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxMyFigures.Name = "listBoxMyFigures";
             this.listBoxMyFigures.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxMyFigures.Size = new System.Drawing.Size(158, 202);
@@ -1266,17 +1264,17 @@ namespace oop_project
             // textBoxMoveMyFigureY
             // 
             this.textBoxMoveMyFigureY.Location = new System.Drawing.Point(183, 341);
-            this.textBoxMoveMyFigureY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveMyFigureY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveMyFigureY.Name = "textBoxMoveMyFigureY";
-            this.textBoxMoveMyFigureY.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveMyFigureY.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveMyFigureY.TabIndex = 45;
             // 
             // textBoxMoveMyFigureX
             // 
             this.textBoxMoveMyFigureX.Location = new System.Drawing.Point(183, 297);
-            this.textBoxMoveMyFigureX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveMyFigureX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveMyFigureX.Name = "textBoxMoveMyFigureX";
-            this.textBoxMoveMyFigureX.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveMyFigureX.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveMyFigureX.TabIndex = 44;
             // 
             // label36
@@ -1304,9 +1302,9 @@ namespace oop_project
             // textBoxIDMyFigure
             // 
             this.textBoxIDMyFigure.Location = new System.Drawing.Point(239, 250);
-            this.textBoxIDMyFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDMyFigure.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDMyFigure.Name = "textBoxIDMyFigure";
-            this.textBoxIDMyFigure.Size = new System.Drawing.Size(59, 24);
+            this.textBoxIDMyFigure.Size = new System.Drawing.Size(59, 27);
             this.textBoxIDMyFigure.TabIndex = 41;
             // 
             // label34
@@ -1326,7 +1324,7 @@ namespace oop_project
             this.Create_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_MyFigure.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.Create_MyFigure.Location = new System.Drawing.Point(133, 180);
-            this.Create_MyFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_MyFigure.Margin = new System.Windows.Forms.Padding(4);
             this.Create_MyFigure.Name = "Create_MyFigure";
             this.Create_MyFigure.Size = new System.Drawing.Size(169, 38);
             this.Create_MyFigure.TabIndex = 39;
@@ -1337,9 +1335,9 @@ namespace oop_project
             // textBoxMyFigureCircSize
             // 
             this.textBoxMyFigureCircSize.Location = new System.Drawing.Point(243, 111);
-            this.textBoxMyFigureCircSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMyFigureCircSize.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMyFigureCircSize.Name = "textBoxMyFigureCircSize";
-            this.textBoxMyFigureCircSize.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMyFigureCircSize.Size = new System.Drawing.Size(59, 27);
             this.textBoxMyFigureCircSize.TabIndex = 37;
             // 
             // label32
@@ -1356,16 +1354,16 @@ namespace oop_project
             // textBoxMyFigureY
             // 
             this.textBoxMyFigureY.Location = new System.Drawing.Point(412, 63);
-            this.textBoxMyFigureY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMyFigureY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMyFigureY.Name = "textBoxMyFigureY";
-            this.textBoxMyFigureY.Size = new System.Drawing.Size(43, 24);
+            this.textBoxMyFigureY.Size = new System.Drawing.Size(43, 27);
             this.textBoxMyFigureY.TabIndex = 34;
             // 
             // trackBarMyFigureY
             // 
             this.trackBarMyFigureY.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarMyFigureY.Location = new System.Drawing.Point(199, 55);
-            this.trackBarMyFigureY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarMyFigureY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarMyFigureY.Maximum = 500;
             this.trackBarMyFigureY.Name = "trackBarMyFigureY";
             this.trackBarMyFigureY.Size = new System.Drawing.Size(187, 56);
@@ -1385,16 +1383,16 @@ namespace oop_project
             // textBoxMyFigureX
             // 
             this.textBoxMyFigureX.Location = new System.Drawing.Point(412, 16);
-            this.textBoxMyFigureX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMyFigureX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMyFigureX.Name = "textBoxMyFigureX";
-            this.textBoxMyFigureX.Size = new System.Drawing.Size(43, 24);
+            this.textBoxMyFigureX.Size = new System.Drawing.Size(43, 27);
             this.textBoxMyFigureX.TabIndex = 31;
             // 
             // trackBarMyFigureX
             // 
             this.trackBarMyFigureX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarMyFigureX.Location = new System.Drawing.Point(197, 7);
-            this.trackBarMyFigureX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarMyFigureX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarMyFigureX.Maximum = 500;
             this.trackBarMyFigureX.Name = "trackBarMyFigureX";
             this.trackBarMyFigureX.Size = new System.Drawing.Size(187, 56);
@@ -1435,13 +1433,12 @@ namespace oop_project
             this.tabPage6.Controls.Add(this.trackBarEllipsX);
             this.tabPage6.Controls.Add(this.label38);
             this.tabPage6.Controls.Add(this.label33);
-            this.tabPage6.Location = new System.Drawing.Point(4, 27);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage6.Size = new System.Drawing.Size(497, 474);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Size = new System.Drawing.Size(497, 599);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Эллипс";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // Change_Ellip
@@ -1449,7 +1446,7 @@ namespace oop_project
             this.Change_Ellip.BackColor = System.Drawing.Color.Maroon;
             this.Change_Ellip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Change_Ellip.Location = new System.Drawing.Point(47, 427);
-            this.Change_Ellip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Change_Ellip.Margin = new System.Windows.Forms.Padding(4);
             this.Change_Ellip.Name = "Change_Ellip";
             this.Change_Ellip.Size = new System.Drawing.Size(237, 38);
             this.Change_Ellip.TabIndex = 58;
@@ -1462,7 +1459,7 @@ namespace oop_project
             this.Delete_Ellip.BackColor = System.Drawing.Color.Maroon;
             this.Delete_Ellip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_Ellip.Location = new System.Drawing.Point(164, 382);
-            this.Delete_Ellip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete_Ellip.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_Ellip.Name = "Delete_Ellip";
             this.Delete_Ellip.Size = new System.Drawing.Size(132, 38);
             this.Delete_Ellip.TabIndex = 57;
@@ -1475,7 +1472,7 @@ namespace oop_project
             this.Move_Ellip.BackColor = System.Drawing.Color.Maroon;
             this.Move_Ellip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Ellip.Location = new System.Drawing.Point(4, 383);
-            this.Move_Ellip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_Ellip.Margin = new System.Windows.Forms.Padding(4);
             this.Move_Ellip.Name = "Move_Ellip";
             this.Move_Ellip.Size = new System.Drawing.Size(152, 37);
             this.Move_Ellip.TabIndex = 56;
@@ -1486,17 +1483,17 @@ namespace oop_project
             // textBoxMoveElY
             // 
             this.textBoxMoveElY.Location = new System.Drawing.Point(180, 327);
-            this.textBoxMoveElY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveElY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveElY.Name = "textBoxMoveElY";
-            this.textBoxMoveElY.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveElY.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveElY.TabIndex = 55;
             // 
             // textBoxMoveElX
             // 
             this.textBoxMoveElX.Location = new System.Drawing.Point(180, 294);
-            this.textBoxMoveElX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveElX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveElX.Name = "textBoxMoveElX";
-            this.textBoxMoveElX.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveElX.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveElX.TabIndex = 54;
             // 
             // label44
@@ -1529,7 +1526,7 @@ namespace oop_project
             this.listBoxEllips.FormattingEnabled = true;
             this.listBoxEllips.ItemHeight = 20;
             this.listBoxEllips.Location = new System.Drawing.Point(316, 225);
-            this.listBoxEllips.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxEllips.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxEllips.Name = "listBoxEllips";
             this.listBoxEllips.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxEllips.Size = new System.Drawing.Size(158, 202);
@@ -1538,9 +1535,9 @@ namespace oop_project
             // textBoxIDEllips
             // 
             this.textBoxIDEllips.Location = new System.Drawing.Point(248, 254);
-            this.textBoxIDEllips.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDEllips.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDEllips.Name = "textBoxIDEllips";
-            this.textBoxIDEllips.Size = new System.Drawing.Size(59, 24);
+            this.textBoxIDEllips.Size = new System.Drawing.Size(59, 27);
             this.textBoxIDEllips.TabIndex = 50;
             // 
             // label42
@@ -1571,7 +1568,7 @@ namespace oop_project
             this.Create_Ellips.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Ellips.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.Create_Ellips.Location = new System.Drawing.Point(139, 193);
-            this.Create_Ellips.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Ellips.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Ellips.Name = "Create_Ellips";
             this.Create_Ellips.Size = new System.Drawing.Size(169, 38);
             this.Create_Ellips.TabIndex = 42;
@@ -1582,17 +1579,17 @@ namespace oop_project
             // textBoxEllipsSize2
             // 
             this.textBoxEllipsSize2.Location = new System.Drawing.Point(283, 146);
-            this.textBoxEllipsSize2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEllipsSize2.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEllipsSize2.Name = "textBoxEllipsSize2";
-            this.textBoxEllipsSize2.Size = new System.Drawing.Size(59, 24);
+            this.textBoxEllipsSize2.Size = new System.Drawing.Size(59, 27);
             this.textBoxEllipsSize2.TabIndex = 41;
             // 
             // textBoxEllipsSize1
             // 
             this.textBoxEllipsSize1.Location = new System.Drawing.Point(283, 102);
-            this.textBoxEllipsSize1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEllipsSize1.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEllipsSize1.Name = "textBoxEllipsSize1";
-            this.textBoxEllipsSize1.Size = new System.Drawing.Size(59, 24);
+            this.textBoxEllipsSize1.Size = new System.Drawing.Size(59, 27);
             this.textBoxEllipsSize1.TabIndex = 40;
             // 
             // label40
@@ -1620,24 +1617,24 @@ namespace oop_project
             // textBoxEllipsY
             // 
             this.textBoxEllipsY.Location = new System.Drawing.Point(411, 58);
-            this.textBoxEllipsY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEllipsY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEllipsY.Name = "textBoxEllipsY";
-            this.textBoxEllipsY.Size = new System.Drawing.Size(43, 24);
+            this.textBoxEllipsY.Size = new System.Drawing.Size(43, 27);
             this.textBoxEllipsY.TabIndex = 37;
             // 
             // textBoxEllipsX
             // 
             this.textBoxEllipsX.Location = new System.Drawing.Point(411, 17);
-            this.textBoxEllipsX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEllipsX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEllipsX.Name = "textBoxEllipsX";
-            this.textBoxEllipsX.Size = new System.Drawing.Size(43, 24);
+            this.textBoxEllipsX.Size = new System.Drawing.Size(43, 27);
             this.textBoxEllipsX.TabIndex = 36;
             // 
             // trackBarEllipsY
             // 
             this.trackBarEllipsY.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarEllipsY.Location = new System.Drawing.Point(216, 47);
-            this.trackBarEllipsY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarEllipsY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarEllipsY.Maximum = 500;
             this.trackBarEllipsY.Name = "trackBarEllipsY";
             this.trackBarEllipsY.Size = new System.Drawing.Size(187, 56);
@@ -1647,7 +1644,7 @@ namespace oop_project
             // 
             this.trackBarEllipsX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarEllipsX.Location = new System.Drawing.Point(216, 7);
-            this.trackBarEllipsX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarEllipsX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarEllipsX.Maximum = 500;
             this.trackBarEllipsX.Name = "trackBarEllipsX";
             this.trackBarEllipsX.Size = new System.Drawing.Size(187, 56);
@@ -1699,13 +1696,12 @@ namespace oop_project
             this.tabPage7.Controls.Add(this.trackBarInherX);
             this.tabPage7.Controls.Add(this.label46);
             this.tabPage7.Controls.Add(this.label45);
-            this.tabPage7.Location = new System.Drawing.Point(4, 27);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage7.Size = new System.Drawing.Size(497, 474);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage7.Size = new System.Drawing.Size(497, 599);
             this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // comboBoxInher
@@ -1715,9 +1711,9 @@ namespace oop_project
             "Ромб",
             "Прямоугольник"});
             this.comboBoxInher.Location = new System.Drawing.Point(345, 117);
-            this.comboBoxInher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxInher.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxInher.Name = "comboBoxInher";
-            this.comboBoxInher.Size = new System.Drawing.Size(128, 26);
+            this.comboBoxInher.Size = new System.Drawing.Size(128, 28);
             this.comboBoxInher.TabIndex = 61;
             // 
             // label52
@@ -1739,7 +1735,7 @@ namespace oop_project
             this.listBoxInher.FormattingEnabled = true;
             this.listBoxInher.ItemHeight = 20;
             this.listBoxInher.Location = new System.Drawing.Point(327, 246);
-            this.listBoxInher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxInher.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxInher.Name = "listBoxInher";
             this.listBoxInher.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxInher.Size = new System.Drawing.Size(158, 202);
@@ -1750,7 +1746,7 @@ namespace oop_project
             this.Delete_Inher.BackColor = System.Drawing.Color.Maroon;
             this.Delete_Inher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_Inher.Location = new System.Drawing.Point(168, 384);
-            this.Delete_Inher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete_Inher.Margin = new System.Windows.Forms.Padding(4);
             this.Delete_Inher.Name = "Delete_Inher";
             this.Delete_Inher.Size = new System.Drawing.Size(132, 38);
             this.Delete_Inher.TabIndex = 58;
@@ -1763,7 +1759,7 @@ namespace oop_project
             this.Move_Inher.BackColor = System.Drawing.Color.Maroon;
             this.Move_Inher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Inher.Location = new System.Drawing.Point(8, 384);
-            this.Move_Inher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Move_Inher.Margin = new System.Windows.Forms.Padding(4);
             this.Move_Inher.Name = "Move_Inher";
             this.Move_Inher.Size = new System.Drawing.Size(152, 37);
             this.Move_Inher.TabIndex = 57;
@@ -1774,17 +1770,17 @@ namespace oop_project
             // textBoxMoveInherY
             // 
             this.textBoxMoveInherY.Location = new System.Drawing.Point(189, 335);
-            this.textBoxMoveInherY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveInherY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveInherY.Name = "textBoxMoveInherY";
-            this.textBoxMoveInherY.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveInherY.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveInherY.TabIndex = 56;
             // 
             // textBoxMoveInherX
             // 
             this.textBoxMoveInherX.Location = new System.Drawing.Point(189, 300);
-            this.textBoxMoveInherX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMoveInherX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMoveInherX.Name = "textBoxMoveInherX";
-            this.textBoxMoveInherX.Size = new System.Drawing.Size(59, 24);
+            this.textBoxMoveInherX.Size = new System.Drawing.Size(59, 27);
             this.textBoxMoveInherX.TabIndex = 55;
             // 
             // label51
@@ -1812,9 +1808,9 @@ namespace oop_project
             // textBoxIDInher
             // 
             this.textBoxIDInher.Location = new System.Drawing.Point(236, 257);
-            this.textBoxIDInher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDInher.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDInher.Name = "textBoxIDInher";
-            this.textBoxIDInher.Size = new System.Drawing.Size(59, 24);
+            this.textBoxIDInher.Size = new System.Drawing.Size(59, 27);
             this.textBoxIDInher.TabIndex = 51;
             // 
             // label49
@@ -1834,7 +1830,7 @@ namespace oop_project
             this.Create_Inher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Create_Inher.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.Create_Inher.Location = new System.Drawing.Point(148, 204);
-            this.Create_Inher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Create_Inher.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Inher.Name = "Create_Inher";
             this.Create_Inher.Size = new System.Drawing.Size(169, 38);
             this.Create_Inher.TabIndex = 43;
@@ -1845,17 +1841,17 @@ namespace oop_project
             // textBoxInherSize2
             // 
             this.textBoxInherSize2.Location = new System.Drawing.Point(257, 166);
-            this.textBoxInherSize2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInherSize2.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxInherSize2.Name = "textBoxInherSize2";
-            this.textBoxInherSize2.Size = new System.Drawing.Size(59, 24);
+            this.textBoxInherSize2.Size = new System.Drawing.Size(59, 27);
             this.textBoxInherSize2.TabIndex = 42;
             // 
             // textBoxInherSize1
             // 
             this.textBoxInherSize1.Location = new System.Drawing.Point(257, 126);
-            this.textBoxInherSize1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInherSize1.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxInherSize1.Name = "textBoxInherSize1";
-            this.textBoxInherSize1.Size = new System.Drawing.Size(59, 24);
+            this.textBoxInherSize1.Size = new System.Drawing.Size(59, 27);
             this.textBoxInherSize1.TabIndex = 41;
             // 
             // labelInherSize2
@@ -1883,24 +1879,24 @@ namespace oop_project
             // textBoxInherY
             // 
             this.textBoxInherY.Location = new System.Drawing.Point(431, 54);
-            this.textBoxInherY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInherY.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxInherY.Name = "textBoxInherY";
-            this.textBoxInherY.Size = new System.Drawing.Size(43, 24);
+            this.textBoxInherY.Size = new System.Drawing.Size(43, 27);
             this.textBoxInherY.TabIndex = 38;
             // 
             // textBoxInherX
             // 
             this.textBoxInherX.Location = new System.Drawing.Point(431, 21);
-            this.textBoxInherX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInherX.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxInherX.Name = "textBoxInherX";
-            this.textBoxInherX.Size = new System.Drawing.Size(43, 24);
+            this.textBoxInherX.Size = new System.Drawing.Size(43, 27);
             this.textBoxInherX.TabIndex = 37;
             // 
             // trackBarInherY
             // 
             this.trackBarInherY.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarInherY.Location = new System.Drawing.Point(236, 54);
-            this.trackBarInherY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarInherY.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarInherY.Maximum = 500;
             this.trackBarInherY.Name = "trackBarInherY";
             this.trackBarInherY.Size = new System.Drawing.Size(187, 56);
@@ -1910,7 +1906,7 @@ namespace oop_project
             // 
             this.trackBarInherX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarInherX.Location = new System.Drawing.Point(236, 7);
-            this.trackBarInherX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarInherX.Margin = new System.Windows.Forms.Padding(4);
             this.trackBarInherX.Maximum = 500;
             this.trackBarInherX.Name = "trackBarInherX";
             this.trackBarInherX.Size = new System.Drawing.Size(187, 56);
@@ -1945,7 +1941,7 @@ namespace oop_project
             this.ClientSize = new System.Drawing.Size(1164, 635);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.PictureArea);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).EndInit();

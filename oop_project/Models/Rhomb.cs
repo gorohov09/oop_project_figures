@@ -61,21 +61,6 @@ namespace oop_project.Models
             Draw(Color.LightGreen);
         }
 
-        public override void Move(double dx, double dy)
-        {
-            Draw(Color.White);
-
-            this.point.X += dx;
-            this.point.Y += dy;
-
-            Draw(Color.LightGreen);
-        }
-
-        public override void Delete()
-        {
-            Draw(Color.White);
-        }
-
         public override string ToString()
         {
             return "Ромб";
