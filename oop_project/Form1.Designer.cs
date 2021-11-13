@@ -432,9 +432,9 @@ namespace oop_project
             this.Create_Rec.Location = new System.Drawing.Point(128, 154);
             this.Create_Rec.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Rec.Name = "Create_Rec";
-            this.Create_Rec.Size = new System.Drawing.Size(148, 39);
+            this.Create_Rec.Size = new System.Drawing.Size(197, 39);
             this.Create_Rec.TabIndex = 4;
-            this.Create_Rec.Text = "Создать";
+            this.Create_Rec.Text = "Создать квадрат";
             this.Create_Rec.UseVisualStyleBackColor = false;
             this.Create_Rec.Click += new System.EventHandler(this.Create_Rec_Click);
             // 
@@ -665,7 +665,7 @@ namespace oop_project
             this.Create_Circ.Name = "Create_Circ";
             this.Create_Circ.Size = new System.Drawing.Size(155, 37);
             this.Create_Circ.TabIndex = 16;
-            this.Create_Circ.Text = "Создать";
+            this.Create_Circ.Text = "Создать круг";
             this.Create_Circ.UseVisualStyleBackColor = false;
             this.Create_Circ.Click += new System.EventHandler(this.Create_Circ_Click);
             // 
@@ -910,9 +910,9 @@ namespace oop_project
             this.Create_Line.Location = new System.Drawing.Point(148, 151);
             this.Create_Line.Margin = new System.Windows.Forms.Padding(4);
             this.Create_Line.Name = "Create_Line";
-            this.Create_Line.Size = new System.Drawing.Size(137, 41);
+            this.Create_Line.Size = new System.Drawing.Size(164, 41);
             this.Create_Line.TabIndex = 17;
-            this.Create_Line.Text = "Создать";
+            this.Create_Line.Text = "Создать линию";
             this.Create_Line.UseVisualStyleBackColor = false;
             this.Create_Line.Click += new System.EventHandler(this.Create_Line_Click);
             // 

@@ -200,15 +200,11 @@ namespace oop_project
         {
             textBoxRecX.Text = Convert.ToString(trackBarRectX.Value);
         }
-
         private void Create_Rec_Click(object sender, EventArgs e)
         {
-            Square.bitmap = bitmap;
-            Square.pictureBox = PictureArea;
 
             Square rectangle;
-            
-            
+
             if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Square();
@@ -421,11 +417,7 @@ namespace oop_project
 
         private void Create_Line_Click(object sender, EventArgs e)
         {
-            Line.bitmap = bitmap;
-            Line.pictureBox = PictureArea;
-
             Line line;
-
 
             if ((textBoxLineX.Text == String.Empty) && (textBoxLineY.Text == String.Empty) && (textBoxLineSize.Text == String.Empty))
             {
