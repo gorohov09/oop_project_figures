@@ -23,8 +23,8 @@ namespace oop_project.Models
         public void Draw()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawEllipse(Pens.LightGreen, (float)this.circle.point.X, (float)this.circle.point.Y, (float)this.circle.Size, (float)this.circle.Size);
-            gr.DrawRectangle(Pens.LightGreen, (float)this.rectangle.point.X, (float)this.rectangle.point.Y, (float)this.rectangle.Size, (float)this.rectangle.Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle.X, (float)this.circle.Y, (float)this.circle.Size, (float)this.circle.Size);
+            gr.DrawRectangle(Pens.LightGreen, (float)this.rectangle.X, (float)this.rectangle.Y, (float)this.rectangle.Size, (float)this.rectangle.Size);
             pictureBox.Image = bitmap;
         }
 
@@ -32,8 +32,8 @@ namespace oop_project.Models
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
-            gr.DrawEllipse(pen, (float)this.circle.point.X, (float)this.circle.point.Y, (float)this.circle.Size, (float)this.circle.Size);
-            gr.DrawRectangle(pen, (float)this.rectangle.point.X, (float)this.rectangle.point.Y, (float)this.rectangle.Size, (float)this.rectangle.Size);
+            gr.DrawEllipse(pen, (float)this.circle.X, (float)this.circle.Y, (float)this.circle.Size, (float)this.circle.Size);
+            gr.DrawRectangle(pen, (float)this.rectangle.X, (float)this.rectangle.Y, (float)this.rectangle.Size, (float)this.rectangle.Size);
             pictureBox.Image = bitmap;
         }
 
@@ -42,11 +42,11 @@ namespace oop_project.Models
             Graphics gr = Graphics.FromImage(bitmap);
             Draw(Color.White);
 
-            this.circle.point.X += dx;
-            this.circle.point.Y += dy;
+            //this.circle.X += dx;
+            //this.circle.Y += dy;
 
-            this.rectangle.point.X += dx;
-            this.rectangle.point.Y += dy;
+            //this.rectangle.X += dx;
+            //this.rectangle.Y += dy;
 
             Draw(Color.LightGreen);
         }

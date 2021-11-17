@@ -7,11 +7,6 @@ namespace oop_project
 {
     public class Circle : TFigure
     {
-        public Circle(MyPoint point, double size) : 
-            base(point, size)
-        {
-        }
-
         public Circle(double x, double y, double size) : 
             base(x, y, size)
         {
@@ -41,17 +36,15 @@ namespace oop_project
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
-            gr.DrawEllipse(pen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
+            gr.DrawEllipse(pen, (float)X, (float)Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
         public override void Move(double dx, double dy)
         {
             Draw(Color.White);
-
-            this.point.X += dx;
-            this.point.Y += dy;
-
+            X += dx;
+            Y += dy;
             Draw(Color.LightGreen);
         }
 

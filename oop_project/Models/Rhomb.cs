@@ -9,12 +9,6 @@ namespace oop_project.Models
     {
         public double Size2 { get; private set; }
 
-        public Rhomb(MyPoint point, double size1, double size2) :
-            base(point, size1)
-        {
-            this.Size2 = size2;
-        }
-
         public Rhomb(double x, double y, double size1, double size2) :
             base(x, y, size1)
         {
@@ -29,8 +23,8 @@ namespace oop_project.Models
 
         public override void Draw(Color color)
         {
-            int x1 = (int)point.X;
-            int y1 = (int)point.Y;
+            int x1 = (int)X;
+            int y1 = (int)Y;
 
             int size1 = (int)Size;
             int size2 = (int)Size2;
@@ -54,11 +48,6 @@ namespace oop_project.Models
             Pen pen = new Pen(color);
             gr.DrawPolygon(pen, points);
             pictureBox.Image = bitmap;
-        }
-
-        public override void Draw()
-        {
-            Draw(Color.LightGreen);
         }
 
         public override string ToString()

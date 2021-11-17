@@ -961,6 +961,7 @@ namespace oop_project
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(497, 599);
             this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Кольцо";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Delete_Ring
@@ -1208,6 +1209,7 @@ namespace oop_project
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage5.Size = new System.Drawing.Size(497, 599);
             this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Произв. фигура";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // Delete_MyFigure
@@ -1439,6 +1441,7 @@ namespace oop_project
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage6.Size = new System.Drawing.Size(497, 599);
             this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Эллипс";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // Change_Ellip
@@ -1702,6 +1705,7 @@ namespace oop_project
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage7.Size = new System.Drawing.Size(497, 599);
             this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Прямоугольник и ромб";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // comboBoxInher

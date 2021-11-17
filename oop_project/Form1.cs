@@ -208,31 +208,30 @@ namespace oop_project
             if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Square();
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Square(Convert.ToDouble(textBoxRecX.Text), Convert.ToDouble(textBoxRecY.Text));
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
             }
             else if ((textBoxRecX.Text != String.Empty) && (textBoxRecY.Text == String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Square(Convert.ToDouble(textBoxRecX.Text), true);
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
             }
             else if ((textBoxRecX.Text == String.Empty) && (textBoxRecY.Text != String.Empty) && (textBoxSizeRec.Text == String.Empty))
             {
                 rectangle = new Square(Convert.ToDouble(textBoxRecY.Text), false);
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
             }
             else
             {
                 double x_rec = Convert.ToDouble(textBoxRecX.Text);
                 double y_rec = Convert.ToDouble(textBoxRecY.Text);
                 double size_rec = Convert.ToDouble(textBoxSizeRec.Text);
-                MyPoint point = new MyPoint(x_rec, y_rec);
-                rectangle = new Square(point, size_rec);
-                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.point.X} y = {rectangle.point.Y}");
+                rectangle = new Square(x_rec, y_rec, size_rec);
+                MessageBox.Show($"Вы создали квадрат размера {rectangle.Size} на {rectangle.Size}. Координаты: x = {rectangle.X} y = {rectangle.Y}");
             }
 
             list_squares = ArrayOperation.AddElement(list_squares, rectangle);
@@ -329,31 +328,30 @@ namespace oop_project
             if ((textBoxCircX.Text == String.Empty) && (textBoxCircY.Text == String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle();
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
             }
             else if ((textBoxCircX.Text != String.Empty) && (textBoxCircY.Text != String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle(Convert.ToDouble(textBoxCircX.Text), Convert.ToDouble(textBoxCircY.Text));
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
             }
             else if ((textBoxCircX.Text != String.Empty) && (textBoxCircY.Text == String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle(Convert.ToDouble(textBoxCircX.Text), true);
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
             }
             else if ((textBoxCircX.Text == String.Empty) && (textBoxCircY.Text != String.Empty) && (textBoxSizeCirc.Text == String.Empty))
             {
                 circle = new Circle(Convert.ToDouble(textBoxCircY.Text), false);
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
+                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
             }
             else
             {
                 double x_circ = Convert.ToDouble(textBoxCircX.Text);
                 double y_circ = Convert.ToDouble(textBoxCircY.Text);
                 double size_circ = Convert.ToDouble(textBoxSizeCirc.Text);
-                MyPoint point = new MyPoint(x_circ, y_circ);
-                circle = new Circle(point, size_circ);
-                MessageBox.Show($"Вы создали радиуса {circle.Size}. Координаты: x = {circle.point.X} y = {circle.point.Y}");
+                circle = new Circle(x_circ, y_circ, size_circ);
+                MessageBox.Show($"Вы создали круг радиуса {circle.Size}. Координаты: x = {circle.X} y = {circle.Y}");
             }
 
             list_circles = ArrayOperation.AddElement(list_circles, circle);
@@ -422,7 +420,7 @@ namespace oop_project
             if ((textBoxLineX.Text == String.Empty) && (textBoxLineY.Text == String.Empty) && (textBoxLineSize.Text == String.Empty))
             {
                 line = new Line();
-                MessageBox.Show($"Вы создали линию. Координаты базовой точки: x1 = {line.point.X} y1 = {line.point.Y}. Размер: {line.Size}");
+                MessageBox.Show($"Вы создали линию. Координаты базовой точки: x1 = {line.X} y1 = {line.Y}. Размер: {line.Size}");
             }
             else
             {
@@ -430,7 +428,7 @@ namespace oop_project
                 double y1_line = Convert.ToDouble(textBoxLineY.Text);
                 double size_line = Convert.ToDouble(textBoxLineSize.Text);
                 line = new Line(x1_line, y1_line, size_line);
-                MessageBox.Show($"Вы создали линию. Координаты базовой точки: x1 = {line.point.X} y1 = {line.point.Y}. Размер: {line.Size}");
+                MessageBox.Show($"Вы создали линию. Координаты базовой точки: x1 = {line.X} y1 = {line.Y}. Размер: {line.Size}");
             }
 
             list_lines = ArrayOperation.AddElement(list_lines, line);
@@ -664,17 +662,16 @@ namespace oop_project
             if ((textBoxEllipsX.Text == String.Empty) && (textBoxEllipsY.Text == String.Empty) && (textBoxEllipsSize1.Text == String.Empty) && (textBoxEllipsSize2.Text == String.Empty))
             {
                 ellipse = new Ellipse();
-                MessageBox.Show($"Вы создали эллипс 1-ая полуось: {ellipse.Size} 2-ая полуось: {ellipse.Size2}. Координаты: x = {ellipse.point.X} y = {ellipse.point.Y}");
+                MessageBox.Show($"Вы создали эллипс 1-ая полуось: {ellipse.Size} 2-ая полуось: {ellipse.Size2}. Координаты: x = {ellipse.X} y = {ellipse.Y}");
             }
             else
             {
                 double x_ellip = Convert.ToDouble(textBoxEllipsX.Text);
                 double y_ellip = Convert.ToDouble(textBoxEllipsY.Text);
                 double size1_ellip = Convert.ToDouble(textBoxEllipsSize1.Text);
-                double size2_ellip = Convert.ToDouble(textBoxEllipsSize2.Text);
-                MyPoint point = new MyPoint(x_ellip, y_ellip);
-                ellipse = new Ellipse(point, size1_ellip, size2_ellip);
-                MessageBox.Show($"Вы создали эллипс 1-ая полуось: {ellipse.Size} 2-ая полуось: {ellipse.Size2}. Координаты: x = {ellipse.point.X} y = {ellipse.point.Y}");
+                double size2_ellip = Convert.ToDouble(textBoxEllipsSize2.Text);               
+                ellipse = new Ellipse(x_ellip, y_ellip, size1_ellip, size2_ellip);
+                MessageBox.Show($"Вы создали эллипс 1-ая полуось: {ellipse.Size} 2-ая полуось: {ellipse.Size2}. Координаты: x = {ellipse.X} y = {ellipse.Y}");
             }
 
             list_ellipses = ArrayOperation.AddElement(list_ellipses, ellipse);
@@ -763,7 +760,7 @@ namespace oop_project
                 if ((textBoxInherX.Text == String.Empty) && (textBoxInherY.Text == String.Empty) && (textBoxInherSize1.Text == String.Empty) && (textBoxInherSize2.Text == String.Empty))
                 {
                     rhomb = new Rhomb();
-                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rhomb.Size} 2-ая полуось: {rhomb.Size2}. Координаты: x = {rhomb.point.X} y = {rhomb.point.Y}");
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rhomb.Size} 2-ая полуось: {rhomb.Size2}. Координаты: x = {rhomb.X} y = {rhomb.Y}");
                 }
                 else
                 {
@@ -771,9 +768,8 @@ namespace oop_project
                     double y_rhomb = Convert.ToDouble(textBoxInherY.Text);
                     double size1_rhomb = Convert.ToDouble(textBoxInherSize1.Text);
                     double size2_rhomb = Convert.ToDouble(textBoxInherSize2.Text);
-                    MyPoint point = new MyPoint(x_rhomb, y_rhomb);
-                    rhomb = new Rhomb(point, size1_rhomb, size2_rhomb);
-                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rhomb.Size} 2-ая полуось: {rhomb.Size2}. Координаты: x = {rhomb.point.X} y = {rhomb.point.Y}");
+                    rhomb = new Rhomb(x_rhomb, y_rhomb, size1_rhomb, size2_rhomb);
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rhomb.Size} 2-ая полуось: {rhomb.Size2}. Координаты: x = {rhomb.X} y = {rhomb.Y}");
                 }
 
                 list_inher = ArrayOperation.AddElement(list_inher, rhomb);
@@ -788,17 +784,16 @@ namespace oop_project
                 if ((textBoxInherX.Text == String.Empty) && (textBoxInherY.Text == String.Empty) && (textBoxInherSize1.Text == String.Empty) && (textBoxInherSize2.Text == String.Empty))
                 {
                     rec = new MyRectangle();
-                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rec.Size} 2-ая полуось: {rec.Size2}. Координаты: x = {rec.point.X} y = {rec.point.Y}");
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rec.Size} 2-ая полуось: {rec.Size2}. Координаты: x = {rec.X} y = {rec.Y}");
                 }
                 else
                 {
-                    double x_rhomb = Convert.ToDouble(textBoxInherX.Text);
-                    double y_rhomb = Convert.ToDouble(textBoxInherY.Text);
-                    double size1_rhomb = Convert.ToDouble(textBoxInherSize1.Text);
-                    double size2_rhomb = Convert.ToDouble(textBoxInherSize2.Text);
-                    MyPoint point = new MyPoint(x_rhomb, y_rhomb);
-                    rec = new MyRectangle(point, size1_rhomb, size2_rhomb);
-                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rec.Size} 2-ая полуось: {rec.Size2}. Координаты: x = {rec.point.X} y = {rec.point.Y}");
+                    double x_rec = Convert.ToDouble(textBoxInherX.Text);
+                    double y_rec = Convert.ToDouble(textBoxInherY.Text);
+                    double size1_rec = Convert.ToDouble(textBoxInherSize1.Text);
+                    double size2_rec = Convert.ToDouble(textBoxInherSize2.Text);
+                    rec = new MyRectangle(x_rec, y_rec, size1_rec, size2_rec);
+                    MessageBox.Show($"Вы создали эллипс 1-ая полуось: {rec.Size} 2-ая полуось: {rec.Size2}. Координаты: x = {rec.X} y = {rec.Y}");
                 }
                 list_inher = ArrayOperation.AddElement(list_inher, rec);
 

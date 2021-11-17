@@ -7,11 +7,6 @@ namespace oop_project
 {
     public class Square : TFigure
     {
-        public Square(MyPoint point, double size) :
-            base(point, size)
-        {
-        }
-
         public Square(double x, double y, double size) :
             base(x, y, size)
         {
@@ -41,15 +36,15 @@ namespace oop_project
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
-            gr.DrawRectangle(pen, (float)point.X, (float)point.Y, (float)Size, (float)Size);
+            gr.DrawRectangle(pen, (float)X, (float)Y, (float)Size, (float)Size);
             pictureBox.Image = bitmap;
         }
 
         public override void Move(double dx, double dy)
         {
             Draw(Color.White);
-            this.point.X += dx;
-            this.point.Y += dy;
+            this.X += dx;
+            this.Y += dy;
             Draw(Color.LightGreen);
         }
 

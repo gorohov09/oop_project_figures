@@ -23,8 +23,8 @@ namespace oop_project.Models
         public void Draw()
         {
             Graphics gr = Graphics.FromImage(bitmap);
-            gr.DrawEllipse(Pens.LightGreen, (float)this.circle1.point.X, (float)this.circle1.point.Y, (float)this.circle1.Size, (float)this.circle1.Size);
-            gr.DrawEllipse(Pens.LightGreen, (float)this.circle2.point.X, (float)this.circle2.point.Y, (float)this.circle2.Size, (float)this.circle2.Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle1.X, (float)this.circle1.Y, (float)this.circle1.Size, (float)this.circle1.Size);
+            gr.DrawEllipse(Pens.LightGreen, (float)this.circle2.X, (float)this.circle2.Y, (float)this.circle2.Size, (float)this.circle2.Size);
             pictureBox.Image = bitmap;
         }
 
@@ -32,8 +32,8 @@ namespace oop_project.Models
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
-            gr.DrawEllipse(pen, (float)this.circle1.point.X, (float)this.circle1.point.Y, (float)this.circle1.Size, (float)this.circle1.Size);
-            gr.DrawEllipse(pen, (float)this.circle2.point.X, (float)this.circle2.point.Y, (float)this.circle2.Size, (float)this.circle2.Size);
+            gr.DrawEllipse(pen, (float)this.circle1.X, (float)this.circle1.Y, (float)this.circle1.Size, (float)this.circle1.Size);
+            gr.DrawEllipse(pen, (float)this.circle2.X, (float)this.circle2.Y, (float)this.circle2.Size, (float)this.circle2.Size);
             pictureBox.Image = bitmap;
         }
 
@@ -42,11 +42,11 @@ namespace oop_project.Models
             Graphics gr = Graphics.FromImage(bitmap);
             Draw(Color.White);
 
-            this.circle1.point.X += dx;
-            this.circle1.point.Y += dy;
+            //this.circle1.X += dx;
+            //this.circle1.Y += dy;
 
-            this.circle2.point.X += dx;
-            this.circle2.point.Y += dy;
+            //this.circle2.X += dx;
+            //this.circle2.Y += dy;
 
             Draw(Color.LightGreen);
         }

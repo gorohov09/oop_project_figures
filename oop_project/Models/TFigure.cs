@@ -11,39 +11,39 @@ namespace oop_project.Models
         public static PictureBox pictureBox;
         public static Bitmap bitmap;
 
-        public MyPoint point { get; protected set; }
+        public double X { get; protected set; }
+
+        public double Y { get; protected set; }
 
         public double Size { get; protected set; }
 
-        public TFigure(MyPoint point, double size)
-        {
-            this.point = point;
-            this.Size = size;
-        }
-
         public TFigure(double x, double y, double size)
         {
-            point = new MyPoint(x, y);
+            this.X = x;
+            this.Y = y;
             this.Size = size;
         }
 
         public TFigure(double value, bool isValue)
         {
             if (isValue == true)
-            {
-                point = new MyPoint(value, (double)new Random().Next(20, 500));
+            {               
+                this.X = value;
+                this.Y = (double)new Random().Next(20, 500);
                 this.Size = (double)new Random().Next(20, 300);
             }
             else
-            {
-                point = new MyPoint((double)new Random().Next(20, 500), value);
+            {               
+                this.X = (double)new Random().Next(20, 500);
+                this.Y = value;
                 this.Size = (double)new Random().Next(20, 300);
             }
         }
 
         public TFigure()
         {
-            point = new MyPoint((double)r.Next(20, 400), (double)r.Next(20, 400));
+            this.X = (double)r.Next(20, 400);
+            this.Y = (double)r.Next(20, 400);
             this.Size = (double)r.Next(30, 150);
         }
 
