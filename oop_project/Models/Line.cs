@@ -22,25 +22,12 @@ namespace oop_project
             Draw(Color.LightGreen);
         }
 
-        public void Draw(Color color)
+        public override void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);
             Pen pen = new Pen(color);
             gr.DrawLine(pen, (float)X, (float)Y, (float)(X + Size), (float)(Y + Size));
             pictureBox.Image = bitmap;
-        }
-
-        public override void Move(double dx, double dy)
-        {
-            Draw(Color.White);
-            X += dx;
-            Y += dy;
-            Draw(Color.LightGreen);
-        }
-
-        public override void Delete()
-        {
-            Draw(Color.White);
         }
 
         public override string ToString()

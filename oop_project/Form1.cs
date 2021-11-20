@@ -58,12 +58,10 @@ namespace oop_project
             trackBarRectY.Scroll += TrackBarRectY_Scroll;
             trackBarCircX.Scroll += TrackBarCircX_Scroll;
             trackBarCircY.Scroll += TrackBarCircY_Scroll;
-            trackBarRingX.Scroll += TrackBarRingX_Scroll;
-            trackBarRingY.Scroll += TrackBarRingY_Scroll;
+            
             trackBarLineX.Scroll += TrackBarLineX_Scroll;
             trackBarLineY.Scroll += TrackBarLineY_Scroll;
-            trackBarMyFigureX.Scroll += TrackBarMyFigureX_Scroll;
-            trackBarMyFigureY.Scroll += TrackBarMyFigureY_Scroll;
+         
             trackBarEllipsX.Scroll += TrackBarEllipsX_Scroll;
             trackBarEllipsY.Scroll += TrackBarEllipsY_Scroll;
             trackBarInherX.Scroll += TrackBarInherX_Scroll;
@@ -71,9 +69,9 @@ namespace oop_project
 
             listBoxRect.SelectedIndexChanged += ListBoxRect_SelectedIndexChanged;
             listBoxCirc.SelectedIndexChanged += ListBoxCirc_SelectedIndexChanged;
-            listBoxRing.SelectedIndexChanged += ListBoxRing_SelectedIndexChanged;
+            
             listBoxLine.SelectedIndexChanged += ListBoxLine_SelectedIndexChanged;
-            listBoxMyFigures.SelectedIndexChanged += ListBoxMyFigures_SelectedIndexChanged;
+      
             listBoxEllips.SelectedIndexChanged += ListBoxEllips_SelectedIndexChanged;
             listBoxInher.SelectedIndexChanged += ListBoxInher_SelectedIndexChanged;
 
@@ -126,20 +124,7 @@ namespace oop_project
             textBoxIDEllips.Text = listBoxEllips.SelectedIndex.ToString();
         }
 
-        private void ListBoxMyFigures_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            textBoxIDMyFigure.Text = listBoxMyFigures.SelectedIndex.ToString();
-        }
-
-        private void TrackBarMyFigureY_Scroll(object sender, EventArgs e)
-        {
-            textBoxMyFigureY.Text = Convert.ToString(trackBarMyFigureY.Value);
-        }
-
-        private void TrackBarMyFigureX_Scroll(object sender, EventArgs e)
-        {
-            textBoxMyFigureX.Text = Convert.ToString(trackBarMyFigureX.Value);
-        }
+        
 
         private void ListBoxLine_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -156,20 +141,7 @@ namespace oop_project
             textBoxLineX.Text = Convert.ToString(trackBarLineX.Value);
         }
 
-        private void ListBoxRing_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            textBoxIDRing.Text = listBoxRing.SelectedIndex.ToString();
-        }
-
-        private void TrackBarRingY_Scroll(object sender, EventArgs e)
-        {
-            textBoxRingY.Text = Convert.ToString(trackBarRingY.Value);
-        }
-
-        private void TrackBarRingX_Scroll(object sender, EventArgs e)
-        {
-            textBoxRingX.Text = Convert.ToString(trackBarRingX.Value);
-        }
+        
 
         private void ListBoxCirc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -489,172 +461,10 @@ namespace oop_project
             }
         }
 
-        private void Create_Ring_Click(object sender, EventArgs e)
-        {
-            Ring.bitmap = bitmap;
-            Ring.pictureBox = PictureArea;
+        
 
-            Ring ring;
-
-            double x_circ_1 = Convert.ToDouble(textBoxRingX.Text);
-            double y_circ_1 = Convert.ToDouble(textBoxRingY.Text);
-            double x_circ_2 = Convert.ToDouble(textBoxRingX.Text);
-            double y_circ_2 = Convert.ToDouble(textBoxRingY.Text);
-
-            double circ1_size = Convert.ToDouble(textBoxSizeRing1.Text);
-
-            double circ2_size = Convert.ToDouble(textBoxSizeRing2.Text);
-
-            double n = Math.Abs(circ2_size - circ1_size);
-
-            if (circ2_size > circ1_size)
-            {    
-                x_circ_2 -= n / 2;
-                y_circ_2 -= n / 2;
-            }
-            else
-            {
-                x_circ_1 -= n / 2;
-                y_circ_1 -= n / 2;
-            }
-
-            Circle circle1 = new Circle(x_circ_1, y_circ_1, circ1_size);
-            Circle circle2 = new Circle(x_circ_2, y_circ_2, circ2_size);
-
-            ring = new Ring(circle1, circle2);
-           
-            list_rings = ArrayOperation.AddElement(list_rings, ring);
-
-            listBoxRing.Items.Add(ring.ToString() + $"№{list_rings.Length}");
-
-            ring.Draw();
-        }
-
-        private void Move_Ring_Click(object sender, EventArgs e)
-        {
-            double x_move = Convert.ToDouble(textBoxMoveRingX.Text);
-            double y_move = Convert.ToDouble(textBoxMoveRingY.Text);
-
-            if (textBoxIDRing.Text != String.Empty)
-            {
-                if (Convert.ToInt32(textBoxIDRing.Text) < 0 || Convert.ToInt32(textBoxIDRing.Text) >= list_rings.Length)
-                {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rings.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                list_rings[Convert.ToInt32(textBoxIDRing.Text)].Move(x_move, y_move);
-            }
-            else
-            {
-                foreach (var item in list_rings)
-                {
-                    item.Move(x_move, y_move);
-                }
-            }
-        }
-
-        private void Delete_Ring_Click(object sender, EventArgs e)
-        {
-            if (textBoxIDRing.Text != String.Empty)
-            {
-                if (Convert.ToInt32(textBoxIDRing.Text) < 0 || Convert.ToInt32(textBoxIDRing.Text) >= list_rings.Length)
-                {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_rings.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                list_rings[Convert.ToInt32(textBoxIDRing.Text)].Delete();
-                list_rings = ArrayOperation.RemoveElement(list_rings, Convert.ToInt32(textBoxIDRing.Text));
-                listBoxRing.Items.RemoveAt(Convert.ToInt32(textBoxIDRing.Text));
-                listBoxRing.Refresh();
-            }
-            else
-            {
-                foreach (var item in list_rings)
-                {
-                    item.Delete();
-                }
-                list_rings = ArrayOperation.Clear(list_rings);
-                listBoxRing.Items.Clear();
-                listBoxRing.Refresh();
-            }
-        }
-
-        private void Create_MyFigure_Click(object sender, EventArgs e)
-        {
-            MyFigure.bitmap = bitmap;
-            MyFigure.pictureBox = PictureArea;
-
-            MyFigure my_figure;
-
-            double x_center = Convert.ToDouble(textBoxMyFigureX.Text);
-            double y_center = Convert.ToDouble(textBoxMyFigureY.Text);
-            double size_figure = Convert.ToDouble(textBoxMyFigureCircSize.Text);
-
-            Circle circle = new Circle(x_center, y_center, size_figure);
-            Square rectangle = new Square(x_center, y_center, size_figure);
-
-            my_figure = new MyFigure(circle, rectangle);
-
-            list_myfigures = ArrayOperation.AddElement(list_myfigures, my_figure);
-
-            listBoxMyFigures.Items.Add(my_figure.ToString() + $"№{list_myfigures.Length}");
-
-            my_figure.Draw();
-        }
-
-        private void Move_MyFigure_Click(object sender, EventArgs e)
-        {
-            double x_move = Convert.ToDouble(textBoxMoveMyFigureX.Text);
-            double y_move = Convert.ToDouble(textBoxMoveMyFigureY.Text);
-
-            if (textBoxIDMyFigure.Text != String.Empty)
-            {
-                if (Convert.ToInt32(textBoxIDMyFigure.Text) < 0 || Convert.ToInt32(textBoxIDMyFigure.Text) >= list_myfigures.Length)
-                {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_myfigures.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                list_myfigures[Convert.ToInt32(textBoxIDMyFigure.Text)].Move(x_move, y_move);
-            }
-            else
-            {
-                foreach (var item in list_rings)
-                {
-                    item.Move(x_move, y_move);
-                }
-            }
-        }
-
-        private void Delete_MyFigure_Click(object sender, EventArgs e)
-        {
-            if (textBoxIDMyFigure.Text != String.Empty)
-            {
-                if (Convert.ToInt32(textBoxIDMyFigure.Text) < 0 || Convert.ToInt32(textBoxIDMyFigure.Text) >= list_myfigures.Length)
-                {
-                    MessageBox.Show($"Ошибка\nИндекс должен быть от {0} до {list_myfigures.Length - 1}", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                list_myfigures[Convert.ToInt32(textBoxIDMyFigure.Text)].Delete();
-                list_myfigures = ArrayOperation.RemoveElement(list_myfigures, Convert.ToInt32(textBoxIDMyFigure.Text));
-                listBoxMyFigures.Items.RemoveAt(Convert.ToInt32(textBoxIDMyFigure.Text));
-                listBoxMyFigures.Refresh();
-            }
-            else
-            {
-                foreach (var item in list_rings)
-                {
-                    item.Delete();
-                }
-                list_myfigures = ArrayOperation.Clear(list_myfigures);
-                listBoxMyFigures.Items.Clear();
-                listBoxMyFigures.Refresh();
-            }
-        }
-
+        
+        
         private void Create_Ellips_Click(object sender, EventArgs e)
         {
             Ellipse ellipse;

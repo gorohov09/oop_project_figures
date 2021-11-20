@@ -92,48 +92,6 @@ namespace oop_project
             this.Create_Line = new System.Windows.Forms.Button();
             this.textBoxLineY = new System.Windows.Forms.TextBox();
             this.textBoxLineX = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.Delete_Ring = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.listBoxRing = new System.Windows.Forms.ListBox();
-            this.trackBarRingY = new System.Windows.Forms.TrackBar();
-            this.trackBarRingX = new System.Windows.Forms.TrackBar();
-            this.Move_Ring = new System.Windows.Forms.Button();
-            this.textBoxMoveRingY = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBoxMoveRingX = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBoxIDRing = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.Create_Ring = new System.Windows.Forms.Button();
-            this.textBoxSizeRing2 = new System.Windows.Forms.TextBox();
-            this.textBoxSizeRing1 = new System.Windows.Forms.TextBox();
-            this.textBoxRingY = new System.Windows.Forms.TextBox();
-            this.textBoxRingX = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.Delete_MyFigure = new System.Windows.Forms.Button();
-            this.Move_MyFigure = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.listBoxMyFigures = new System.Windows.Forms.ListBox();
-            this.textBoxMoveMyFigureY = new System.Windows.Forms.TextBox();
-            this.textBoxMoveMyFigureX = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBoxIDMyFigure = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.Create_MyFigure = new System.Windows.Forms.Button();
-            this.textBoxMyFigureCircSize = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBoxMyFigureY = new System.Windows.Forms.TextBox();
-            this.trackBarMyFigureY = new System.Windows.Forms.TrackBar();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBoxMyFigureX = new System.Windows.Forms.TextBox();
-            this.trackBarMyFigureX = new System.Windows.Forms.TrackBar();
-            this.label16 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.Change_Ellip = new System.Windows.Forms.Button();
             this.Delete_Ellip = new System.Windows.Forms.Button();
@@ -191,12 +149,6 @@ namespace oop_project
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLineY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLineX)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRingY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRingX)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureX)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsX)).BeginInit();
@@ -220,8 +172,6 @@ namespace oop_project
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -932,485 +882,6 @@ namespace oop_project
             this.textBoxLineX.Size = new System.Drawing.Size(37, 27);
             this.textBoxLineX.TabIndex = 10;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.Delete_Ring);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.listBoxRing);
-            this.tabPage4.Controls.Add(this.trackBarRingY);
-            this.tabPage4.Controls.Add(this.trackBarRingX);
-            this.tabPage4.Controls.Add(this.Move_Ring);
-            this.tabPage4.Controls.Add(this.textBoxMoveRingY);
-            this.tabPage4.Controls.Add(this.label26);
-            this.tabPage4.Controls.Add(this.textBoxMoveRingX);
-            this.tabPage4.Controls.Add(this.label25);
-            this.tabPage4.Controls.Add(this.textBoxIDRing);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.Create_Ring);
-            this.tabPage4.Controls.Add(this.textBoxSizeRing2);
-            this.tabPage4.Controls.Add(this.textBoxSizeRing1);
-            this.tabPage4.Controls.Add(this.textBoxRingY);
-            this.tabPage4.Controls.Add(this.textBoxRingX);
-            this.tabPage4.Controls.Add(this.label23);
-            this.tabPage4.Controls.Add(this.label22);
-            this.tabPage4.Controls.Add(this.label21);
-            this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(497, 599);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Кольцо";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // Delete_Ring
-            // 
-            this.Delete_Ring.BackColor = System.Drawing.Color.Maroon;
-            this.Delete_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delete_Ring.Location = new System.Drawing.Point(173, 399);
-            this.Delete_Ring.Margin = new System.Windows.Forms.Padding(4);
-            this.Delete_Ring.Name = "Delete_Ring";
-            this.Delete_Ring.Size = new System.Drawing.Size(132, 38);
-            this.Delete_Ring.TabIndex = 33;
-            this.Delete_Ring.Text = "Удалить";
-            this.Delete_Ring.UseVisualStyleBackColor = false;
-            this.Delete_Ring.Click += new System.EventHandler(this.Delete_Ring_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(340, 203);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 20);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Список колец";
-            // 
-            // listBoxRing
-            // 
-            this.listBoxRing.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listBoxRing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBoxRing.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBoxRing.FormattingEnabled = true;
-            this.listBoxRing.ItemHeight = 20;
-            this.listBoxRing.Location = new System.Drawing.Point(328, 226);
-            this.listBoxRing.Margin = new System.Windows.Forms.Padding(4);
-            this.listBoxRing.Name = "listBoxRing";
-            this.listBoxRing.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listBoxRing.Size = new System.Drawing.Size(158, 202);
-            this.listBoxRing.TabIndex = 31;
-            // 
-            // trackBarRingY
-            // 
-            this.trackBarRingY.Cursor = System.Windows.Forms.Cursors.Default;
-            this.trackBarRingY.Location = new System.Drawing.Point(225, 47);
-            this.trackBarRingY.Margin = new System.Windows.Forms.Padding(4);
-            this.trackBarRingY.Maximum = 500;
-            this.trackBarRingY.Name = "trackBarRingY";
-            this.trackBarRingY.Size = new System.Drawing.Size(187, 56);
-            this.trackBarRingY.TabIndex = 30;
-            // 
-            // trackBarRingX
-            // 
-            this.trackBarRingX.Cursor = System.Windows.Forms.Cursors.Default;
-            this.trackBarRingX.Location = new System.Drawing.Point(225, 7);
-            this.trackBarRingX.Margin = new System.Windows.Forms.Padding(4);
-            this.trackBarRingX.Maximum = 500;
-            this.trackBarRingX.Name = "trackBarRingX";
-            this.trackBarRingX.Size = new System.Drawing.Size(187, 56);
-            this.trackBarRingX.TabIndex = 29;
-            // 
-            // Move_Ring
-            // 
-            this.Move_Ring.BackColor = System.Drawing.Color.Maroon;
-            this.Move_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Move_Ring.Location = new System.Drawing.Point(13, 399);
-            this.Move_Ring.Margin = new System.Windows.Forms.Padding(4);
-            this.Move_Ring.Name = "Move_Ring";
-            this.Move_Ring.Size = new System.Drawing.Size(152, 37);
-            this.Move_Ring.TabIndex = 28;
-            this.Move_Ring.Text = "Переместить";
-            this.Move_Ring.UseVisualStyleBackColor = false;
-            this.Move_Ring.Click += new System.EventHandler(this.Move_Ring_Click);
-            // 
-            // textBoxMoveRingY
-            // 
-            this.textBoxMoveRingY.Location = new System.Drawing.Point(173, 350);
-            this.textBoxMoveRingY.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMoveRingY.Name = "textBoxMoveRingY";
-            this.textBoxMoveRingY.Size = new System.Drawing.Size(59, 27);
-            this.textBoxMoveRingY.TabIndex = 27;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(8, 351);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(150, 20);
-            this.label26.TabIndex = 26;
-            this.label26.Text = "Смещение по Y";
-            // 
-            // textBoxMoveRingX
-            // 
-            this.textBoxMoveRingX.Location = new System.Drawing.Point(173, 302);
-            this.textBoxMoveRingX.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMoveRingX.Name = "textBoxMoveRingX";
-            this.textBoxMoveRingX.Size = new System.Drawing.Size(59, 27);
-            this.textBoxMoveRingX.TabIndex = 25;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(8, 303);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(151, 20);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "Смещение по X";
-            // 
-            // textBoxIDRing
-            // 
-            this.textBoxIDRing.Location = new System.Drawing.Point(243, 260);
-            this.textBoxIDRing.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxIDRing.Name = "textBoxIDRing";
-            this.textBoxIDRing.Size = new System.Drawing.Size(59, 27);
-            this.textBoxIDRing.TabIndex = 23;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(8, 265);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(217, 20);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "Введите  ID элемента";
-            // 
-            // Create_Ring
-            // 
-            this.Create_Ring.BackColor = System.Drawing.Color.Maroon;
-            this.Create_Ring.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Create_Ring.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Create_Ring.Location = new System.Drawing.Point(155, 185);
-            this.Create_Ring.Margin = new System.Windows.Forms.Padding(4);
-            this.Create_Ring.Name = "Create_Ring";
-            this.Create_Ring.Size = new System.Drawing.Size(169, 38);
-            this.Create_Ring.TabIndex = 21;
-            this.Create_Ring.Text = "Создать";
-            this.Create_Ring.UseVisualStyleBackColor = false;
-            this.Create_Ring.Click += new System.EventHandler(this.Create_Ring_Click);
-            // 
-            // textBoxSizeRing2
-            // 
-            this.textBoxSizeRing2.Location = new System.Drawing.Point(205, 153);
-            this.textBoxSizeRing2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSizeRing2.Name = "textBoxSizeRing2";
-            this.textBoxSizeRing2.Size = new System.Drawing.Size(59, 27);
-            this.textBoxSizeRing2.TabIndex = 20;
-            // 
-            // textBoxSizeRing1
-            // 
-            this.textBoxSizeRing1.Location = new System.Drawing.Point(205, 110);
-            this.textBoxSizeRing1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSizeRing1.Name = "textBoxSizeRing1";
-            this.textBoxSizeRing1.Size = new System.Drawing.Size(59, 27);
-            this.textBoxSizeRing1.TabIndex = 19;
-            // 
-            // textBoxRingY
-            // 
-            this.textBoxRingY.Location = new System.Drawing.Point(433, 68);
-            this.textBoxRingY.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxRingY.Name = "textBoxRingY";
-            this.textBoxRingY.Size = new System.Drawing.Size(43, 27);
-            this.textBoxRingY.TabIndex = 18;
-            // 
-            // textBoxRingX
-            // 
-            this.textBoxRingX.Location = new System.Drawing.Point(433, 26);
-            this.textBoxRingX.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxRingX.Name = "textBoxRingX";
-            this.textBoxRingX.Size = new System.Drawing.Size(43, 27);
-            this.textBoxRingX.TabIndex = 17;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(28, 154);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(147, 20);
-            this.label23.TabIndex = 16;
-            this.label23.Text = "Радиус 2 круга";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(28, 111);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(147, 20);
-            this.label22.TabIndex = 15;
-            this.label22.Text = "Радиус 1 круга";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(28, 69);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(167, 20);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Координата по Y";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(29, 26);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(168, 20);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Координата по X";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.Delete_MyFigure);
-            this.tabPage5.Controls.Add(this.Move_MyFigure);
-            this.tabPage5.Controls.Add(this.label37);
-            this.tabPage5.Controls.Add(this.listBoxMyFigures);
-            this.tabPage5.Controls.Add(this.textBoxMoveMyFigureY);
-            this.tabPage5.Controls.Add(this.textBoxMoveMyFigureX);
-            this.tabPage5.Controls.Add(this.label36);
-            this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Controls.Add(this.textBoxIDMyFigure);
-            this.tabPage5.Controls.Add(this.label34);
-            this.tabPage5.Controls.Add(this.Create_MyFigure);
-            this.tabPage5.Controls.Add(this.textBoxMyFigureCircSize);
-            this.tabPage5.Controls.Add(this.label32);
-            this.tabPage5.Controls.Add(this.textBoxMyFigureY);
-            this.tabPage5.Controls.Add(this.trackBarMyFigureY);
-            this.tabPage5.Controls.Add(this.label31);
-            this.tabPage5.Controls.Add(this.textBoxMyFigureX);
-            this.tabPage5.Controls.Add(this.trackBarMyFigureX);
-            this.tabPage5.Controls.Add(this.label16);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(497, 599);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Произв. фигура";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // Delete_MyFigure
-            // 
-            this.Delete_MyFigure.BackColor = System.Drawing.Color.Maroon;
-            this.Delete_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delete_MyFigure.Location = new System.Drawing.Point(167, 393);
-            this.Delete_MyFigure.Margin = new System.Windows.Forms.Padding(4);
-            this.Delete_MyFigure.Name = "Delete_MyFigure";
-            this.Delete_MyFigure.Size = new System.Drawing.Size(132, 38);
-            this.Delete_MyFigure.TabIndex = 49;
-            this.Delete_MyFigure.Text = "Удалить";
-            this.Delete_MyFigure.UseVisualStyleBackColor = false;
-            this.Delete_MyFigure.Click += new System.EventHandler(this.Delete_MyFigure_Click);
-            // 
-            // Move_MyFigure
-            // 
-            this.Move_MyFigure.BackColor = System.Drawing.Color.Maroon;
-            this.Move_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Move_MyFigure.Location = new System.Drawing.Point(4, 394);
-            this.Move_MyFigure.Margin = new System.Windows.Forms.Padding(4);
-            this.Move_MyFigure.Name = "Move_MyFigure";
-            this.Move_MyFigure.Size = new System.Drawing.Size(152, 37);
-            this.Move_MyFigure.TabIndex = 48;
-            this.Move_MyFigure.Text = "Переместить";
-            this.Move_MyFigure.UseVisualStyleBackColor = false;
-            this.Move_MyFigure.Click += new System.EventHandler(this.Move_MyFigure_Click);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(325, 188);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(138, 20);
-            this.label37.TabIndex = 47;
-            this.label37.Text = "Список фигур";
-            // 
-            // listBoxMyFigures
-            // 
-            this.listBoxMyFigures.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listBoxMyFigures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBoxMyFigures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBoxMyFigures.FormattingEnabled = true;
-            this.listBoxMyFigures.ItemHeight = 20;
-            this.listBoxMyFigures.Location = new System.Drawing.Point(315, 223);
-            this.listBoxMyFigures.Margin = new System.Windows.Forms.Padding(4);
-            this.listBoxMyFigures.Name = "listBoxMyFigures";
-            this.listBoxMyFigures.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listBoxMyFigures.Size = new System.Drawing.Size(158, 202);
-            this.listBoxMyFigures.TabIndex = 46;
-            // 
-            // textBoxMoveMyFigureY
-            // 
-            this.textBoxMoveMyFigureY.Location = new System.Drawing.Point(183, 341);
-            this.textBoxMoveMyFigureY.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMoveMyFigureY.Name = "textBoxMoveMyFigureY";
-            this.textBoxMoveMyFigureY.Size = new System.Drawing.Size(59, 27);
-            this.textBoxMoveMyFigureY.TabIndex = 45;
-            // 
-            // textBoxMoveMyFigureX
-            // 
-            this.textBoxMoveMyFigureX.Location = new System.Drawing.Point(183, 297);
-            this.textBoxMoveMyFigureX.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMoveMyFigureX.Name = "textBoxMoveMyFigureX";
-            this.textBoxMoveMyFigureX.Size = new System.Drawing.Size(59, 27);
-            this.textBoxMoveMyFigureX.TabIndex = 44;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(4, 345);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(150, 20);
-            this.label36.TabIndex = 43;
-            this.label36.Text = "Смещение по Y";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label35.Location = new System.Drawing.Point(4, 300);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(151, 20);
-            this.label35.TabIndex = 42;
-            this.label35.Text = "Смещение по X";
-            // 
-            // textBoxIDMyFigure
-            // 
-            this.textBoxIDMyFigure.Location = new System.Drawing.Point(239, 250);
-            this.textBoxIDMyFigure.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxIDMyFigure.Name = "textBoxIDMyFigure";
-            this.textBoxIDMyFigure.Size = new System.Drawing.Size(59, 27);
-            this.textBoxIDMyFigure.TabIndex = 41;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label34.Location = new System.Drawing.Point(4, 254);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(217, 20);
-            this.label34.TabIndex = 40;
-            this.label34.Text = "Введите  ID элемента";
-            // 
-            // Create_MyFigure
-            // 
-            this.Create_MyFigure.BackColor = System.Drawing.Color.Maroon;
-            this.Create_MyFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Create_MyFigure.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Create_MyFigure.Location = new System.Drawing.Point(133, 180);
-            this.Create_MyFigure.Margin = new System.Windows.Forms.Padding(4);
-            this.Create_MyFigure.Name = "Create_MyFigure";
-            this.Create_MyFigure.Size = new System.Drawing.Size(169, 38);
-            this.Create_MyFigure.TabIndex = 39;
-            this.Create_MyFigure.Text = "Создать";
-            this.Create_MyFigure.UseVisualStyleBackColor = false;
-            this.Create_MyFigure.Click += new System.EventHandler(this.Create_MyFigure_Click);
-            // 
-            // textBoxMyFigureCircSize
-            // 
-            this.textBoxMyFigureCircSize.Location = new System.Drawing.Point(243, 111);
-            this.textBoxMyFigureCircSize.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMyFigureCircSize.Name = "textBoxMyFigureCircSize";
-            this.textBoxMyFigureCircSize.Size = new System.Drawing.Size(59, 27);
-            this.textBoxMyFigureCircSize.TabIndex = 37;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(31, 114);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(153, 20);
-            this.label32.TabIndex = 35;
-            this.label32.Text = "Размер фигуры";
-            // 
-            // textBoxMyFigureY
-            // 
-            this.textBoxMyFigureY.Location = new System.Drawing.Point(412, 63);
-            this.textBoxMyFigureY.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMyFigureY.Name = "textBoxMyFigureY";
-            this.textBoxMyFigureY.Size = new System.Drawing.Size(43, 27);
-            this.textBoxMyFigureY.TabIndex = 34;
-            // 
-            // trackBarMyFigureY
-            // 
-            this.trackBarMyFigureY.Cursor = System.Windows.Forms.Cursors.Default;
-            this.trackBarMyFigureY.Location = new System.Drawing.Point(199, 55);
-            this.trackBarMyFigureY.Margin = new System.Windows.Forms.Padding(4);
-            this.trackBarMyFigureY.Maximum = 500;
-            this.trackBarMyFigureY.Name = "trackBarMyFigureY";
-            this.trackBarMyFigureY.Size = new System.Drawing.Size(187, 56);
-            this.trackBarMyFigureY.TabIndex = 33;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label31.Location = new System.Drawing.Point(13, 66);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(167, 20);
-            this.label31.TabIndex = 32;
-            this.label31.Text = "Координата по Y";
-            // 
-            // textBoxMyFigureX
-            // 
-            this.textBoxMyFigureX.Location = new System.Drawing.Point(412, 16);
-            this.textBoxMyFigureX.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMyFigureX.Name = "textBoxMyFigureX";
-            this.textBoxMyFigureX.Size = new System.Drawing.Size(43, 27);
-            this.textBoxMyFigureX.TabIndex = 31;
-            // 
-            // trackBarMyFigureX
-            // 
-            this.trackBarMyFigureX.Cursor = System.Windows.Forms.Cursors.Default;
-            this.trackBarMyFigureX.Location = new System.Drawing.Point(197, 7);
-            this.trackBarMyFigureX.Margin = new System.Windows.Forms.Padding(4);
-            this.trackBarMyFigureX.Maximum = 500;
-            this.trackBarMyFigureX.Name = "trackBarMyFigureX";
-            this.trackBarMyFigureX.Size = new System.Drawing.Size(187, 56);
-            this.trackBarMyFigureX.TabIndex = 30;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(13, 22);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(168, 20);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Координата по X";
-            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.Change_Ellip);
@@ -1705,7 +1176,7 @@ namespace oop_project
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage7.Size = new System.Drawing.Size(497, 599);
             this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Прямоугольник и ромб";
+            this.tabPage7.Text = "Ромб и Прямоугольник";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // comboBoxInher
@@ -1962,14 +1433,6 @@ namespace oop_project
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLineY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLineX)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRingY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarRingX)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMyFigureX)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarEllipsY)).EndInit();
@@ -1998,7 +1461,6 @@ namespace oop_project
         private System.Windows.Forms.Button Move_Rec;
         private System.Windows.Forms.TextBox textBoxIDRec;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox textBoxMoveRecX;
         private System.Windows.Forms.TextBox textBoxMoveRecY;
         private System.Windows.Forms.Label label5;
@@ -2030,22 +1492,6 @@ namespace oop_project
         private System.Windows.Forms.TextBox textBoxLineX;
         private System.Windows.Forms.Button Delete_Line;
         private System.Windows.Forms.Button Move_Line;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBoxSizeRing2;
-        private System.Windows.Forms.TextBox textBoxSizeRing1;
-        private System.Windows.Forms.TextBox textBoxRingY;
-        private System.Windows.Forms.TextBox textBoxRingX;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button Create_Ring;
-        private System.Windows.Forms.Button Move_Ring;
-        private System.Windows.Forms.TextBox textBoxMoveRingY;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBoxMoveRingX;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBoxIDRing;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TrackBar trackBarRectY;
         private System.Windows.Forms.TrackBar trackBarRectX;
         private System.Windows.Forms.ListBox listBoxRect;
@@ -2056,10 +1502,6 @@ namespace oop_project
         private System.Windows.Forms.TrackBar trackBarCircX;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBoxCirc;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox listBoxRing;
-        private System.Windows.Forms.TrackBar trackBarRingY;
-        private System.Windows.Forms.TrackBar trackBarRingX;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBoxLineSize;
         private System.Windows.Forms.Label label14;
@@ -2068,27 +1510,6 @@ namespace oop_project
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBoxLine;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button Delete_Ring;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button Delete_MyFigure;
-        private System.Windows.Forms.Button Move_MyFigure;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ListBox listBoxMyFigures;
-        private System.Windows.Forms.TextBox textBoxMoveMyFigureY;
-        private System.Windows.Forms.TextBox textBoxMoveMyFigureX;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBoxIDMyFigure;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Button Create_MyFigure;
-        private System.Windows.Forms.TextBox textBoxMyFigureCircSize;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBoxMyFigureY;
-        private System.Windows.Forms.TrackBar trackBarMyFigureY;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBoxMyFigureX;
-        private System.Windows.Forms.TrackBar trackBarMyFigureX;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label33;
