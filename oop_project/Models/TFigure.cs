@@ -47,15 +47,15 @@ namespace oop_project.Models
             this.Size = (double)r.Next(30, 150);
         }
 
-        #region Laba_5
-        public virtual void Draw()
+        public void Draw()
         {
-
+            Draw(Color.LightGreen);
         }
 
         public virtual void Draw(Color color)
         {
-
+            Graphics gr = Graphics.FromImage(bitmap);
+            Pen pen = new Pen(color);
         }
 
         public void Move(double dx, double dy)
@@ -70,6 +70,5 @@ namespace oop_project.Models
         {
             Draw(Color.White);
         }
-        #endregion
     }
 }

@@ -17,11 +17,6 @@ namespace oop_project
         {
         }
 
-        public override void Draw()
-        {
-            Draw(Color.LightGreen);
-        }
-
         public override void Draw(Color color)
         {
             Graphics gr = Graphics.FromImage(bitmap);

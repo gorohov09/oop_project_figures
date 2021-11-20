@@ -26,11 +26,6 @@ namespace oop_project
             base()
         {
         }
-
-        public override void Draw()
-        {
-            Draw(Color.LightGreen);
-        }
         
         public override void Draw(Color color)
         {
