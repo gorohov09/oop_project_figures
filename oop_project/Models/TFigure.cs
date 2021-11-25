@@ -54,8 +54,7 @@ namespace oop_project.Models
 
         public virtual void Draw(Color color)
         {
-            Graphics gr = Graphics.FromImage(bitmap);
-            Pen pen = new Pen(color);
+            
         }
 
         public void Move(double dx, double dy)
