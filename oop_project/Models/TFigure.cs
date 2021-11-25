@@ -57,11 +57,24 @@ namespace oop_project.Models
             
         }
 
+        /// <summary>
+        /// Смещение фигуры
+        /// </summary>
+        /// <param name="dx">Смещение по x</param>
+        /// <param name="dy">Смещение по y</param>
         public void Move(double dx, double dy)
         {
             Draw(Color.White);
             this.X += dx;
             this.Y += dy;
+            Draw(Color.LightGreen);
+        }
+
+        public void Move_In_BasePoint(double x_base, double y_base)
+        {
+            Draw(Color.White);
+            this.X = x_base;
+            this.Y = y_base;
             Draw(Color.LightGreen);
         }
 

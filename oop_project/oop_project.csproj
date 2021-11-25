@@ -53,6 +53,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Create_Collection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Create_Collection.Designer.cs">
+      <DependentUpon>Form_Create_Collection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Move_Collection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Move_Collection.Designer.cs">
+      <DependentUpon>Form_Move_Collection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Circle.cs" />
     <Compile Include="Models\Ellipse.cs" />
     <Compile Include="Models\Line.cs" />
@@ -67,6 +79,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Create_Collection.resx">
+      <DependentUpon>Form_Create_Collection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Move_Collection.resx">
+      <DependentUpon>Form_Move_Collection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
