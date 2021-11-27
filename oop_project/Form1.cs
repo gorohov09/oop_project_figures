@@ -115,12 +115,121 @@ namespace oop_project
             {
                 double base_x = Convert.ToDouble(f.textBoxMoveX.Text);
                 double base_y = Convert.ToDouble(f.textBoxMoveY.Text);
+                string el = f.cmbbxItemFig.SelectedItem.ToString();
 
-                for (int i = 0; i < List_Figures.Length; i++)
+                if (el == "Все")
                 {
-                    List_Figures[i].Move_In_BasePoint(base_x, base_y);
+                    for (int i = 0; i < List_Figures.Length; i++)
+                    {
+                        List_Figures[i].Move_In_BasePoint(base_x, base_y);
+                    }
+                }
+                else if (el == "Крг и элпс")
+                {
+                    for (int i = 0; i < List_Figures.Length; i++)
+                    {
+                        if (List_Figures[i] is Circle)
+                        {
+                            List_Figures[i].Move_In_BasePoint(base_x, base_y);
+                        }
+                    }
+                }
+                else if (el == "Квадраты, прм и рмб")
+                {
+                    for (int i = 0; i < List_Figures.Length; i++)
+                    {
+                        if (List_Figures[i] is Square)
+                        {
+                            List_Figures[i].Move_In_BasePoint(base_x, base_y);
+                        }
+                    }
+                }
+                else if (el == "Линии")
+                {
+                    for (int i = 0; i < List_Figures.Length; i++)
+                    {
+                        if (List_Figures[i] is Line)
+                        {
+                            List_Figures[i].Move_In_BasePoint(base_x, base_y);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void Delete_Figures_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < List_Figures.Length; i++)
+            {
+                List_Figures[i].Delete();
+            }
+        }
+
+        private void buttonDelete_Collection_Click(object sender, EventArgs e)
+        {
+
+            for(int i = 0; i < List_Figures.Length; i++)
+            {
+                List_Figures[i].Delete();
+                List_Figures[i] = null;
+            }
+            List_Figures = null;
+            listBoxFigures.Items.Clear();
+        }
+
+        private void buttonEllipseMethod_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < List_Figures.Length; i++)
+            {
+                if (List_Figures[i] is Ellipse)
+                {
+                    (List_Figures[i] as Ellipse).ChangeSemiAxis();
+                  
                 }
             }
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            //capture up arrow key
+            if (keyData == Keys.Up)
+            {
+                foreach (var e in List_Figures)
+                {
+                    e.Move(0, -17);
+                }
+                return true;
+            }
+            //capture down arrow key
+            if (keyData == Keys.Down)
+            {
+                foreach (var e in List_Figures)
+                {
+                    e.Move(0, 17);
+                }
+                return true;
+            }
+            //capture left arrow key
+            if (keyData == Keys.Left)
+            {
+                foreach (var e in List_Figures)
+                {
+                    e.Move(-17, 0);
+                }
+                return true;
+            }
+            //capture right arrow key
+            if (keyData == Keys.Right)
+            {
+                foreach (var e in List_Figures)
+                {
+                    e.Move(17, 0);
+                }
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
+

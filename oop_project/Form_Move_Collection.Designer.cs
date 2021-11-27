@@ -35,6 +35,7 @@ namespace oop_project
             this.textBoxMoveY = new System.Windows.Forms.TextBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonMoveColl = new System.Windows.Forms.Button();
+            this.cmbbxItemFig = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +81,7 @@ namespace oop_project
             this.buttonClose.BackColor = System.Drawing.SystemColors.Info;
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.No;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClose.Location = new System.Drawing.Point(55, 154);
+            this.buttonClose.Location = new System.Drawing.Point(34, 190);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(144, 43);
             this.buttonClose.TabIndex = 5;
@@ -92,18 +93,34 @@ namespace oop_project
             this.buttonMoveColl.BackColor = System.Drawing.SystemColors.Info;
             this.buttonMoveColl.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonMoveColl.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonMoveColl.Location = new System.Drawing.Point(243, 154);
+            this.buttonMoveColl.Location = new System.Drawing.Point(205, 190);
             this.buttonMoveColl.Name = "buttonMoveColl";
             this.buttonMoveColl.Size = new System.Drawing.Size(169, 43);
             this.buttonMoveColl.TabIndex = 6;
             this.buttonMoveColl.Text = "Переместить";
             this.buttonMoveColl.UseVisualStyleBackColor = false;
             // 
+            // cmbbxItemFig
+            // 
+            this.cmbbxItemFig.BackColor = System.Drawing.SystemColors.Info;
+            this.cmbbxItemFig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbbxItemFig.FormattingEnabled = true;
+            this.cmbbxItemFig.Items.AddRange(new object[] {
+            "Все",
+            "Крг и элпс",
+            "Квадраты, прм и рмб",
+            "Линии"});
+            this.cmbbxItemFig.Location = new System.Drawing.Point(104, 142);
+            this.cmbbxItemFig.Name = "cmbbxItemFig";
+            this.cmbbxItemFig.Size = new System.Drawing.Size(186, 28);
+            this.cmbbxItemFig.TabIndex = 7;
+            // 
             // Form_Move_Collection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 282);
+            this.Controls.Add(this.cmbbxItemFig);
             this.Controls.Add(this.buttonMoveColl);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.textBoxMoveY);
@@ -111,6 +128,7 @@ namespace oop_project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form_Move_Collection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Move_Collection";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,5 +143,6 @@ namespace oop_project
         public System.Windows.Forms.TextBox textBoxMoveY;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonMoveColl;
+        public System.Windows.Forms.ComboBox cmbbxItemFig;
     }
 }

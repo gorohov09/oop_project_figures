@@ -88,6 +88,7 @@ namespace oop_project
             this.Controls.Add(this.textBoxCountEl);
             this.Controls.Add(this.label1);
             this.Name = "Form_Create_Collection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Create_Collection";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -34,6 +34,9 @@ namespace oop_project
             this.Show_Collection = new System.Windows.Forms.Button();
             this.listBoxFigures = new System.Windows.Forms.ListBox();
             this.buttonMove = new System.Windows.Forms.Button();
+            this.Delete_Figures = new System.Windows.Forms.Button();
+            this.buttonDelete_Collection = new System.Windows.Forms.Button();
+            this.buttonEllipseMethod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,16 +101,59 @@ namespace oop_project
             this.buttonMove.UseVisualStyleBackColor = false;
             this.buttonMove.Click += new System.EventHandler(this.buttonMove_Click);
             // 
+            // Delete_Figures
+            // 
+            this.Delete_Figures.BackColor = System.Drawing.SystemColors.Info;
+            this.Delete_Figures.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete_Figures.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Delete_Figures.Location = new System.Drawing.Point(28, 256);
+            this.Delete_Figures.Name = "Delete_Figures";
+            this.Delete_Figures.Size = new System.Drawing.Size(160, 45);
+            this.Delete_Figures.TabIndex = 5;
+            this.Delete_Figures.Text = "Стиреть";
+            this.Delete_Figures.UseVisualStyleBackColor = false;
+            this.Delete_Figures.Click += new System.EventHandler(this.Delete_Figures_Click);
+            // 
+            // buttonDelete_Collection
+            // 
+            this.buttonDelete_Collection.BackColor = System.Drawing.SystemColors.Info;
+            this.buttonDelete_Collection.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelete_Collection.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonDelete_Collection.Location = new System.Drawing.Point(28, 325);
+            this.buttonDelete_Collection.Name = "buttonDelete_Collection";
+            this.buttonDelete_Collection.Size = new System.Drawing.Size(160, 45);
+            this.buttonDelete_Collection.TabIndex = 6;
+            this.buttonDelete_Collection.Text = "Удалить";
+            this.buttonDelete_Collection.UseVisualStyleBackColor = false;
+            this.buttonDelete_Collection.Click += new System.EventHandler(this.buttonDelete_Collection_Click);
+            // 
+            // buttonEllipseMethod
+            // 
+            this.buttonEllipseMethod.BackColor = System.Drawing.SystemColors.Info;
+            this.buttonEllipseMethod.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEllipseMethod.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEllipseMethod.Location = new System.Drawing.Point(28, 395);
+            this.buttonEllipseMethod.Name = "buttonEllipseMethod";
+            this.buttonEllipseMethod.Size = new System.Drawing.Size(179, 45);
+            this.buttonEllipseMethod.TabIndex = 7;
+            this.buttonEllipseMethod.Text = "Спец мтд эллипса";
+            this.buttonEllipseMethod.UseVisualStyleBackColor = false;
+            this.buttonEllipseMethod.Click += new System.EventHandler(this.buttonEllipseMethod_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 635);
+            this.Controls.Add(this.buttonEllipseMethod);
+            this.Controls.Add(this.buttonDelete_Collection);
+            this.Controls.Add(this.Delete_Figures);
             this.Controls.Add(this.buttonMove);
             this.Controls.Add(this.listBoxFigures);
             this.Controls.Add(this.Show_Collection);
             this.Controls.Add(this.Create_Collection);
             this.Controls.Add(this.PictureArea);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -123,6 +169,9 @@ namespace oop_project
         private System.Windows.Forms.Button Show_Collection;
         private System.Windows.Forms.ListBox listBoxFigures;
         private System.Windows.Forms.Button buttonMove;
+        private System.Windows.Forms.Button Delete_Figures;
+        private System.Windows.Forms.Button buttonDelete_Collection;
+        private System.Windows.Forms.Button buttonEllipseMethod;
     }
 }
 
