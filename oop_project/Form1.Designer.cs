@@ -36,7 +36,7 @@ namespace oop_project
             this.buttonMove = new System.Windows.Forms.Button();
             this.Delete_Figures = new System.Windows.Forms.Button();
             this.buttonDelete_Collection = new System.Windows.Forms.Button();
-            this.buttonEllipseMethod = new System.Windows.Forms.Button();
+            this.button_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,25 +127,25 @@ namespace oop_project
             this.buttonDelete_Collection.UseVisualStyleBackColor = false;
             this.buttonDelete_Collection.Click += new System.EventHandler(this.buttonDelete_Collection_Click);
             // 
-            // buttonEllipseMethod
+            // button_Add
             // 
-            this.buttonEllipseMethod.BackColor = System.Drawing.SystemColors.Info;
-            this.buttonEllipseMethod.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEllipseMethod.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonEllipseMethod.Location = new System.Drawing.Point(28, 395);
-            this.buttonEllipseMethod.Name = "buttonEllipseMethod";
-            this.buttonEllipseMethod.Size = new System.Drawing.Size(179, 45);
-            this.buttonEllipseMethod.TabIndex = 7;
-            this.buttonEllipseMethod.Text = "Спец мтд эллипса";
-            this.buttonEllipseMethod.UseVisualStyleBackColor = false;
-            this.buttonEllipseMethod.Click += new System.EventHandler(this.buttonEllipseMethod_Click);
+            this.button_Add.BackColor = System.Drawing.SystemColors.Info;
+            this.button_Add.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_Add.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_Add.Location = new System.Drawing.Point(28, 400);
+            this.button_Add.Name = "button_Add";
+            this.button_Add.Size = new System.Drawing.Size(160, 45);
+            this.button_Add.TabIndex = 8;
+            this.button_Add.Text = "Добавить";
+            this.button_Add.UseVisualStyleBackColor = false;
+            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 635);
-            this.Controls.Add(this.buttonEllipseMethod);
+            this.Controls.Add(this.button_Add);
             this.Controls.Add(this.buttonDelete_Collection);
             this.Controls.Add(this.Delete_Figures);
             this.Controls.Add(this.buttonMove);
@@ -171,7 +171,7 @@ namespace oop_project
         private System.Windows.Forms.Button buttonMove;
         private System.Windows.Forms.Button Delete_Figures;
         private System.Windows.Forms.Button buttonDelete_Collection;
-        private System.Windows.Forms.Button buttonEllipseMethod;
+        private System.Windows.Forms.Button button_Add;
     }
 }
 
