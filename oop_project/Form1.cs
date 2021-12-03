@@ -28,6 +28,7 @@ namespace oop_project
     {
         Bitmap bitmap;
         TContainerArr containerArr;
+        TContainerList containerList;
         Random rand;
         public Form1()
         {
@@ -42,14 +43,19 @@ namespace oop_project
             rand = new Random();
         }
 
-        private void ShowCollection()
+        private void ShowArray()
         {
             containerArr.Draw();
         }
 
+        private void ShowList()
+        {
+            containerList.Draw();
+        }
+
         private void ListBoxFigures_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ShowCollection();
+            //ShowCollection();
             int index_el = listBoxFigures.SelectedIndex;
             containerArr.Paint_Red(index_el);
         }
@@ -64,18 +70,43 @@ namespace oop_project
 
                 if (sel == "пустой")
                 {
-                    containerArr = new TContainerArr();
+                    if (f.radioButtonArr.Checked)
+                    {
+                        containerArr = new TContainerArr();
+                        MessageBox.Show("Пустой массив успешно создан");
+                    }
+                    else
+                    {
+                        containerList = new TContainerList();
+                        MessageBox.Show("Пустой список успешно создан");
+                    }                                     
                 }
                 else if (sel == "заполненный")
                 {
                     int count_element = Convert.ToInt32(f.textBoxCountEl.Text);
-                    containerArr = new TContainerArr(count_element);
-                    int count = 0;
-                    foreach (var el in containerArr)
+                    if (f.radioButtonArr.Checked)
                     {
-                        listBoxFigures.Items.Add(el.ToString() + $"№{count + 1}");
-                        count++;
+                        containerArr = new TContainerArr(count_element);
+                        int count = 0;
+                        foreach (var el in containerList)
+                        {
+                            listBoxFigures.Items.Add(el.ToString() + $"№{count + 1}");
+                            count++;
+                        }
+                        MessageBox.Show("Заполненный массив успешно создан");
                     }
+                    else
+                    {
+                        containerList = new TContainerList(count_element);
+                        int count = 0;
+                        foreach (var el in containerList)
+                        {
+                            listBoxFigures.Items.Add(el.ToString() + $"№{count + 1}");
+                            count++;
+                        }
+                        MessageBox.Show("Заполненный список успешно создан");
+                    }
+                    
                 }
                 else
                 {
@@ -86,7 +117,14 @@ namespace oop_project
 
         private void Show_Collection_Click(object sender, EventArgs e)
         {
-            ShowCollection();
+            if (containerArr != null)
+            {
+                ShowArray();
+            }
+            else
+            {
+                ShowList();
+            }
         }
 
         private void buttonMove_Click(object sender, EventArgs e)
@@ -98,19 +136,43 @@ namespace oop_project
                 double base_x = Convert.ToDouble(f.textBoxMoveX.Text);
                 double base_y = Convert.ToDouble(f.textBoxMoveY.Text);
                 string el = f.cmbbxItemFig.SelectedItem.ToString();
-                containerArr.Move((int)base_x, (int)base_y, el);
+                if (containerArr != null)
+                {
+                    containerArr.Move((int)base_x, (int)base_y, el);
+                }
+                else
+                {
+                    containerList.Move((int)base_x, (int)base_y, el);
+                }
+                
             }
         }
 
         private void Delete_Figures_Click(object sender, EventArgs e)
         {
-            containerArr.RemoveAll();
+            if (containerArr != null)
+            {
+                containerArr.RemoveAll();
+            }
+            else
+            {
+                containerList.RemoveAll();
+            }
         }
 
         private void buttonDelete_Collection_Click(object sender, EventArgs e)
         {
-            containerArr.Delete();
-            listBoxFigures.Items.Clear();
+            if (containerArr != null)
+            {
+                containerArr.Delete();
+                listBoxFigures.Items.Clear();
+            }
+            else
+            {
+                containerList.Delete();
+                listBoxFigures.Items.Clear();
+            }
+            
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -179,8 +241,17 @@ namespace oop_project
                     figure = new Square((double)rand.Next(300), (double)rand.Next(300), (double)rand.Next(300));
                     break;
             }
-            containerArr.Add(figure);
-            listBoxFigures.Items.Add(figure.ToString() + $"№{listBoxFigures.Items.Count + 1}");
+            if (containerArr != null)
+            {
+                containerArr.Add(figure);
+                listBoxFigures.Items.Add(figure.ToString() + $"№{listBoxFigures.Items.Count + 1}");
+            }
+            else
+            {
+                containerList.Add(figure);
+                listBoxFigures.Items.Add(figure.ToString() + $"№{listBoxFigures.Items.Count + 1}");
+            }
+            
         }
     }
 }

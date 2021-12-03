@@ -35,6 +35,8 @@ namespace oop_project
             this.buttonClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbbxCreate = new System.Windows.Forms.ComboBox();
+            this.radioButtonArr = new System.Windows.Forms.RadioButton();
+            this.radioButtonList = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +44,7 @@ namespace oop_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(12, 77);
+            this.label1.Location = new System.Drawing.Point(12, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 24);
             this.label1.TabIndex = 0;
@@ -51,7 +53,7 @@ namespace oop_project
             // textBoxCountEl
             // 
             this.textBoxCountEl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCountEl.Location = new System.Drawing.Point(267, 73);
+            this.textBoxCountEl.Location = new System.Drawing.Point(267, 115);
             this.textBoxCountEl.Name = "textBoxCountEl";
             this.textBoxCountEl.Size = new System.Drawing.Size(133, 28);
             this.textBoxCountEl.TabIndex = 2;
@@ -61,7 +63,7 @@ namespace oop_project
             this.buttonCreateColl.BackColor = System.Drawing.SystemColors.Info;
             this.buttonCreateColl.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonCreateColl.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCreateColl.Location = new System.Drawing.Point(243, 154);
+            this.buttonCreateColl.Location = new System.Drawing.Point(230, 186);
             this.buttonCreateColl.Name = "buttonCreateColl";
             this.buttonCreateColl.Size = new System.Drawing.Size(144, 43);
             this.buttonCreateColl.TabIndex = 3;
@@ -73,7 +75,7 @@ namespace oop_project
             this.buttonClose.BackColor = System.Drawing.SystemColors.Info;
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.No;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClose.Location = new System.Drawing.Point(55, 154);
+            this.buttonClose.Location = new System.Drawing.Point(46, 186);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(144, 43);
             this.buttonClose.TabIndex = 4;
@@ -104,11 +106,35 @@ namespace oop_project
             this.cmbbxCreate.Size = new System.Drawing.Size(161, 28);
             this.cmbbxCreate.TabIndex = 8;
             // 
+            // radioButtonArr
+            // 
+            this.radioButtonArr.AutoSize = true;
+            this.radioButtonArr.Location = new System.Drawing.Point(80, 72);
+            this.radioButtonArr.Name = "radioButtonArr";
+            this.radioButtonArr.Size = new System.Drawing.Size(77, 21);
+            this.radioButtonArr.TabIndex = 9;
+            this.radioButtonArr.TabStop = true;
+            this.radioButtonArr.Text = "Массив";
+            this.radioButtonArr.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonList
+            // 
+            this.radioButtonList.AutoSize = true;
+            this.radioButtonList.Location = new System.Drawing.Point(213, 72);
+            this.radioButtonList.Name = "radioButtonList";
+            this.radioButtonList.Size = new System.Drawing.Size(76, 21);
+            this.radioButtonList.TabIndex = 10;
+            this.radioButtonList.TabStop = true;
+            this.radioButtonList.Text = "Список";
+            this.radioButtonList.UseVisualStyleBackColor = true;
+            // 
             // Form_Create_Collection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 282);
+            this.Controls.Add(this.radioButtonList);
+            this.Controls.Add(this.radioButtonArr);
             this.Controls.Add(this.cmbbxCreate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonClose);
@@ -130,5 +156,7 @@ namespace oop_project
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox cmbbxCreate;
         public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.RadioButton radioButtonArr;
+        public System.Windows.Forms.RadioButton radioButtonList;
     }
 }

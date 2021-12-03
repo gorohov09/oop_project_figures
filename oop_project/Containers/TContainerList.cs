@@ -2,49 +2,54 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace oop_project.Containers
 {
-    public class TContainerArr : IEnumerable<TFigure>
+    public class TContainerList : IEnumerable<TFigure>
     {
-        private TFigure[] figures;
+        Node head;
+        Node tail;
+        int count;
+        Random rand;
 
-        private int index;
-
-        private Random rand;
-
-        public TContainerArr()
+        public TContainerList()
         {
-            figures = new TFigure[15];
-            this.index = 0;
+            head = null;
+            tail = null;
+            count = 0;
             rand = new Random();
         }
 
-        public TContainerArr(int count)
+        public TContainerList(int count)
         {
-            this.index = 0;
-            figures = new TFigure[count];
             rand = new Random();
-            Load();
+            this.count = 0;
+            Load(count);
         }
 
         public void Add(TFigure figure)
         {
-            this.Resize(index >= this.figures.Length);
-            this.figures[index] = figure;
-            this.index++;
+            Node node = new Node(figure);
+
+            if (head == null)
+                head = node;
+            else
+                tail.Next = node;
+            tail = node;
+
+            count++;
         }
 
         public void Draw()
         {
-            for (int i = 0; i < figures.Length; i++)
+            Node current = head;
+            while (current != null)
             {
-                if (figures[i] != null)
-                    figures[i].Draw();
+                current.Data.Draw();
+                current = current.Next;
             }
         }
 
@@ -52,40 +57,41 @@ namespace oop_project.Containers
         {
             if (condition == "Все")
             {
-                for (int i = 0; i < figures.Length; i++)
+                Node current = head;
+                while (current != null)
                 {
-                    if (figures[i] != null)
-                        figures[i].Move_In_BasePoint(base_x, base_y);
+                    current.Data.Move_In_BasePoint(base_x, base_y);
+                    current = current.Next;
                 }
             }
             else if (condition == "Крг и элпс")
             {
-                for (int i = 0; i < figures.Length; i++)
+                Node current = head;
+                while (current != null)
                 {
-                    if (figures[i] is Circle && figures[i] != null)
-                    {
-                        figures[i].Move_In_BasePoint(base_x, base_y);
-                    }
+                    if (current.Data is Circle)
+                        current.Data.Move_In_BasePoint(base_x, base_y);
+                    current = current.Next;
                 }
             }
             else if (condition == "Квадраты, прм и рмб")
             {
-                for (int i = 0; i < figures.Length; i++)
+                Node current = head;
+                while (current != null)
                 {
-                    if (figures[i] is Square && figures[i] != null)
-                    {
-                        figures[i].Move_In_BasePoint(base_x, base_y);
-                    }
+                    if (current.Data is Square)
+                        current.Data.Move_In_BasePoint(base_x, base_y);
+                    current = current.Next;
                 }
             }
             else if (condition == "Линии")
             {
-                for (int i = 0; i < figures.Length; i++)
+                Node current = head;
+                while (current != null)
                 {
-                    if (figures[i] is Line && figures[i] != null)
-                    {
-                        figures[i].Move_In_BasePoint(base_x, base_y);
-                    }
+                    if (current.Data is Line)
+                        current.Data.Move_In_BasePoint(base_x, base_y);
+                    current = current.Next;
                 }
             }
         }
@@ -93,50 +99,33 @@ namespace oop_project.Containers
         public void Delete()
         {
             RemoveAll();
-            for (int i = 0; i < figures.Length; i++)
+            Node current = head;
+            while (current != null)
             {
-                figures[i] = null;
+                current.Data = null;
+                current = current.Next;
             }
-            figures = null;
-        }
-
-        public void Paint_Red(int index_el)
-        {
-            for (int i = 0; i < figures.Length; i++)
-            {
-                if (index_el == i + 1 && figures[i] != null)
-                {
-                    figures[index_el].Draw(Color.Red);
-                    break;
-                }
-            }
+            head = null;
+            tail = null;
+            count = 0;
         }
 
         public void RemoveAll()
         {
-            for (int i = 0; i < figures.Length; i++)
+            Node current = head;
+            while (current != null)
             {
-                if (figures[i] != null)
-                    figures[i].Delete();
+                current.Data.Delete();
+                current = current.Next;
             }
         }
 
-        private void Resize(bool Flag)
+        private void Load(int count)
         {
-            if (Flag)
+            for (int i = 0; i < count; i++)
             {
-                Array.Resize(ref this.figures, Convert.ToInt32(Math.Round(this.figures.Length * 1.1)));
-            }
-        }
-
-        private void Load()
-        {
-            for (int i = 0; i < this.figures.Length; i++)
-            {
-                TFigure figure = Select_Figures();
-                
-                figures[index] = figure;
-                index++;
+                TFigure fig = Select_Figures();
+                Add(fig);
             }
         }
 
@@ -167,22 +156,24 @@ namespace oop_project.Containers
             return figure;
         }
 
-        public int Count
-        {
-            get { return figures.Length; }
-        }
-
         public IEnumerator<TFigure> GetEnumerator()
         {
-            for(int i = 0; i < this.figures.Length; i++)
+            Node current = head;
+            while (current != null)
             {
-                yield return this.figures[i];
+                yield return current.Data;
+                current = current.Next;
             }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public int Count
+        {
+            get { return this.count; }
         }
     }
 }
